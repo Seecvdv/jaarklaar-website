@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jaarrekening kleine BV maken — micro & klein regime | Jaarklaar</title>
+<meta name="description" content="Maak zelf de jaarrekening van je kleine of micro BV. Jaarklaar berekent automatisch je grootteregime en past de juiste RJk-richtlijnen toe. KvK-deponering gereed. Vanaf €19.">
+<link rel="canonical" href="https://jaarklaar.app/bv-jaarrekening">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root { --indigo: #6366f1; --indigo-dark: #4f46e5; --indigo-light: #eef2ff; --dark: #0f172a; --body: #334155; --muted: #64748b; --border: #e2e8f0; --bg: #f8fafc; --radius: 14px; --accent: #10b981; --accent-light: #f0fdf4; }
+  body { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; color: var(--body); background: white; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  h1, h2, h3 { color: var(--dark); line-height: 1.25; font-weight: 800; }
+  h1 { font-size: clamp(32px, 4.5vw, 52px); letter-spacing: -.02em; }
+  h2 { font-size: clamp(24px, 3vw, 36px); letter-spacing: -.015em; }
+  h3 { font-size: 18px; }
+  a { color: var(--indigo); }
+  .container { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+  .btn { display: inline-flex; align-items: center; gap: 7px; padding: 13px 28px; border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer; text-decoration: none; border: none; transition: all .18s; }
+  .btn-primary { background: var(--indigo); color: white; box-shadow: 0 2px 12px rgba(99,102,241,0.35); }
+  .btn-primary:hover { background: var(--indigo-dark); transform: translateY(-1px); }
+  .btn-secondary { background: white; color: var(--dark); border: 1.5px solid var(--border); }
+  .btn-secondary:hover { border-color: var(--indigo); color: var(--indigo); }
+  .skip-link { position: absolute; top: -40px; left: 0; background: var(--indigo); color: white; padding: 8px 16px; z-index: 1000; font-size: 14px; font-weight: 600; text-decoration: none; border-radius: 0 0 8px 0; }
+  .skip-link:focus { top: 0; }
+  nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 0 5%; display: flex; align-items: center; justify-content: space-between; height: 60px; }
+  .nav-logo { display: flex; align-items: center; gap: 8px; font-size: 17px; font-weight: 800; color: var(--dark); text-decoration: none; }
+  .nav-logo-mark { width: 30px; height: 30px; border-radius: 8px; background: var(--indigo); display: flex; align-items: center; justify-content: center; color: white; font-size: 13px; font-weight: 800; }
+  .nav-back { font-size: 13px; color: var(--muted); text-decoration: none; }
+  .nav-back:hover { color: var(--dark); }
+  .hero { padding: 64px 0 56px; border-bottom: 1px solid var(--border); }
+  .hero-chip { display: inline-flex; align-items: center; gap: 6px; background: var(--accent-light); color: #166534; font-size: 12px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; padding: 5px 12px; border-radius: 100px; margin-bottom: 20px; }
+  .hero h1 { margin-bottom: 18px; max-width: 700px; }
+  .hero .lead { font-size: 18px; color: var(--muted); line-height: 1.7; max-width: 620px; margin-bottom: 32px; }
+  .hero-cta { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 32px; }
+  .hero-proof { font-size: 13px; color: var(--muted); display: flex; gap: 16px; flex-wrap: wrap; }
+  .hero-proof span::before { content: '✓ '; color: #16a34a; font-weight: 700; }
+  .content-section { padding: 56px 0; border-bottom: 1px solid var(--border); }
+  .content-section h2 { margin-bottom: 20px; }
+  .content-section p { margin-bottom: 16px; font-size: 15px; line-height: 1.8; }
+  .content-section p:last-child { margin-bottom: 0; }
+  .steps { display: flex; flex-direction: column; gap: 20px; margin-top: 28px; }
+  .step { display: flex; gap: 16px; align-items: flex-start; }
+  .step-num { width: 36px; height: 36px; border-radius: 50%; background: var(--indigo); color: white; font-size: 15px; font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+  .step-content h3 { font-size: 16px; margin-bottom: 6px; }
+  .step-content p { font-size: 14px; color: var(--muted); margin: 0; }
+  .regime-table { width: 100%; border-collapse: collapse; font-size: 14px; margin-top: 24px; }
+  .regime-table th { background: var(--indigo); color: white; padding: 12px 16px; text-align: left; font-weight: 700; }
+  .regime-table td { padding: 11px 16px; border-bottom: 1px solid var(--border); }
+  .regime-table tr:nth-child(even) td { background: var(--bg); }
+  .regime-table td:first-child { font-weight: 600; color: var(--dark); }
+  .card-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 28px; }
+  .card { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; }
+  .card h3 { font-size: 15px; margin-bottom: 8px; }
+  .card p { font-size: 13px; color: var(--muted); margin: 0; line-height: 1.6; }
+  .price-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 28px; }
+  .price-box { background: var(--indigo-light); border: 2px solid var(--indigo); border-radius: var(--radius); padding: 24px; }
+  .price-box h3 { font-size: 15px; margin-bottom: 4px; }
+  .price-box .sub { font-size: 12px; color: var(--muted); margin-bottom: 12px; }
+  .price-amount { font-size: 40px; font-weight: 800; color: var(--dark); line-height: 1; margin-bottom: 4px; }
+  .price-amount sup { font-size: 18px; vertical-align: top; margin-top: 6px; }
+  .price-per { font-size: 12px; color: var(--muted); margin-bottom: 16px; }
+  .cta-block { background: var(--dark); border-radius: 16px; padding: 48px 40px; text-align: center; margin: 48px 0; }
+  .cta-block h2 { color: white; margin-bottom: 12px; }
+  .cta-block p { color: rgba(255,255,255,0.6); font-size: 16px; margin-bottom: 28px; }
+  .cta-note { margin-top: 14px; font-size: 13px; color: rgba(255,255,255,0.4); }
+  .faq { margin-top: 28px; }
+  details.faq-item { border-bottom: 1px solid var(--border); }
+  details.faq-item summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; padding: 18px 0; font-size: 15px; font-weight: 600; color: var(--dark); transition: color .15s; }
+  details.faq-item summary::-webkit-details-marker { display: none; }
+  details.faq-item summary:hover { color: var(--indigo); }
+  .faq-icon { font-size: 20px; color: var(--muted); flex-shrink: 0; transition: transform .2s; }
+  details.faq-item[open] summary { color: var(--indigo); }
+  details.faq-item[open] .faq-icon { transform: rotate(45deg); color: var(--indigo); }
+  .faq-answer { font-size: 14px; color: var(--muted); line-height: 1.7; padding-bottom: 18px; }
+  .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; }
+  .breadcrumb a { color: var(--muted); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--indigo); }
+  .breadcrumb span { margin: 0 6px; }
+  footer { background: var(--dark); padding: 32px 5%; color: rgba(255,255,255,0.5); font-size: 13px; }
+  .footer-inner { max-width: 860px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  .footer-logo { font-size: 15px; font-weight: 800; color: white; text-decoration: none; }
+  .footer-links { display: flex; gap: 20px; }
+  .footer-links a { color: rgba(255,255,255,0.5); text-decoration: none; }
+  .footer-links a:hover { color: white; }
+  @media (max-width: 600px) { .card-grid, .price-grid { grid-template-columns: 1fr; } .cta-block { padding: 32px 24px; } }
+</style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Ga naar hoofdinhoud</a>
+<nav>
+  <a href="/" class="nav-logo"><div class="nav-logo-mark">J</div>Jaarklaar</a>
+  <a href="/" class="nav-back">← Terug naar overzicht</a>
+  <a href="https://app.jaarklaar.app" class="btn btn-primary" style="padding:8px 18px;font-size:13px;">Begin nu →</a>
+</nav>
+
+<main id="main-content">
+<div class="container">
+
+  <section class="hero">
+    <div class="breadcrumb"><a href="/">Jaarklaar</a><span>›</span> Jaarrekening kleine BV</div>
+    <div class="hero-chip">Micro BV · Kleine BV · RJk</div>
+    <h1>Jaarrekening kleine BV maken — micro en klein regime</h1>
+    <p class="lead">Je kleine of micro BV is wettelijk verplicht een jaarrekening op te stellen en te deponeren bij de KvK. Jaarklaar bepaalt automatisch je grootteregime op basis van balanstotaal, omzet en personeel, en past de juiste vereisten toe.</p>
+    <div class="hero-cta">
+      <a href="https://app.jaarklaar.app" class="btn btn-primary">Start je BV-jaarrekening →</a>
+      <a href="#grootteregime" class="btn btn-secondary">Welk regime geldt voor mij?</a>
+    </div>
+    <div class="hero-proof">
+      <span>Micro én klein regime</span>
+      <span>KvK-deponering gereed</span>
+      <span>Vergelijkend jaar ingebouwd</span>
+      <span>Vanaf €19 per jaarrekening</span>
+    </div>
+  </section>
+
+  <section class="content-section" id="grootteregime">
+    <h2>Welk grootteregime geldt voor jouw BV?</h2>
+    <p>Het grootteregime bepaalt welke vereisten gelden voor je jaarrekening. Je valt in een categorie als je op twee opeenvolgende balansdata aan minimaal twee van de drie criteria voldoet. Per 1 januari 2024 gelden de volgende grenzen (RJ-Uiting 2024-4):</p>
+    <table class="regime-table">
+      <thead>
+        <tr>
+          <th>Regime</th>
+          <th>Balanstotaal</th>
+          <th>Netto-omzet</th>
+          <th>Werknemers</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Micro</td>
+          <td>≤ €450.000</td>
+          <td>≤ €900.000</td>
+          <td>&lt; 10</td>
+        </tr>
+        <tr>
+          <td>Klein</td>
+          <td>≤ €7,5 miljoen</td>
+          <td>≤ €15 miljoen</td>
+          <td>&lt; 50</td>
+        </tr>
+        <tr>
+          <td>Middelgroot</td>
+          <td>≤ €25 miljoen</td>
+          <td>≤ €50 miljoen</td>
+          <td>&lt; 250</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="margin-top:16px;font-size:13px;color:var(--muted);">Middelgrote en grote ondernemingen vallen buiten de scope van Jaarklaar. Jaarklaar is bedoeld voor micro- en kleine rechtspersonen.</p>
+  </section>
+
+  <section class="content-section" id="hoe-het-werkt">
+    <h2>Zo maak je een BV-jaarrekening in Jaarklaar</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <h3>Kies micro of klein</h3>
+          <p>Selecteer je regime op basis van de criteria hierboven. Jaarklaar past de indeling en toelichtingsvereisten automatisch aan — micro heeft minder verplichte posten dan klein.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <h3>Importeer of vul handmatig in</h3>
+          <p>Upload je export vanuit Moneybird, Exact Online of een kolommenbalans uit AFAS, King of Twinfield. Of voer de balans en winst-en-verliesrekening handmatig in.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <h3>Voeg toelichting en grondslagen toe</h3>
+          <p>Beschrijf de gehanteerde waarderingsgrondslagen. Jaarklaar biedt standaard teksten die je kunt aanpassen.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-content">
+          <h3>Deponeer bij de KvK</h3>
+          <p>Download de PDF, onderteken en deponeer bij de KvK. Kleine BV's mogen een verkorte balans deponeren — Jaarklaar houdt daarmee rekening.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <h2>Wat zit er in?</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Balans</h3>
+        <p>Volledig conform Titel 9 Boek 2 BW. Micro en klein hebben verschillende niveaus van detaillering — Jaarklaar past dit automatisch aan.</p>
+      </div>
+      <div class="card">
+        <h3>Winst-en-verliesrekening</h3>
+        <p>Categorisch model conform art. 2:377 BW, inclusief vergelijkend jaar.</p>
+      </div>
+      <div class="card">
+        <h3>Toelichting & grondslagen</h3>
+        <p>Waarderingsgrondslagen, afschrijvingstabellen voor vaste activa en overige verplichte toelichtingen.</p>
+      </div>
+      <div class="card">
+        <h3>Kasstroomoverzicht</h3>
+        <p>Optioneel voor kleine BV's — Jaarklaar biedt het indirecte model conform RJk.</p>
+      </div>
+      <div class="card">
+        <h3>KvK-deponering gereed</h3>
+        <p>De PDF voldoet aan de vereisten van de KvK. Kleine BV's mogen een verkorte versie deponeren.</p>
+      </div>
+      <div class="card">
+        <h3>Import uit boekhoudpakketten</h3>
+        <p>Direct importeren vanuit Moneybird, Exact Online, AFAS, King, Twinfield en andere pakketten via kolommenbalans.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <h2>Wat kost het?</h2>
+    <p>Je betaalt alleen bij het exporteren van de definitieve PDF. Invoeren en aanpassen is altijd gratis.</p>
+    <div class="price-grid">
+      <div class="price-box">
+        <h3>Micro BV</h3>
+        <div class="sub">Balanstotaal ≤ €450k · Omzet ≤ €900k · &lt; 10 werknemers</div>
+        <div class="price-amount"><sup>€</sup>19</div>
+        <div class="price-per">per jaarrekening</div>
+        <a href="https://app.jaarklaar.app" class="btn btn-primary" style="font-size:13px;padding:10px 20px;">Begin gratis →</a>
+      </div>
+      <div class="price-box">
+        <h3>Kleine BV</h3>
+        <div class="sub">Balanstotaal ≤ €7,5M · Omzet ≤ €15M · &lt; 50 werknemers</div>
+        <div class="price-amount"><sup>€</sup>19</div>
+        <div class="price-per">per jaarrekening</div>
+        <a href="https://app.jaarklaar.app" class="btn btn-primary" style="font-size:13px;padding:10px 20px;">Begin gratis →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <h2>Veelgestelde vragen</h2>
+    <div class="faq">
+      <details class="faq-item">
+        <summary>Wanneer moet ik de jaarrekening deponeren bij de KvK? <span class="faq-icon">+</span></summary>
+        <div class="faq-answer">Uiterlijk 8 dagen na vaststelling door de aandeelhouders, en in elk geval binnen 12 maanden na afloop van het boekjaar. Voor BV's die het boekjaar laten samenvallen met het kalenderjaar geldt dus uiterlijk 31 december van het volgende jaar.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Mag een micro BV een vereenvoudigde jaarrekening opstellen? <span class="faq-icon">+</span></summary>
+        <div class="faq-answer">Ja. Micro BV's mogen op grond van art. 2:395a BW een sterk vereenvoudigde jaarrekening opstellen. Ze mogen zelfs fiscale grondslagen toepassen. Jaarklaar past de juiste indeling automatisch toe op basis van je gekozen regime.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Is een accountantscontrole verplicht? <span class="faq-icon">+</span></summary>
+        <div class="faq-answer">Nee, niet voor micro en kleine BV's. Accountantscontrole is alleen verplicht voor middelgrote en grote BV's. Voor extra zekerheid biedt Jaarklaar een accountantscheck op afroep voor €110 per uur.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Wat is het verschil tussen de jaarrekening opmaken en deponeren? <span class="faq-icon">+</span></summary>
+        <div class="faq-answer">Opmaken doet het bestuur. Vaststellen doen de aandeelhouders (goedkeuring). Deponeren is het publiceren bij de KvK. Jaarklaar helpt je met het opmaken — de PDF print je uit voor ondertekening en deponeer je daarna bij de KvK.</div>
+      </details>
+    </div>
+  </section>
+
+  <div class="cta-block">
+    <h2>Klaar om te beginnen?</h2>
+    <p>Maak gratis een account en start je BV-jaarrekening. Betaal alleen bij export.</p>
+    <a href="https://app.jaarklaar.app" class="btn btn-primary" style="font-size:16px;padding:15px 36px;">Start je BV-jaarrekening →</a>
+    <div class="cta-note">Vanaf €19 · Micro én klein · KvK-deponering gereed</div>
+  </div>
+
+</div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <a href="/" class="footer-logo">Jaarklaar</a>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/vve-jaarrekening">VvE</a>
+      <a href="/stichting-jaarrekening">Stichting</a>
+      <a href="https://app.jaarklaar.app">App</a>
+      <a href="mailto:cees@ceesdecontroller.nl">Contact</a>
+    </div>
+    <div>© 2026 Cees de Controller</div>
+  </div>
+</footer>
+</body>
+</html>

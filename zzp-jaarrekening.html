@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZZP jaarrekening maken — resultatenrekening & fiscaal overzicht | Jaarklaar</title>
+<meta name="description" content="Maak zelf je ZZP jaarrekening. Jaarklaar genereert een overzichtelijke resultatenrekening en fiscaal overzicht voor je eenmanszaak of VOF. Snel klaar. €9 per jaarrekening.">
+<link rel="canonical" href="https://jaarklaar.app/zzp-jaarrekening">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root { --indigo: #6366f1; --indigo-dark: #4f46e5; --indigo-light: #eef2ff; --dark: #0f172a; --body: #334155; --muted: #64748b; --border: #e2e8f0; --bg: #f8fafc; --radius: 14px; --accent: #f59e0b; --accent-light: #fffbeb; }
+  body { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; color: var(--body); background: white; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  h1, h2, h3 { color: var(--dark); line-height: 1.25; font-weight: 800; }
+  h1 { font-size: clamp(32px, 4.5vw, 52px); letter-spacing: -.02em; }
+  h2 { font-size: clamp(24px, 3vw, 36px); letter-spacing: -.015em; }
+  h3 { font-size: 18px; }
+  a { color: var(--indigo); }
+  .container { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+  .btn { display: inline-flex; align-items: center; gap: 7px; padding: 13px 28px; border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer; text-decoration: none; border: none; transition: all .18s; }
+  .btn-primary { background: var(--indigo); color: white; box-shadow: 0 2px 12px rgba(99,102,241,0.35); }
+  .btn-primary:hover { background: var(--indigo-dark); transform: translateY(-1px); }
+  .btn-secondary { background: white; color: var(--dark); border: 1.5px solid var(--border); }
+  .btn-secondary:hover { border-color: var(--indigo); color: var(--indigo); }
+  .skip-link { position: absolute; top: -40px; left: 0; background: var(--indigo); color: white; padding: 8px 16px; z-index: 1000; font-size: 14px; font-weight: 600; text-decoration: none; border-radius: 0 0 8px 0; }
+  .skip-link:focus { top: 0; }
+  nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 0 5%; display: flex; align-items: center; justify-content: space-between; height: 60px; }
+  .nav-logo { display: flex; align-items: center; gap: 8px; font-size: 17px; font-weight: 800; color: var(--dark); text-decoration: none; }
+  .nav-logo-mark { width: 30px; height: 30px; border-radius: 8px; background: var(--indigo); display: flex; align-items: center; justify-content: center; color: white; font-size: 13px; font-weight: 800; }
+  .nav-back { font-size: 13px; color: var(--muted); text-decoration: none; }
+  .nav-back:hover { color: var(--dark); }
+  .hero { padding: 64px 0 56px; border-bottom: 1px solid var(--border); }
+  .hero-chip { display: inline-flex; align-items: center; gap: 6px; background: var(--accent-light); color: #92400e; font-size: 12px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; padding: 5px 12px; border-radius: 100px; margin-bottom: 20px; }
+  .hero h1 { margin-bottom: 18px; max-width: 700px; }
+  .hero .lead { font-size: 18px; color: var(--muted); line-height: 1.7; max-width: 620px; margin-bottom: 32px; }
+  .hero-cta { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 32px; }
+  .hero-proof { font-size: 13px; color: var(--muted); display: flex; gap: 16px; flex-wrap: wrap; }
+  .hero-proof span::before { content: '✓ '; color: #16a34a; font-weight: 700; }
+  .content-section { padding: 56px 0; border-bottom: 1px solid var(--border); }
+  .content-section h2 { margin-bottom: 20px; }
+  .content-section p { margin-bottom: 16px; font-size: 15px; line-height: 1.8; }
+  .content-section p:last-child { margin-bottom: 0; }
+  .steps { display: flex; flex-direction: column; gap: 20px; margin-top: 28px; }
+  .step { display: flex; gap: 16px; align-items: flex-start; }
+  .step-num { width: 36px; height: 36px; border-radius: 50%; background: var(--indigo); color: white; font-size: 15px; font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+  .step-content h3 { font-size: 16px; margin-bottom: 6px; }
+  .step-content p { font-size: 14px; color: var(--muted); margin: 0; }
+  .card-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 28px; }
+  .card { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; }
+  .card h3 { font-size: 15px; margin-bottom: 8px; }
+  .card p { font-size: 13px; color: var(--muted); margin: 0; line-height: 1.6; }
+  .highlight-box { background: var(--indigo-light); border-left: 4px solid var(--indigo); border-radius: 0 var(--radius) var(--radius) 0; padding: 16px 20px; margin-top: 20px; font-size: 14px; color: var(--body); line-height: 1.7; }
+  .highlight-box strong { color: var(--dark); }
+  .price-box { background: var(--indigo-light); border: 2px solid var(--indigo); border-radius: var(--radius); padding: 28px 32px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; margin-top: 28px; }
+  .price-box-left h3 { font-size: 18px; margin-bottom: 6px; }
+  .price-box-left p { font-size: 14px; color: var(--muted); margin: 0; }
+  .price-box-amount { font-size: 48px; font-weight: 800; color: var(--dark); white-space: nowrap; }
+  .price-box-amount span { font-size: 16px; font-weight: 500; color: var(--muted); }
+  .cta-block { background: var(--dark); border-radius: 16px; padding: 48px 40px; text-align: center; margin: 48px 0; }
+  .cta-block h2 { color: white; margin-bottom: 12px; }
+  .cta-block p { color: rgba(255,255,255,0.6); font-size: 16px; margin-bottom: 28px; }
+  .cta-note { margin-top: 14px; font-size: 13px; color: rgba(255,255,255,0.4); }
+  .faq { margin-top: 28px; }
+  details.faq-item { border-bottom: 1px solid var(--border); }
+  details.faq-item summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; padding: 18px 0; font-size: 15px; font-weight: 600; color: var(--dark); transition: color .15s; }
+  details.faq-item summary::-webkit-details-marker { display: none; }
+  details.faq-item summary:hover { color: var(--indigo); }
+  .faq-icon { font-size: 20px; color: var(--muted); flex-shrink: 0; transition: transform .2s; }
+  details.faq-item[open] summary { color: var(--indigo); }
+  details.faq-item[open] .faq-icon { transform: rotate(45deg); color: var(--indigo); }
+  .faq-answer { font-size: 14px; color: var(--muted); line-height: 1.7; padding-bottom: 18px; }
+  .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; }
+  .breadcrumb a { color: var(--muted); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--indigo); }
+  .breadcrumb span { margin: 0 6px; }
+  footer { background: var(--dark); padding: 32px 5%; color: rgba(255,255,255,0.5); font-size: 13px; }
+  .footer-inner { max-width: 860px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  .footer-logo { font-size: 15px; font-weight: 800; color: white; text-decoration: none; }
+  .footer-links { display: flex; gap: 20px; }
+  .footer-links a { color: rgba(255,255,255,0.5); text-decoration: none; }
+  .footer-links a:hover { color: white; }
+  @media (max-width: 600px) { .card-grid { grid-template-columns: 1fr; } .price-box { flex-direction: column; text-align: center; } .cta-block { padding: 32px 24px; } }
+</style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Ga naar hoofdinhoud</a>
+<nav>
+  <a href="/" class="nav-logo"><div class="nav-logo-mark">J</div>Jaarklaar</a>
+  <a href="/" class="nav-back">← Terug naar overzicht</a>
+  <a href="https://app.jaarklaar.app" class="btn btn-primary" style="padding:8px 18px;font-size:13px;">Begin nu →</a>
+</nav>
+
+<main id="main-content">
+<div class="container">
+
+  <section class="hero">
+    <div class="breadcrumb"><a href="/">Jaarklaar</a><span>›</span> ZZP jaarrekening</div>
+    <div class="hero-chip">ZZP · Eenmanszaak · VOF · Fiscaal</div>
+    <h1>ZZP jaarrekening maken — resultatenrekening in minuten</h1>
+    <p class="lead">Als ZZP'er of eenmanszaak heb je geen accountant nodig voor je jaarrekening. Jaarklaar maakt een overzichtelijke resultatenrekening en fiscaal overzicht voor je inkomstenbelastingaangifte. Snel, goedkoop en klaar.</p>
+    <div class="hero-cta">
+      <a href="https://app.jaarklaar.app" class="btn btn-primary">Start je ZZP-jaarrekening →</a>
+      <a href="#wat-heb-ik-nodig" class="btn btn-secondary">Wat heb ik nodig?</a>
+    </div>
+    <div class="hero-proof">
+      <span>Resultatenrekening inbegrepen</span>
+      <span>Fiscaal overzicht voor IB-aangifte</span>
+      <span>PDF in één klik</span>
+      <span>€9 per jaarrekening</span>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <h2>Heeft een ZZP'er een jaarrekening nodig?</h2>
+    <p>Een eenmanszaak is wettelijk niet verplicht een jaarrekening op te stellen zoals een BV dat is. Toch heeft bijna elke ZZP'er baat bij een gestructureerd financieel overzicht over het boekjaar:</p>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Voor de belastingaangifte</h3>
+        <p>De Belastingdienst vraagt om een winst-en-verliesrekening als onderbouwing van je IB-aangifte. Jaarklaar genereert dit overzicht automatisch.</p>
+      </div>
+      <div class="card">
+        <h3>Voor je boekhouder</h3>
+        <p>Veel ZZP'ers doen de dagelijkse boekhouding zelf maar laten de aangifte door een boekhouder doen. Een nette jaarrekening bespaart uren.</p>
+      </div>
+      <div class="card">
+        <h3>Voor je hypotheek of lening</h3>
+        <p>Banken en hypotheekverstrekkers vragen om de jaarrekeningen van de laatste twee of drie jaar als bewijs van inkomen.</p>
+      </div>
+      <div class="card">
+        <h3>Voor je eigen overzicht</h3>
+        <p>Inzicht in je omzet, kosten en winst helpt je betere zakelijke beslissingen te nemen.</p>
+      </div>
+    </div>
+    <div class="highlight-box">
+      <strong>Let op het verschil met een BV.</strong> Heb je een BV? Dan ben je wettelijk verplicht een jaarrekening op te stellen en te deponeren bij de KvK. Kijk dan op de pagina <a href="/bv-jaarrekening">jaarrekening kleine BV maken</a> of <a href="/micro-onderneming-jaarrekening">jaarrekening micro-onderneming</a>.
+    </div>
+  </section>
+
+  <section class="content-section" id="wat-heb-ik-nodig">
+    <h2>Wat heb je nodig?</h2>
+    <p>Voor een ZZP-jaarrekening in Jaarklaar heb je het volgende bij de hand:</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <h3>Je totale omzet over het boekjaar</h3>
+          <p>Het totaal van alle gefactureerde bedragen exclusief btw. Dit haal je uit je boekhoudpakket (Moneybird, e-Boekhouden, etc.) of uit je factuuroverzicht.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <h3>Je kostenposten</h3>
+          <p>Inkoopkosten, autokosten, kantoorkosten, software-abonnementen, verzekeringen, afschrijvingen op bedrijfsmiddelen enzovoort.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <h3>Uren voor zelfstandigenaftrek</h3>
+          <p>Als je meer dan 1.225 uur per jaar aan je onderneming besteedt, kom je in aanmerking voor de zelfstandigenaftrek. Jaarklaar heeft hier een apart veld voor in het fiscaal overzicht.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <h2>Wat maakt Jaarklaar voor je?</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Resultatenrekening</h3>
+        <p>Overzicht van omzet, inkoopkosten en bedrijfskosten met berekening van de nettowinst.</p>
+      </div>
+      <div class="card">
+        <h3>Fiscaal overzicht</h3>
+        <p>Winst uit onderneming, zelfstandigenaftrek, startersaftrek en MKB-winstvrijstelling — klaar voor de IB-aangifte.</p>
+      </div>
+      <div class="card">
+        <h3>Vergelijkend jaar</h3>
+        <p>Cijfers naast het vorige boekjaar, zodat je ontwikkeling direct zichtbaar is.</p>
+      </div>
+      <div class="card">
+        <h3>PDF export</h3>
+        <p>Professioneel opgemaakte PDF, klaar om te delen met je boekhouder, bank of hypotheekadviseur.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <h2>Wat kost het?</h2>
+    <p>De goedkoopste optie in Jaarklaar. Betaal alleen bij export.</p>
+    <div class="price-box">
+      <div class="price-box-left">
+        <h3>ZZP / Eenmanszaak jaarrekening</h3>
+        <p>Resultatenrekening, fiscaal overzicht en vergelijkend jaar. PDF in één klik.</p>
+      </div>
+      <div>
+        <div class="price-box-amount">€9 <span>per jaarrekening</span></div>
+        <a href="https://app.jaarklaar.app" class="btn btn-primary" style="margin-top:12px;">Begin gratis →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <h2>Veelgestelde vragen</h2>
+    <div class="faq">
+      <details class="faq-item">
+        <summary>Is een jaarrekening verplicht voor een eenmanszaak? <span class="faq-icon">+</span></summary>
+        <div class="faq-answer">Nee, niet wettelijk. Een eenmanszaak heeft geen publicatieplicht zoals een BV. Maar de Belastingdienst vereist wel een winst-en-verliesrekening als basis voor de IB-aangifte, en banken en hypotheekverstrekkers vragen om jaarrekeningen als inkomstenbewijs.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Wat is het verschil tussen Jaarklaar en eenvoudigejaarrekening.nl? <span class="faq-icon">+</span></summary>
+        <div class="faq-answer">Eenvoudigejaarrekening.nl richt zich ook op ZZP'ers, maar ondersteunt geen VvE's, stichtingen of BV's. Jaarklaar biedt dezelfde functionaliteit voor ZZP'ers maar ook alle andere segmenten — handig als je meerdere entiteiten hebt of later een BV opricht.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Werkt Jaarklaar ook voor een VOF? <span class="faq-icon">+</span></summary>
+        <div class="faq-answer">Ja. Een VOF heeft dezelfde structuur als een eenmanszaak wat betreft de resultatenrekening. Je kunt de ZZP-module gebruiken voor een VOF. Elke vennoot gebruikt zijn eigen aandeel in de winst voor zijn IB-aangifte.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Heb ik ook een balans nodig als ZZP'er? <span class="faq-icon">+</span></summary>
+        <div class="faq-answer">Voor de Belastingdienst is een resultatenrekening voldoende. Voor een hypotheekaanvraag of lening vragen sommige banken ook om een balans. Jaarklaar heeft een eenvoudige balans-optie beschikbaar in de ZZP-module.</div>
+      </details>
+    </div>
+  </section>
+
+  <div class="cta-block">
+    <h2>Klaar om te beginnen?</h2>
+    <p>Maak gratis een account en start je ZZP-jaarrekening. Betaal alleen bij export.</p>
+    <a href="https://app.jaarklaar.app" class="btn btn-primary" style="font-size:16px;padding:15px 36px;">Start je ZZP-jaarrekening →</a>
+    <div class="cta-note">€9 per jaarrekening · Geen abonnement · In minuten klaar</div>
+  </div>
+
+</div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <a href="/" class="footer-logo">Jaarklaar</a>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/vve-jaarrekening">VvE</a>
+      <a href="/stichting-jaarrekening">Stichting</a>
+      <a href="/bv-jaarrekening">Kleine BV</a>
+      <a href="/micro-onderneming-jaarrekening">Micro</a>
+      <a href="https://app.jaarklaar.app">App</a>
+      <a href="mailto:cees@ceesdecontroller.nl">Contact</a>
+    </div>
+    <div>© 2026 Cees de Controller</div>
+  </div>
+</footer>
+</body>
+</html>

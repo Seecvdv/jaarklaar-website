@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jaarrekening micro-onderneming maken — snel & compliant | Jaarklaar</title>
+<meta name="description" content="Maak zelf de jaarrekening van je micro-onderneming. Jaarklaar past het microregime (art. 2:395a BW) automatisch toe. KvK-deponering gereed. Vanaf €19.">
+<link rel="canonical" href="https://jaarklaar.app/micro-onderneming-jaarrekening">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root { --indigo: #6366f1; --indigo-dark: #4f46e5; --indigo-light: #eef2ff; --dark: #0f172a; --body: #334155; --muted: #64748b; --border: #e2e8f0; --bg: #f8fafc; --radius: 14px; --accent: #0ea5e9; --accent-light: #f0f9ff; }
+  body { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; color: var(--body); background: white; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  h1, h2, h3 { color: var(--dark); line-height: 1.25; font-weight: 800; }
+  h1 { font-size: clamp(32px, 4.5vw, 52px); letter-spacing: -.02em; }
+  h2 { font-size: clamp(24px, 3vw, 36px); letter-spacing: -.015em; }
+  h3 { font-size: 18px; }
+  a { color: var(--indigo); }
+  .container { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+  .btn { display: inline-flex; align-items: center; gap: 7px; padding: 13px 28px; border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer; text-decoration: none; border: none; transition: all .18s; }
+  .btn-primary { background: var(--indigo); color: white; box-shadow: 0 2px 12px rgba(99,102,241,0.35); }
+  .btn-primary:hover { background: var(--indigo-dark); transform: translateY(-1px); }
+  .btn-secondary { background: white; color: var(--dark); border: 1.5px solid var(--border); }
+  .btn-secondary:hover { border-color: var(--indigo); color: var(--indigo); }
+  .skip-link { position: absolute; top: -40px; left: 0; background: var(--indigo); color: white; padding: 8px 16px; z-index: 1000; font-size: 14px; font-weight: 600; text-decoration: none; border-radius: 0 0 8px 0; }
+  .skip-link:focus { top: 0; }
+  nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 0 5%; display: flex; align-items: center; justify-content: space-between; height: 60px; }
+  .nav-logo { display: flex; align-items: center; gap: 8px; font-size: 17px; font-weight: 800; color: var(--dark); text-decoration: none; }
+  .nav-logo-mark { width: 30px; height: 30px; border-radius: 8px; background: var(--indigo); display: flex; align-items: center; justify-content: center; color: white; font-size: 13px; font-weight: 800; }
+  .nav-back { font-size: 13px; color: var(--muted); text-decoration: none; }
+  .nav-back:hover { color: var(--dark); }
+  .hero { padding: 64px 0 56px; border-bottom: 1px solid var(--border); }
+  .hero-chip { display: inline-flex; align-items: center; gap: 6px; background: var(--accent-light); color: #0369a1; font-size: 12px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; padding: 5px 12px; border-radius: 100px; margin-bottom: 20px; }
+  .hero h1 { margin-bottom: 18px; max-width: 700px; }
+  .hero .lead { font-size: 18px; color: var(--muted); line-height: 1.7; max-width: 620px; margin-bottom: 32px; }
+  .hero-cta { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 32px; }
+  .hero-proof { font-size: 13px; color: var(--muted); display: flex; gap: 16px; flex-wrap: wrap; }
+  .hero-proof span::before { content: '✓ '; color: #16a34a; font-weight: 700; }
+  .content-section { padding: 56px 0; border-bottom: 1px solid var(--border); }
+  .content-section h2 { margin-bottom: 20px; }
+  .content-section p { margin-bottom: 16px; font-size: 15px; line-height: 1.8; }
+  .content-section p:last-child { margin-bottom: 0; }
+  .steps { display: flex; flex-direction: column; gap: 20px; margin-top: 28px; }
+  .step { display: flex; gap: 16px; align-items: flex-start; }
+  .step-num { width: 36px; height: 36px; border-radius: 50%; background: var(--indigo); color: white; font-size: 15px; font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+  .step-content h3 { font-size: 16px; margin-bottom: 6px; }
+  .step-content p { font-size: 14px; color: var(--muted); margin: 0; }
+  .card-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 28px; }
+  .card { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; }
+  .card h3 { font-size: 15px; margin-bottom: 8px; }
+  .card p { font-size: 13px; color: var(--muted); margin: 0; line-height: 1.6; }
+  .criteria-box { background: var(--accent-light); border: 1px solid #bae6fd; border-radius: var(--radius); padding: 20px 24px; margin-top: 20px; }
+  .criteria-box h3 { font-size: 15px; margin-bottom: 12px; color: #0369a1; }
+  .criteria-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+  .criteria-list li { font-size: 14px; color: var(--body); display: flex; align-items: center; gap: 8px; }
+  .criteria-list li::before { content: '≤'; font-weight: 800; color: #0369a1; flex-shrink: 0; }
+  .price-box { background: var(--indigo-light); border: 2px solid var(--indigo); border-radius: var(--radius); padding: 28px 32px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; margin-top: 28px; }
+  .price-box-left h3 { font-size: 18px; margin-bottom: 6px; }
+  .price-box-left p { font-size: 14px; color: var(--muted); margin: 0; }
+  .price-box-amount { font-size: 48px; font-weight: 800; color: var(--dark); white-space: nowrap; }
+  .price-box-amount span { font-size: 16px; font-weight: 500; color: var(--muted); }
+  .cta-block { background: var(--dark); border-radius: 16px; padding: 48px 40px; text-align: center; margin: 48px 0; }
+  .cta-block h2 { color: white; margin-bottom: 12px; }
+  .cta-block p { color: rgba(255,255,255,0.6); font-size: 16px; margin-bottom: 28px; }
+  .cta-note { margin-top: 14px; font-size: 13px; color: rgba(255,255,255,0.4); }
+  .faq { margin-top: 28px; }
+  details.faq-item { border-bottom: 1px solid var(--border); }
+  details.faq-item summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; padding: 18px 0; font-size: 15px; font-weight: 600; color: var(--dark); transition: color .15s; }
+  details.faq-item summary::-webkit-details-marker { display: none; }
+  details.faq-item summary:hover { color: var(--indigo); }
+  .faq-icon { font-size: 20px; color: var(--muted); flex-shrink: 0; transition: transform .2s; }
+  details.faq-item[open] summary { color: var(--indigo); }
+  details.faq-item[open] .faq-icon { transform: rotate(45deg); color: var(--indigo); }
+  .faq-answer { font-size: 14px; color: var(--muted); line-height: 1.7; padding-bottom: 18px; }
+  .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; }
+  .breadcrumb a { color: var(--muted); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--indigo); }
+  .breadcrumb span { margin: 0 6px; }
+  footer { background: var(--dark); padding: 32px 5%; color: rgba(255,255,255,0.5); font-size: 13px; }
+  .footer-inner { max-width: 860px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  .footer-logo { font-size: 15px; font-weight: 800; color: white; text-decoration: none; }
+  .footer-links { display: flex; gap: 20px; }
+  .footer-links a { color: rgba(255,255,255,0.5); text-decoration: none; }
+  .footer-links a:hover { color: white; }
+  @media (max-width: 600px) { .card-grid { grid-template-columns: 1fr; } .price-box { flex-direction: column; text-align: center; } .cta-block { padding: 32px 24px; } }
+</style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Ga naar hoofdinhoud</a>
+<nav>
+  <a href="/" class="nav-logo"><div class="nav-logo-mark">J</div>Jaarklaar</a>
+  <a href="/" class="nav-back">← Terug naar overzicht</a>
+  <a href="https://app.jaarklaar.app" class="btn btn-primary" style="padding:8px 18px;font-size:13px;">Begin nu →</a>
+</nav>
+
+<main id="main-content">
+<div class="container">
+
+  <section class="hero">
+    <div class="breadcrumb"><a href="/">Jaarklaar</a><span>›</span> Jaarrekening micro-onderneming</div>
+    <div class="hero-chip">Micro-onderneming · Art. 2:395a BW · RJk</div>
+    <h1>Jaarrekening micro-onderneming maken</h1>
+    <p class="lead">Als micro-onderneming mag je een sterk vereenvoudigde jaarrekening opstellen op basis van art. 2:395a BW. Jaarklaar past het microregime automatisch toe — minder posten, minder toelichting, maar wettelijk volledig conform.</p>
+    <div class="hero-cta">
+      <a href="https://app.jaarklaar.app" class="btn btn-primary">Start je jaarrekening →</a>
+      <a href="#microregime" class="btn btn-secondary">Val ik onder het microregime?</a>
+    </div>
+    <div class="hero-proof">
+      <span>Microregime automatisch</span>
+      <span>KvK-deponering gereed</span>
+      <span>Minimale toelichting vereist</span>
+      <span>€19 per jaarrekening</span>
+    </div>
+  </section>
+
+  <section class="content-section" id="microregime">
+    <h2>Val jij onder het microregime?</h2>
+    <p>Je bent een micro-onderneming als je op twee opeenvolgende balansdata aan minimaal twee van de volgende drie criteria voldoet (per 1 januari 2024, art. 2:395a BW):</p>
+    <div class="criteria-box">
+      <h3>Criteria microrechtspersoon (2024)</h3>
+      <ul class="criteria-list">
+        <li>Balanstotaal van €450.000</li>
+        <li>Netto-omzet van €900.000</li>
+        <li>Minder dan 10 werknemers gemiddeld over het boekjaar</li>
+      </ul>
+    </div>
+    <p style="margin-top:20px;">Val je niet onder micro maar wel onder klein (balanstotaal ≤ €7,5M, omzet ≤ €15M, &lt;50 werknemers)? Kijk dan op de pagina <a href="/bv-jaarrekening">jaarrekening kleine BV maken</a>.</p>
+  </section>
+
+  <section class="content-section">
+    <h2>Wat mag een micro-onderneming weglaten?</h2>
+    <p>Het microregime biedt aanzienlijke vereenvoudigingen ten opzichte van het kleine en middelgrote regime. Op grond van art. 2:395a lid 4 en 5 BW hoef je als micro-onderneming onder andere het volgende niet op te nemen:</p>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Beperkte balans</h3>
+        <p>Activa en passiva mogen worden samengetrokken tot hoofdposten. Geen verplichte uitsplitsing van alle subposten.</p>
+      </div>
+      <div class="card">
+        <h3>Vereenvoudigde W&V-rekening</h3>
+        <p>Minder verplichte posten. Baten en lasten uit gewone bedrijfsuitoefening hoeven niet apart te worden vermeld.</p>
+      </div>
+      <div class="card">
+        <h3>Beperkte toelichting</h3>
+        <p>Veel verplichte toelichtingen uit afdeling 6 van Titel 9 Boek 2 BW zijn niet van toepassing op micro-ondernemingen.</p>
+      </div>
+      <div class="card">
+        <h3>Geen kasstroomoverzicht verplicht</h3>
+        <p>Micro-ondernemingen zijn niet verplicht een kasstroomoverzicht op te stellen, al kan het nuttig zijn.</p>
+      </div>
+      <div class="card">
+        <h3>Fiscale grondslagen toegestaan</h3>
+        <p>Micro-ondernemingen mogen fiscale grondslagen toepassen voor waardering en resultaatbepaling, mits consequent toegepast.</p>
+      </div>
+      <div class="card">
+        <h3>Geen bestuursverslag verplicht</h3>
+        <p>Micro-ondernemingen zijn vrijgesteld van de verplichting tot het opstellen van een bestuursverslag.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section" id="hoe-het-werkt">
+    <h2>Zo maak je de jaarrekening in Jaarklaar</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <h3>Kies het type "Micro-onderneming"</h3>
+          <p>Jaarklaar past direct de vereenvoudigde indeling toe conform art. 2:395a BW. Alleen de relevante posten en minimale toelichting worden getoond.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <h3>Importeer of vul in</h3>
+          <p>Upload je export vanuit Moneybird of Exact Online, of voer de cijfers handmatig in. Kolommenbalans vanuit andere software werkt ook.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <h3>Exporteer en deponeer</h3>
+          <p>Download de PDF. Onderteken, en deponeer bij de KvK. Micro-ondernemingen mogen een beperkte balans deponeren — Jaarklaar houdt daar rekening mee.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <h2>Wat kost het?</h2>
+    <p>Je betaalt alleen bij het exporteren van de definitieve PDF. Invoeren en aanpassen is gratis.</p>
+    <div class="price-box">
+      <div class="price-box-left">
+        <h3>Jaarrekening micro-onderneming</h3>
+        <p>Vereenvoudigd microregime conform art. 2:395a BW. Inclusief balans, W&V-rekening en minimale toelichting.</p>
+      </div>
+      <div>
+        <div class="price-box-amount">€19 <span>per jaarrekening</span></div>
+        <a href="https://app.jaarklaar.app" class="btn btn-primary" style="margin-top:12px;">Begin gratis →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <h2>Veelgestelde vragen</h2>
+    <div class="faq">
+      <details class="faq-item">
+        <summary>Moet een micro-onderneming een jaarrekening deponeren bij de KvK? <span class="faq-icon">+</span></summary>
+        <div class="faq-answer">Ja. Micro-ondernemingen zijn verplicht hun jaarrekening te deponeren bij de KvK, maar mogen volstaan met een beperkte balans (art. 2:395a lid 8 BW). Winst-en-verliesrekening en toelichting hoeven niet gepubliceerd te worden.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Mag ik fiscale grondslagen toepassen? <span class="faq-icon">+</span></summary>
+        <div class="faq-answer">Ja. Micro-ondernemingen mogen op grond van art. 2:395a lid 7 BW fiscale grondslagen toepassen voor waardering en resultaatbepaling, mits ze alle voor hen geldende fiscale grondslagen consequent toepassen. Je moet dit wel vermelden in de toelichting.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Wat als ik niet meer aan de microcriteria voldoe? <span class="faq-icon">+</span></summary>
+        <div class="faq-answer">Als je twee jaar achter elkaar niet meer aan de microcriteria voldoet, val je in het kleine of middelgrote regime. Je kunt dan in Jaarklaar het type "Kleine onderneming" kiezen.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Is een accountant verplicht voor micro-ondernemingen? <span class="faq-icon">+</span></summary>
+        <div class="faq-answer">Nee. Accountantscontrole is niet verplicht voor micro-ondernemingen. Voor extra zekerheid biedt Jaarklaar een accountantscheck op afroep voor €110 per uur.</div>
+      </details>
+    </div>
+  </section>
+
+  <div class="cta-block">
+    <h2>Klaar om te beginnen?</h2>
+    <p>Maak gratis een account en start je jaarrekening. Betaal alleen bij export.</p>
+    <a href="https://app.jaarklaar.app" class="btn btn-primary" style="font-size:16px;padding:15px 36px;">Start je jaarrekening →</a>
+    <div class="cta-note">€19 per jaarrekening · Microregime · KvK-gereed</div>
+  </div>
+
+</div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <a href="/" class="footer-logo">Jaarklaar</a>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/vve-jaarrekening">VvE</a>
+      <a href="/stichting-jaarrekening">Stichting</a>
+      <a href="/bv-jaarrekening">Kleine BV</a>
+      <a href="/zzp-jaarrekening">ZZP</a>
+      <a href="https://app.jaarklaar.app">App</a>
+      <a href="mailto:cees@ceesdecontroller.nl">Contact</a>
+    </div>
+    <div>© 2026 Cees de Controller</div>
+  </div>
+</footer>
+</body>
+</html>

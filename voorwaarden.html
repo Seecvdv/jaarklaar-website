@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Algemene Voorwaarden – Jaarklaar</title>
+  <meta name="description" content="Algemene voorwaarden van Jaarklaar. Lees wat u mag verwachten van onze dienst en wat uw verantwoordelijkheden zijn." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --blauw: #1D4ED8;
+      --blauw-licht: #EFF6FF;
+      --blauw-mid: #DBEAFE;
+      --tekst: #111827;
+      --subtekst: #6B7280;
+      --rand: #E5E7EB;
+      --achtergrond: #F3F4F8;
+      --wit: #ffffff;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--tekst);
+      background: var(--achtergrond);
+    }
+
+    .site-header {
+      background: var(--wit);
+      border-bottom: 1px solid var(--rand);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+    }
+    .site-header-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 15px;
+      color: var(--tekst);
+    }
+    .logo-icon {
+      width: 30px;
+      height: 30px;
+      background: var(--blauw);
+      border-radius: 7px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .logo-icon svg { display: block; }
+    .header-link {
+      font-size: 13px;
+      color: var(--blauw);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .header-link:hover { text-decoration: underline; }
+
+    .hero {
+      background: linear-gradient(135deg, #1e3a8a 0%, #1D4ED8 60%, #3b82f6 100%);
+      color: white;
+      padding: 48px 24px 40px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: clamp(20px, 4vw, 30px);
+      font-weight: 700;
+      margin-bottom: 10px;
+      line-height: 1.25;
+    }
+    .hero .datum {
+      font-size: 13px;
+      opacity: 0.8;
+      background: rgba(255,255,255,0.15);
+      display: inline-block;
+      padding: 4px 14px;
+      border-radius: 20px;
+      margin-top: 8px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 32px 24px 80px;
+    }
+
+    .artikel {
+      background: var(--wit);
+      border: 1px solid var(--rand);
+      border-radius: 14px;
+      padding: 32px 36px;
+      margin-bottom: 16px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+    @media (max-width: 600px) {
+      .artikel { padding: 20px 18px; }
+    }
+
+    .artikel h2 {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--blauw);
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--rand);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .artikel h2 .nr {
+      width: 26px;
+      height: 26px;
+      background: var(--blauw-licht);
+      color: var(--blauw);
+      border-radius: 50%;
+      font-size: 12px;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    h3 { font-size: 14px; font-weight: 700; color: var(--tekst); margin: 18px 0 8px; }
+    p { color: #374151; margin-bottom: 12px; font-size: 14px; }
+    p:last-child { margin-bottom: 0; }
+    ul, ol { margin: 8px 0 12px 20px; }
+    li { color: #374151; font-size: 14px; margin-bottom: 5px; line-height: 1.6; }
+
+    .waarschuwing {
+      background: #fffbeb;
+      border: 1px solid #fde68a;
+      border-radius: 10px;
+      padding: 14px 18px;
+      font-size: 14px;
+      color: #92400e;
+      margin: 14px 0;
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+    .infobox {
+      background: var(--blauw-licht);
+      border: 1px solid var(--blauw-mid);
+      border-radius: 10px;
+      padding: 14px 18px;
+      font-size: 14px;
+      color: #1e40af;
+      margin: 14px 0;
+    }
+
+    a { color: var(--blauw); }
+    a:hover { text-decoration: underline; }
+
+    footer {
+      background: var(--wit);
+      border-top: 1px solid var(--rand);
+      padding: 24px;
+      text-align: center;
+      font-size: 12px;
+      color: var(--subtekst);
+    }
+    footer a { color: var(--subtekst); text-decoration: none; margin: 0 8px; }
+    footer a:hover { color: var(--blauw); }
+    .footer-links { margin-bottom: 8px; }
+
+    [id] { scroll-margin-top: 72px; }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="https://app.jaarklaar.app" class="logo">
+      <div class="logo-icon">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M3 2h10a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1z" stroke="white" stroke-width="1.5"/>
+          <path d="M5 6h6M5 9h4" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      Jaarklaar
+    </a>
+    <a href="https://app.jaarklaar.app" class="header-link">Terug naar de app →</a>
+  </div>
+</header>
+
+<div class="hero">
+  <h1>Algemene Voorwaarden</h1>
+  <div class="datum">Laatst bijgewerkt: 31 maart 2026</div>
+</div>
+
+<div class="container">
+
+  <div class="infobox">
+    Door gebruik te maken van Jaarklaar gaat u akkoord met deze algemene voorwaarden. Lees ze zorgvuldig door voordat u de applicatie gebruikt.
+  </div>
+
+  <!-- 1 -->
+  <div class="artikel" id="dienst">
+    <h2><span class="nr">1</span> Wat is Jaarklaar?</h2>
+    <p>Jaarklaar is een online softwareapplicatie, aangeboden door <strong>Cees de Controller</strong>, waarmee gebruikers zelfstandig een financiële jaarrekening kunnen opstellen voor hun organisatie.</p>
+    <p>De applicatie is geschikt voor:</p>
+    <ul>
+      <li>ZZP'ers en eenmanszaken</li>
+      <li>Micro-rechtspersonen (BV, stichting, vereniging)</li>
+      <li>Kleine rechtspersonen</li>
+      <li>Verenigingen van Eigenaars (VvE)</li>
+      <li>Fondsenwervende organisaties en ANBI-stichtingen (RJ 650)</li>
+    </ul>
+    <p>Jaarklaar is een hulpmiddel voor het opstellen van financiële overzichten. De applicatie vervangt <strong>geen</strong> professioneel accountants- of belastingadvies.</p>
+  </div>
+
+  <!-- 2 -->
+  <div class="artikel" id="toegang">
+    <h2><span class="nr">2</span> Wat krijgt u?</h2>
+    <h3>Gratis</h3>
+    <ul>
+      <li>Aanmaken van een account</li>
+      <li>Aanmaken en bewerken van dossiers</li>
+      <li>Opslaan van gegevens in uw account</li>
+      <li>Inzage in alle tabbladen en invoervelden</li>
+    </ul>
+    <h3>Na betaling (eenmalig per dossier)</h3>
+    <ul>
+      <li>Downloaden van een opgemaakte PDF van de jaarrekening</li>
+      <li>Downloaden van een Excel-export van de financiële overzichten</li>
+      <li>Downloaden van een iXBRL-bestand voor deponering bij de Kamer van Koophandel (waar van toepassing)</li>
+    </ul>
+    <p>Betaling geeft toegang tot de exportfunctie voor het betreffende dossier. Er is geen tijdslimiet op het gebruik van een betaald dossier.</p>
+  </div>
+
+  <!-- 3 -->
+  <div class="artikel" id="niet-inbegrepen">
+    <h2><span class="nr">3</span> Wat krijgt u niet?</h2>
+    <div class="waarschuwing">
+      <span>⚠️</span>
+      <span>Jaarklaar is software, geen adviseur. De volgende diensten zijn uitdrukkelijk <strong>niet</strong> inbegrepen.</span>
+    </div>
+    <ul>
+      <li><strong>Geen accountantsadvies</strong> — Jaarklaar controleert niet of uw ingevoerde gegevens fiscaal of juridisch juist zijn.</li>
+      <li><strong>Geen garantie op fiscale juistheid</strong> — U bent zelf verantwoordelijk voor de juistheid van de ingevoerde gegevens. Onjuiste invoer leidt tot een onjuiste jaarrekening.</li>
+      <li><strong>Geen belastingadvies</strong> — De fiscale overzichten (zoals de ZZP-aftrekposten) zijn informatief van aard en geen belastingadvies.</li>
+      <li><strong>Geen goedkeuring van de jaarrekening</strong> — Jaarklaar stelt geen accountantsverklaring op en verricht geen controle.</li>
+      <li><strong>Geen garantie op acceptatie door KvK</strong> — Hoewel Jaarklaar de iXBRL-export zo goed mogelijk aanmaakt conform de KvK-taxonomie, garanderen wij niet dat het bestand door de KvK wordt geaccepteerd. Gebruik de SBR-validator voor controle.</li>
+    </ul>
+  </div>
+
+  <!-- 4 -->
+  <div class="artikel" id="betaling">
+    <h2><span class="nr">4</span> Betaling</h2>
+    <ul>
+      <li>Betaling vindt eenmalig plaats per dossier, op het moment dat u een export wilt downloaden.</li>
+      <li>De prijzen zijn zichtbaar in de applicatie voordat u tot betaling overgaat.</li>
+      <li>Betaling verloopt via Stripe. Door te betalen gaat u akkoord met de <a href="https://stripe.com/nl/legal/consumer" target="_blank" rel="noopener">voorwaarden van Stripe</a>.</li>
+      <li><strong>Geen restitutie na download</strong> — Omdat de export direct na betaling beschikbaar is (digitale levering), geldt het herroepingsrecht niet zodra u de download heeft gestart. U geeft bij betaling uitdrukkelijk toestemming voor directe levering.</li>
+      <li>Bij technische problemen waardoor u de download niet heeft ontvangen, kunt u contact opnemen via <a href="mailto:cees@ceesdecontroller.nl">cees@ceesdecontroller.nl</a>.</li>
+    </ul>
+  </div>
+
+  <!-- 5 -->
+  <div class="artikel" id="aansprakelijkheid">
+    <h2><span class="nr">5</span> Aansprakelijkheid</h2>
+    <p><strong>Gebruiker is verantwoordelijk voor de ingevoerde gegevens.</strong> U bent zelf verantwoordelijk voor de volledigheid en juistheid van alle gegevens die u invoert in Jaarklaar. Een onjuiste of onvolledige jaarrekening die voortkomt uit foutieve invoer is uw eigen verantwoordelijkheid.</p>
+    <p>Cees de Controller is niet aansprakelijk voor:</p>
+    <ul>
+      <li>Schade die voortvloeit uit het gebruik van een onjuist opgemaakte jaarrekening</li>
+      <li>Boetes, naheffingen of andere gevolgen van een onjuiste aangifte of deponering</li>
+      <li>Verlies van gegevens door technische storingen (zie artikel 6)</li>
+      <li>Tijdelijke onbeschikbaarheid van de applicatie</li>
+    </ul>
+    <p>De aansprakelijkheid van Cees de Controller is in alle gevallen beperkt tot het bedrag dat u heeft betaald voor de betreffende export.</p>
+  </div>
+
+  <!-- 6 -->
+  <div class="artikel" id="beschikbaarheid">
+    <h2><span class="nr">6</span> Beschikbaarheid en gegevensopslag</h2>
+    <p>Wij streven naar een hoge beschikbaarheid van de applicatie, maar geven geen garanties over uptime. Uw gegevens worden opgeslagen via Supabase (EU-datacenter). Wij adviseren u regelmatig exportbestanden te downloaden als lokale back-up van uw jaarrekening.</p>
+    <p>Cees de Controller behoudt zich het recht voor om de dienst te wijzigen of te beëindigen. Bij beëindiging van de dienst ontvangt u minimaal 30 dagen van tevoren een e-mail met de mogelijkheid uw gegevens te exporteren.</p>
+  </div>
+
+  <!-- 7 -->
+  <div class="artikel" id="account">
+    <h2><span class="nr">7</span> Uw account</h2>
+    <ul>
+      <li>U bent verantwoordelijk voor de vertrouwelijkheid van uw inloggegevens.</li>
+      <li>U mag uw account niet delen met anderen.</li>
+      <li>U mag Jaarklaar niet gebruiken voor onrechtmatige doeleinden of voor het opstellen van valse jaarrekeningen.</li>
+      <li>Cees de Controller behoudt het recht een account te beëindigen bij misbruik.</li>
+    </ul>
+  </div>
+
+  <!-- 8 -->
+  <div class="artikel" id="ip">
+    <h2><span class="nr">8</span> Intellectueel eigendom</h2>
+    <p>De applicatie Jaarklaar, inclusief de software, vormgeving, teksten en gegenereerde sjablonen, is intellectueel eigendom van <strong>Cees de Controller</strong>. Het is niet toegestaan om de applicatie of onderdelen daarvan te kopiëren, te reverse-engineeren of te distribueren zonder schriftelijke toestemming.</p>
+    <p>De door u ingevoerde gegevens en gegenereerde jaarrekeningen zijn en blijven uw eigendom.</p>
+  </div>
+
+  <!-- 9 -->
+  <div class="artikel" id="recht">
+    <h2><span class="nr">9</span> Toepasselijk recht</h2>
+    <p>Op deze algemene voorwaarden is <strong>Nederlands recht</strong> van toepassing. Geschillen worden voorgelegd aan de bevoegde rechter in Nederland.</p>
+  </div>
+
+  <!-- 10 -->
+  <div class="artikel" id="wijzigingen">
+    <h2><span class="nr">10</span> Wijzigingen</h2>
+    <p>Cees de Controller behoudt zich het recht voor deze voorwaarden aan te passen. Wezenlijke wijzigingen worden minimaal 14 dagen van tevoren aangekondigd per e-mail aan geregistreerde gebruikers. De meest recente versie is altijd beschikbaar op <a href="https://app.jaarklaar.app/voorwaarden.html">app.jaarklaar.app/voorwaarden.html</a>.</p>
+    <p>Datum laatste update: <strong>31 maart 2026</strong></p>
+  </div>
+
+  <!-- 11 -->
+  <div class="artikel" id="contact">
+    <h2><span class="nr">11</span> Contact</h2>
+    <p>
+      <strong>Cees de Controller</strong><br>
+      App: <a href="https://app.jaarklaar.app">app.jaarklaar.app</a><br>
+      E-mail: <a href="mailto:cees@ceesdecontroller.nl">cees@ceesdecontroller.nl</a>
+    </p>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-links">
+    <a href="privacy.html">Privacy</a>
+    <a href="voorwaarden.html">Voorwaarden</a>
+    <a href="verwerkersovereenkomst.html">Verwerkersovereenkomst</a>
+    <a href="handleiding.html">Handleiding</a>
+    <a href="https://app.jaarklaar.app">App</a>
+  </div>
+  <p>© 2026 Cees de Controller · Jaarklaar</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacyverklaring – Jaarklaar</title>
+  <meta name="description" content="Privacyverklaring van Jaarklaar. Hoe wij omgaan met uw persoonsgegevens conform de AVG." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --blauw: #1D4ED8;
+      --blauw-licht: #EFF6FF;
+      --blauw-mid: #DBEAFE;
+      --tekst: #111827;
+      --subtekst: #6B7280;
+      --rand: #E5E7EB;
+      --achtergrond: #F3F4F8;
+      --wit: #ffffff;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--tekst);
+      background: var(--achtergrond);
+    }
+
+    /* ── HEADER ── */
+    .site-header {
+      background: var(--wit);
+      border-bottom: 1px solid var(--rand);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+    }
+    .site-header-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 15px;
+      color: var(--tekst);
+    }
+    .logo-icon {
+      width: 30px;
+      height: 30px;
+      background: var(--blauw);
+      border-radius: 7px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .logo-icon svg { display: block; }
+    .header-link {
+      font-size: 13px;
+      color: var(--blauw);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .header-link:hover { text-decoration: underline; }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(135deg, #1e3a8a 0%, #1D4ED8 60%, #3b82f6 100%);
+      color: white;
+      padding: 48px 24px 40px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: clamp(20px, 4vw, 30px);
+      font-weight: 700;
+      margin-bottom: 10px;
+      line-height: 1.25;
+    }
+    .hero .datum {
+      font-size: 13px;
+      opacity: 0.8;
+      background: rgba(255,255,255,0.15);
+      display: inline-block;
+      padding: 4px 14px;
+      border-radius: 20px;
+      margin-top: 8px;
+    }
+
+    /* ── LAYOUT ── */
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 32px 24px 80px;
+    }
+
+    /* ── INHOUD ── */
+    .artikel {
+      background: var(--wit);
+      border: 1px solid var(--rand);
+      border-radius: 14px;
+      padding: 32px 36px;
+      margin-bottom: 16px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+    @media (max-width: 600px) {
+      .artikel { padding: 20px 18px; }
+    }
+
+    .artikel h2 {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--blauw);
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--rand);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .artikel h2 .nr {
+      width: 26px;
+      height: 26px;
+      background: var(--blauw-licht);
+      color: var(--blauw);
+      border-radius: 50%;
+      font-size: 12px;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    h3 {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--tekst);
+      margin: 18px 0 8px;
+    }
+
+    p {
+      color: #374151;
+      margin-bottom: 12px;
+      font-size: 14px;
+    }
+    p:last-child { margin-bottom: 0; }
+
+    ul, ol {
+      margin: 8px 0 12px 20px;
+    }
+    li {
+      color: #374151;
+      font-size: 14px;
+      margin-bottom: 5px;
+      line-height: 1.6;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      font-size: 13px;
+    }
+    th {
+      background: var(--achtergrond);
+      text-align: left;
+      padding: 9px 12px;
+      font-weight: 600;
+      color: var(--subtekst);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      border-bottom: 2px solid var(--rand);
+    }
+    td {
+      padding: 9px 12px;
+      border-bottom: 1px solid var(--rand);
+      vertical-align: top;
+      color: #374151;
+    }
+    tr:last-child td { border-bottom: none; }
+
+    .infobox {
+      background: var(--blauw-licht);
+      border: 1px solid var(--blauw-mid);
+      border-radius: 10px;
+      padding: 14px 18px;
+      font-size: 14px;
+      color: #1e40af;
+      margin: 14px 0;
+    }
+
+    a { color: var(--blauw); }
+    a:hover { text-decoration: underline; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--wit);
+      border-top: 1px solid var(--rand);
+      padding: 24px;
+      text-align: center;
+      font-size: 12px;
+      color: var(--subtekst);
+    }
+    footer a { color: var(--subtekst); text-decoration: none; margin: 0 8px; }
+    footer a:hover { color: var(--blauw); }
+    .footer-links { margin-bottom: 8px; }
+
+    [id] { scroll-margin-top: 72px; }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="https://app.jaarklaar.app" class="logo">
+      <div class="logo-icon">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M3 2h10a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1z" stroke="white" stroke-width="1.5"/>
+          <path d="M5 6h6M5 9h4" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      Jaarklaar
+    </a>
+    <a href="https://app.jaarklaar.app" class="header-link">Terug naar de app →</a>
+  </div>
+</header>
+
+<div class="hero">
+  <h1>Privacyverklaring</h1>
+  <div class="datum">Laatst bijgewerkt: 31 maart 2026</div>
+</div>
+
+<div class="container">
+
+  <div class="infobox">
+    Jaarklaar gaat zorgvuldig om met uw persoonsgegevens. In deze privacyverklaring leggen wij uit welke gegevens wij verzamelen, waarom, en welke rechten u heeft.
+  </div>
+
+  <!-- 1 -->
+  <div class="artikel" id="verantwoordelijke">
+    <h2><span class="nr">1</span> Verwerkingsverantwoordelijke</h2>
+    <p>De verwerkingsverantwoordelijke voor de verwerking van uw persoonsgegevens is:</p>
+    <table>
+      <tr><th>Gegeven</th><th>Informatie</th></tr>
+      <tr><td>Handelsnaam</td><td>Cees de Controller</td></tr>
+      <tr><td>Applicatie</td><td>Jaarklaar (jaarklaar.app)</td></tr>
+      <tr><td>KvK-nummer</td><td>95299238</td></tr>
+      <tr><td>E-mailadres</td><td><a href="mailto:cees@ceesdecontroller.nl">cees@ceesdecontroller.nl</a></td></tr>
+    </table>
+    <p>Voor alle vragen over uw privacy kunt u contact opnemen via bovenstaand e-mailadres.</p>
+  </div>
+
+  <!-- 2 -->
+  <div class="artikel" id="gegevens">
+    <h2><span class="nr">2</span> Welke persoonsgegevens verzamelen wij?</h2>
+
+    <h3>Accountgegevens</h3>
+    <ul>
+      <li><strong>E-mailadres</strong> — nodig voor registratie, inloggen en communicatie</li>
+      <li><strong>Wachtwoord</strong> — opgeslagen als versleutelde hash via Supabase Auth; nooit leesbaar voor ons</li>
+    </ul>
+
+    <h3>Profielgegevens (optioneel, door uzelf ingevuld)</h3>
+    <ul>
+      <li>Voor- en achternaam, telefoonnummer</li>
+      <li>Bedrijfsnaam, KvK-nummer, RSIN, BTW-nummer</li>
+      <li>Vestigingsadres</li>
+      <li>Factuur-e-mailadres en interne referentie</li>
+    </ul>
+
+    <h3>Financiële gegevens in dossiers</h3>
+    <ul>
+      <li>Financiële bedragen en balansposten die u zelf invoert voor de jaarrekening</li>
+      <li>Organisatienaam, rechtsvorm, KvK-nummer, boekjaarperiode</li>
+      <li>Bestuurders en grondslagen</li>
+    </ul>
+
+    <h3>Betaalgegevens</h3>
+    <ul>
+      <li>Betaalgegevens worden <strong>uitsluitend</strong> verwerkt door Stripe. Wij slaan geen betalingskaartgegevens op.</li>
+      <li>Wij ontvangen van Stripe een betalingsbevestiging met uw e-mailadres en het betaalde bedrag.</li>
+    </ul>
+
+    <h3>Technische gegevens</h3>
+    <ul>
+      <li>IP-adres (tijdelijk, via Cloudflare voor beveiliging)</li>
+      <li>Anonieme gebruiksstatistieken via PostHog (geen cookies, geen herleidbare persoonsgegevens)</li>
+    </ul>
+  </div>
+
+  <!-- 3 -->
+  <div class="artikel" id="grondslag">
+    <h2><span class="nr">3</span> Waarom verwerken wij uw gegevens?</h2>
+    <table>
+      <tr><th>Doel</th><th>Grondslag</th><th>Gegevens</th></tr>
+      <tr>
+        <td>Toegang verlenen tot de applicatie</td>
+        <td>Uitvoering overeenkomst</td>
+        <td>E-mailadres, wachtwoord</td>
+      </tr>
+      <tr>
+        <td>Opslaan van uw jaarrekening-dossiers</td>
+        <td>Uitvoering overeenkomst</td>
+        <td>Financiële gegevens, organisatiegegevens</td>
+      </tr>
+      <tr>
+        <td>Verwerken van betalingen</td>
+        <td>Uitvoering overeenkomst</td>
+        <td>E-mailadres, betaalgegevens (via Stripe)</td>
+      </tr>
+      <tr>
+        <td>Sturen van transactionele e-mails</td>
+        <td>Gerechtvaardigd belang</td>
+        <td>E-mailadres</td>
+      </tr>
+      <tr>
+        <td>Verbeteren van de applicatie</td>
+        <td>Gerechtvaardigd belang</td>
+        <td>Geanonimiseerde gebruiksstatistieken</td>
+      </tr>
+      <tr>
+        <td>Voldoen aan wettelijke verplichtingen</td>
+        <td>Wettelijke verplichting</td>
+        <td>Betaalbevestigingen (fiscale bewaarplicht)</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- 4 -->
+  <div class="artikel" id="bewaartermijn">
+    <h2><span class="nr">4</span> Hoe lang bewaren wij uw gegevens?</h2>
+    <table>
+      <tr><th>Gegevens</th><th>Bewaartermijn</th></tr>
+      <tr><td>Accountgegevens en dossiers</td><td>Zolang uw account actief is. Na verwijdering van uw account worden gegevens binnen 30 dagen gewist.</td></tr>
+      <tr><td>Betaalgegevens (facturen)</td><td>7 jaar (wettelijke fiscale bewaarplicht)</td></tr>
+      <tr><td>E-mailcommunicatie</td><td>2 jaar</td></tr>
+      <tr><td>Technische logs</td><td>Maximaal 90 dagen</td></tr>
+      <tr><td>Anonieme statistieken (PostHog)</td><td>12 maanden</td></tr>
+    </table>
+  </div>
+
+  <!-- 5 -->
+  <div class="artikel" id="verwerkers">
+    <h2><span class="nr">5</span> Delen wij uw gegevens met derden?</h2>
+    <p>Wij verkopen uw gegevens <strong>nooit</strong> aan derden. Wij werken samen met de volgende verwerkers die uw gegevens uitsluitend verwerken ten behoeve van onze dienstverlening:</p>
+    <table>
+      <tr><th>Verwerker</th><th>Rol</th><th>Locatie</th></tr>
+      <tr>
+        <td><strong>Supabase</strong></td>
+        <td>Database en authenticatie</td>
+        <td>EU (Frankfurt)</td>
+      </tr>
+      <tr>
+        <td><strong>Stripe</strong></td>
+        <td>Betalingsverwerking</td>
+        <td>EU-vestiging; PCI-DSS gecertificeerd</td>
+      </tr>
+      <tr>
+        <td><strong>Cloudflare</strong></td>
+        <td>Hosting, CDN en DDoS-beveiliging</td>
+        <td>EU-regio</td>
+      </tr>
+      <tr>
+        <td><strong>Loops.so</strong></td>
+        <td>Transactionele e-mail</td>
+        <td>EU-regio</td>
+      </tr>
+      <tr>
+        <td><strong>PostHog</strong></td>
+        <td>Anonieme gebruiksanalyse</td>
+        <td>EU (Frankfurt); geen cookies</td>
+      </tr>
+    </table>
+    <p>Met alle verwerkers is een verwerkersovereenkomst gesloten conform artikel 28 AVG. Zie onze <a href="verwerkersovereenkomst.html">verwerkersovereenkomstenpagina</a> voor details.</p>
+  </div>
+
+  <!-- 6 -->
+  <div class="artikel" id="rechten">
+    <h2><span class="nr">6</span> Uw rechten</h2>
+    <p>Op grond van de Algemene Verordening Gegevensbescherming (AVG) heeft u de volgende rechten:</p>
+    <ul>
+      <li><strong>Recht op inzage</strong> — U kunt opvragen welke persoonsgegevens wij van u verwerken.</li>
+      <li><strong>Recht op rectificatie</strong> — U kunt onjuiste gegevens laten corrigeren. Veel gegevens kunt u zelf aanpassen via uw accountpagina.</li>
+      <li><strong>Recht op verwijdering</strong> — U kunt verzoeken om verwijdering van uw persoonsgegevens ("recht om vergeten te worden").</li>
+      <li><strong>Recht op beperking van de verwerking</strong> — U kunt verzoeken de verwerking tijdelijk stop te zetten.</li>
+      <li><strong>Recht op gegevensoverdraagbaarheid</strong> — U kunt uw gegevens in een gestructureerd, machineleesbaar formaat opvragen.</li>
+      <li><strong>Recht van bezwaar</strong> — U kunt bezwaar maken tegen verwerking op basis van gerechtvaardigd belang.</li>
+    </ul>
+    <p>Om een van deze rechten uit te oefenen, stuurt u een e-mail naar <a href="mailto:cees@ceesdecontroller.nl">cees@ceesdecontroller.nl</a>. Wij reageren binnen 30 dagen.</p>
+    <p>Als u van mening bent dat uw privacyrechten worden geschonden, kunt u ook een klacht indienen bij de <strong>Autoriteit Persoonsgegevens</strong> via <a href="https://www.autoriteitpersoonsgegevens.nl" target="_blank" rel="noopener">autoriteitpersoonsgegevens.nl</a>.</p>
+  </div>
+
+  <!-- 7 -->
+  <div class="artikel" id="cookies">
+    <h2><span class="nr">7</span> Cookiebeleid</h2>
+    <p>Jaarklaar maakt <strong>geen gebruik van tracking cookies of advertentiecookies</strong>.</p>
+    <h3>Functionele cookies</h3>
+    <p>Wij gebruiken uitsluitend technisch noodzakelijke cookies voor de werking van de applicatie, zoals uw inlogsessie (via Supabase Auth). Deze cookies zijn noodzakelijk voor de dienstverlening en vereisen geen toestemming.</p>
+    <h3>Analyse zonder cookies</h3>
+    <p>Voor gebruiksstatistieken gebruiken wij PostHog in cookieloze modus. PostHog verzamelt geen persoonsgegevens en plaatst geen cookies. Er worden uitsluitend geanonimiseerde gedragspatronen gemeten om de applicatie te verbeteren.</p>
+  </div>
+
+  <!-- 8 -->
+  <div class="artikel" id="beveiliging">
+    <h2><span class="nr">8</span> Beveiliging</h2>
+    <p>Wij nemen passende technische en organisatorische maatregelen om uw persoonsgegevens te beveiligen:</p>
+    <ul>
+      <li>Versleutelde verbindingen (HTTPS/TLS) voor alle communicatie</li>
+      <li>Wachtwoorden worden nooit in leesbare tekst opgeslagen (bcrypt-hashing via Supabase)</li>
+      <li>Toegang tot de database is beveiligd via Row Level Security: gebruikers kunnen uitsluitend hun eigen gegevens inzien</li>
+      <li>Betalingen verlopen uitsluitend via Stripe (PCI-DSS gecertificeerd)</li>
+      <li>Beveiligingsheaders (HSTS, CSP, X-Frame-Options) op alle pagina's</li>
+    </ul>
+  </div>
+
+  <!-- 9 -->
+  <div class="artikel" id="wijzigingen">
+    <h2><span class="nr">9</span> Wijzigingen in deze verklaring</h2>
+    <p>Wij kunnen deze privacyverklaring van tijd tot tijd aanpassen. Bij wezenlijke wijzigingen sturen wij een e-mail naar geregistreerde gebruikers. De meest recente versie is altijd beschikbaar op <a href="https://app.jaarklaar.app/privacy.html">app.jaarklaar.app/privacy.html</a>.</p>
+    <p>Datum laatste update: <strong>31 maart 2026</strong></p>
+  </div>
+
+  <!-- 10 -->
+  <div class="artikel" id="contact">
+    <h2><span class="nr">10</span> Contact</h2>
+    <p>Voor vragen over deze privacyverklaring of over de verwerking van uw persoonsgegevens kunt u contact opnemen:</p>
+    <p>
+      <strong>Cees de Controller</strong><br>
+      E-mail: <a href="mailto:cees@ceesdecontroller.nl">cees@ceesdecontroller.nl</a>
+    </p>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-links">
+    <a href="privacy.html">Privacy</a>
+    <a href="voorwaarden.html">Voorwaarden</a>
+    <a href="verwerkersovereenkomst.html">Verwerkersovereenkomst</a>
+    <a href="handleiding.html">Handleiding</a>
+    <a href="https://app.jaarklaar.app">App</a>
+  </div>
+  <p>© 2026 Cees de Controller · Jaarklaar</p>
+</footer>
+
+</body>
+</html>

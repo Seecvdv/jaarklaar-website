@@ -290,6 +290,45 @@
   .feature-card h3 { font-size: 15px; margin-bottom: 8px; }
   .feature-card p { font-size: 13px; color: var(--muted); line-height: 1.6; }
 
+  /* ── VERGELIJKING ── */
+  .compare-wrap {
+    overflow-x: auto;
+    margin-top: 48px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-lg);
+  }
+  .compare-table {
+    width: 100%; border-collapse: collapse;
+    font-size: 15px; min-width: 560px;
+    background: var(--white);
+  }
+  .compare-table thead th {
+    padding: 16px 20px; font-weight: 700; font-size: 14px;
+    border-bottom: 2px solid var(--border);
+    text-align: center; color: var(--muted);
+  }
+  .compare-table thead th:first-child { text-align: left; }
+  .compare-table thead th.col-jaarklaar {
+    background: var(--indigo); color: white;
+    border-radius: 12px 12px 0 0;
+  }
+  .compare-table tbody tr { border-bottom: 1px solid var(--border); }
+  .compare-table tbody tr:last-child { border-bottom: none; }
+  .compare-table tbody td {
+    padding: 14px 20px; text-align: center; color: var(--body);
+  }
+  .compare-table tbody td:first-child {
+    text-align: left; font-weight: 600; color: var(--dark);
+  }
+  .compare-table tbody td.col-jaarklaar {
+    background: #eff6ff; font-weight: 700; color: var(--dark);
+  }
+  .compare-table tbody tr:last-child td.col-jaarklaar {
+    border-radius: 0 0 12px 12px;
+  }
+  .val-yes { color: #059669; font-size: 18px; }
+  .val-no  { color: #DC2626; font-size: 18px; }
+
   /* ── PRICING ── */
   .pricing-section { background: var(--bg); }
   .pricing-grid {
@@ -661,6 +700,75 @@
         <h3>Veilig opgeslagen</h3>
         <p>Je dossiers worden beveiligd opgeslagen in je account. Toegankelijk vanaf elk apparaat.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- VERGELIJKING -->
+<section id="vergelijking">
+  <div class="container">
+    <div class="label-chip">Eerlijk vergelijken</div>
+    <h2>Waarom Jaarklaar?</h2>
+    <p class="section-sub">Geen accountant inhuren. Geen gedoe met Excel.<br>Gewoon zelf doen.</p>
+    <div class="compare-wrap">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Accountant</th>
+            <th>Zelf in Excel</th>
+            <th class="col-jaarklaar">Jaarklaar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Kosten</td>
+            <td>€500 – €2.000</td>
+            <td>Gratis maar foutgevoelig</td>
+            <td class="col-jaarklaar">€9 – €39</td>
+          </tr>
+          <tr>
+            <td>Doorlooptijd</td>
+            <td>Weken</td>
+            <td>Dagen</td>
+            <td class="col-jaarklaar">Minuten</td>
+          </tr>
+          <tr>
+            <td>KvK-conform</td>
+            <td class="val-yes">✅</td>
+            <td class="val-no">❌</td>
+            <td class="col-jaarklaar val-yes">✅</td>
+          </tr>
+          <tr>
+            <td>RJ-richtlijnen</td>
+            <td class="val-yes">✅</td>
+            <td class="val-no">❌</td>
+            <td class="col-jaarklaar val-yes">✅</td>
+          </tr>
+          <tr>
+            <td>iXBRL/SBR export</td>
+            <td class="val-yes">✅</td>
+            <td class="val-no">❌</td>
+            <td class="col-jaarklaar val-yes">✅</td>
+          </tr>
+          <tr>
+            <td>Zelf de controle</td>
+            <td class="val-no">❌</td>
+            <td class="val-yes">✅</td>
+            <td class="col-jaarklaar val-yes">✅</td>
+          </tr>
+          <tr>
+            <td>Geen boekhoudkennis nodig</td>
+            <td class="val-no">❌</td>
+            <td class="val-no">❌</td>
+            <td class="col-jaarklaar val-yes">✅</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="text-align:center;margin-top:40px;">
+      <a href="https://app.jaarklaar.app" class="btn btn-primary btn-xl">Start gratis — betaal alleen bij export</a>
+      <p style="margin-top:14px;font-size:14px;color:var(--muted);">Geen abonnement. Geen creditcard nodig.<br>Alleen betalen als je exporteert.</p>
     </div>
   </div>
 </section>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <!-- Achtergrond -->
+  <rect width="1200" height="630" fill="#1D4ED8"/>
+
+  <!-- Subtiele decoratieve cirkels -->
+  <circle cx="1050" cy="120" r="280" fill="#1e40af" opacity="0.5"/>
+  <circle cx="150" cy="520" r="200" fill="#1e40af" opacity="0.4"/>
+
+  <!-- Logo-blok -->
+  <rect x="540" y="170" width="64" height="64" rx="16" fill="white" opacity="0.15"/>
+  <text x="572" y="214" font-family="Arial, sans-serif" font-size="36" font-weight="800" text-anchor="middle" fill="white">J</text>
+
+  <!-- Hoofdtitel -->
+  <text x="600" y="330" font-family="Arial, sans-serif" font-size="96" font-weight="800" text-anchor="middle" fill="white" letter-spacing="-2">Jaarklaar</text>
+
+  <!-- Subtitel -->
+  <text x="600" y="400" font-family="Arial, sans-serif" font-size="32" font-weight="400" text-anchor="middle" fill="white" opacity="0.85">Zelf je jaarrekening maken, zonder accountant.</text>
+
+  <!-- Scheidingslijn -->
+  <rect x="500" y="436" width="200" height="2" fill="white" opacity="0.3"/>
+
+  <!-- URL rechtsonder -->
+  <text x="1160" y="600" font-family="Arial, sans-serif" font-size="22" font-weight="600" text-anchor="end" fill="white" opacity="0.7">jaarklaar.app</text>
+</svg>

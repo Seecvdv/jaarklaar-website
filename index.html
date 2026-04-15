@@ -10,7 +10,7 @@
 <meta property="og:url" content="https://jaarklaar.app/">
 <meta property="og:title" content="Jaarklaar — zelf je jaarrekening maken, zonder accountant">
 <meta property="og:description" content="Jaarklaar begeleidt je stap voor stap door je jaarrekening. Wettelijk conform, klaar voor KvK-deponering. Voor VvE's, stichtingen, kleine bedrijven en ZZP'ers.">
-<meta property="og:image" content="https://jaarklaar.app/og-image.png">
+<meta property="og:image" content="https://jaarklaar.app/og-image.svg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Jaarklaar — zelf je jaarrekening maken, zonder accountant">
 <meta name="twitter:description" content="Jaarklaar begeleidt je stap voor stap door je jaarrekening. Wettelijk conform, klaar voor KvK-deponering.">
@@ -344,8 +344,11 @@
   /* ── PRICING ── */
   .pricing-section { background: var(--bg); }
   .pricing-grid {
-    display: grid; grid-template-columns: repeat(4, 1fr);
+    display: grid; grid-template-columns: repeat(5, 1fr);
     gap: 20px; margin-top: 56px;
+  }
+  @media (max-width: 1100px) {
+    .pricing-grid { grid-template-columns: repeat(3, 1fr); }
   }
   .price-card {
     background: white; border: 1.5px solid var(--border);
@@ -540,9 +543,10 @@
 <script>
   !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a=u._i.push([i,[],a]),u.loaded=!1,u.get_distinct_id=function(){var t=u.get_property("$device_id");return t||u.distinct_id},u.ready=function(t){u._i.push(["_hq",t])},g(u,"capture"),g(u,"identify"),g(u,"alias"),g(u,"set"),g(u,"unset"),g(u,"opt_out_capturing"),g(u,"has_opted_out_capturing"),g(u,"opt_in_capturing"),g(u,"reset"),g(u,"people"),g(u,"set_property");void 0===a&&(void 0!==window.posthog&&(u=window.posthog),u.loaded=!0),e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
   posthog.init('phc_A7pd4CHGAtjYgkFJEARfoygjiUoMmSQzZzaiD4iPXcEf', {
-    api_host: 'https://eu.i.posthog.com',
-    person_profiles: 'identified_only'
-  });
+      api_host: 'https://eu.i.posthog.com',
+      capture_pageview: true,
+      capture_pageleave: true
+    });
 </script>
 </head>
 <body>
@@ -856,7 +860,20 @@
         <a href="https://app.jaarklaar.app" class="btn btn-secondary">Begin gratis</a>
       </div>
       <div class="price-card">
-        <div class="price-label">Micro- / kleine BV of vereniging</div>
+        <div class="price-label">Micro-onderneming</div>
+        <div class="price-amount"><sup>€</sup>9</div>
+        <div class="price-per">per jaarrekening</div>
+        <hr class="price-divider">
+        <ul class="price-features">
+          <li>Balans + W&amp;V-rekening</li>
+          <li>Microregime (art. 2:395a BW)</li>
+          <li>KvK-deponering gereed</li>
+          <li>PDF &amp; Excel export</li>
+        </ul>
+        <a href="https://app.jaarklaar.app" class="btn btn-secondary">Begin gratis</a>
+      </div>
+      <div class="price-card">
+        <div class="price-label">Kleine onderneming</div>
         <div class="price-amount"><sup>€</sup>19</div>
         <div class="price-per">per jaarrekening</div>
         <hr class="price-divider">
@@ -977,7 +994,7 @@
       </details>
       <details class="faq-item">
         <summary>Wat kost het precies? <span class="faq-icon">+</span></summary>
-        <div class="faq-answer">Je betaalt alleen bij het exporteren van de definitieve PDF. Prijs afhankelijk van type: ZZP €9, micro/kleine BV €19, VvE €29, stichting/ANBI €39. Geen abonnement, geen verborgen kosten.</div>
+        <div class="faq-answer">Je betaalt alleen bij het exporteren van de definitieve PDF. Prijs afhankelijk van type: ZZP €9, micro-onderneming €9, kleine onderneming €19, VvE €29, stichting/ANBI €39. Geen abonnement, geen verborgen kosten.</div>
       </details>
       <details class="faq-item">
         <summary>Hoe neem ik contact op? <span class="faq-icon">+</span></summary>

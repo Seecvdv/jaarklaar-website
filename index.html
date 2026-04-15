@@ -5,6 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Jaarklaar — zelf je jaarrekening maken, zonder accountant</title>
 <meta name="description" content="Jaarklaar begeleidt je stap voor stap door je jaarrekening. Wettelijk conform, klaar voor KvK-deponering. Voor VvE's, stichtingen, kleine bedrijven en ZZP'ers.">
+<link rel="canonical" href="https://jaarklaar.app/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jaarklaar.app/">
+<meta property="og:title" content="Jaarklaar — zelf je jaarrekening maken, zonder accountant">
+<meta property="og:description" content="Jaarklaar begeleidt je stap voor stap door je jaarrekening. Wettelijk conform, klaar voor KvK-deponering. Voor VvE's, stichtingen, kleine bedrijven en ZZP'ers.">
+<meta property="og:image" content="https://jaarklaar.app/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Jaarklaar — zelf je jaarrekening maken, zonder accountant">
+<meta name="twitter:description" content="Jaarklaar begeleidt je stap voor stap door je jaarrekening. Wettelijk conform, klaar voor KvK-deponering.">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -290,6 +300,8 @@
   .feature-card h3 { font-size: 15px; margin-bottom: 8px; }
   .feature-card p { font-size: 13px; color: var(--muted); line-height: 1.6; }
 
+  .section-sub { font-size: 17px; color: var(--muted); margin-top: 14px; max-width: 540px; }
+
   /* ── VERGELIJKING ── */
   .compare-wrap {
     overflow-x: auto;
@@ -470,6 +482,35 @@
   .fade-up-2 { animation: fadeUp .6s .15s ease both; }
   .fade-up-3 { animation: fadeUp .6s .3s ease both; }
 
+  /* ── HAMBURGER ── */
+  .nav-hamburger {
+    display: none; flex-direction: column; justify-content: center;
+    gap: 5px; background: none; border: none; cursor: pointer;
+    padding: 6px; border-radius: 8px;
+  }
+  .nav-hamburger span {
+    display: block; width: 22px; height: 2px;
+    background: var(--dark); border-radius: 2px;
+    transition: all .25s;
+  }
+  .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+  .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  .mobile-menu {
+    display: none; position: fixed; inset: 64px 0 0 0;
+    background: white; z-index: 99;
+    flex-direction: column; align-items: center; justify-content: center;
+    gap: 32px;
+  }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a {
+    font-size: 20px; font-weight: 700; color: var(--dark);
+    text-decoration: none;
+  }
+  .mobile-menu a:hover { color: var(--indigo); }
+  .mobile-menu .btn { font-size: 16px; padding: 14px 32px; }
+
   /* ── RESPONSIVE ── */
   @media (max-width: 900px) {
     .hero-inner { grid-template-columns: 1fr; }
@@ -481,6 +522,7 @@
     .steps-grid { grid-template-columns: 1fr; }
     .steps-grid::before { display: none; }
     .nav-links { display: none; }
+    .nav-hamburger { display: flex; }
   }
   @media (max-width: 600px) {
     section { padding: 64px 5%; }
@@ -501,7 +543,7 @@
 
 <!-- NAV -->
 <nav>
-  <a href="#" class="nav-logo">
+  <a href="/" class="nav-logo">
     <div class="nav-logo-mark">J</div>
     Jaarklaar
   </a>
@@ -512,7 +554,18 @@
     <a href="#faq">FAQ</a>
   </div>
   <a href="https://app.jaarklaar.app" class="btn btn-primary">Probeer gratis →</a>
+  <button class="nav-hamburger" aria-label="Menu openen" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+<div class="mobile-menu" role="dialog" aria-label="Navigatie">
+  <a href="#voor-wie">Voor wie</a>
+  <a href="#hoe-het-werkt">Hoe het werkt</a>
+  <a href="#prijs">Prijs</a>
+  <a href="#faq">FAQ</a>
+  <a href="https://app.jaarklaar.app" class="btn btn-primary">Probeer gratis →</a>
+</div>
 
 <main id="main-content">
 <!-- HERO -->
@@ -844,7 +897,7 @@
       </div>
       <div style="text-align:right;flex-shrink:0;">
         <div class="addon-price">€110 <span>per uur</span></div>
-        <a href="/cdn-cgi/l/email-protection#583b3d3d2b183b3d3d2b3c3d3b37362c2a3734343d2a763634" class="btn btn-secondary" style="margin-top:12px;display:inline-flex;">Aanvragen</a>
+        <a href="mailto:cees@ceesdecontroller.nl" class="btn btn-secondary" style="margin-top:12px;display:inline-flex;">Aanvragen</a>
       </div>
     </div>
   </div>
@@ -895,96 +948,6 @@
   </div>
 </section>
 
-<!-- VERGELIJKING -->
-<section>
-  <div class="container">
-    <div class="section-header">
-      <div class="label-chip">Vergelijking</div>
-      <h2>Jaarklaar vs. de rest</h2>
-      <p>Waarom Jaarklaar de enige tool is die écht alle kleine organisaties bedient.</p>
-    </div>
-    <div style="margin-top:48px;overflow-x:auto;">
-      <table style="width:100%;border-collapse:collapse;font-size:14px;">
-        <thead>
-          <tr>
-            <th style="text-align:left;padding:14px 16px;border-bottom:2px solid var(--border);color:var(--muted);font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:.05em;">Functie</th>
-            <th style="padding:14px 16px;border-bottom:2px solid var(--indigo);background:var(--indigo-light);border-radius:8px 8px 0 0;text-align:center;color:#1e3a8a;font-weight:800;">Jaarklaar</th>
-            <th style="padding:14px 16px;border-bottom:2px solid var(--border);text-align:center;color:var(--muted);font-weight:600;">eenvoudigejaarrekening.nl</th>
-            <th style="padding:14px 16px;border-bottom:2px solid var(--border);text-align:center;color:var(--muted);font-weight:600;">Excel / Word</th>
-            <th style="padding:14px 16px;border-bottom:2px solid var(--border);text-align:center;color:var(--muted);font-weight:600;">Accountant</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr style="background:#fafafa;">
-            <td style="padding:13px 16px;color:var(--dark);font-weight:500;border-bottom:1px solid var(--border);">VvE-jaarrekening</td>
-            <td style="padding:13px 16px;text-align:center;font-weight:700;color:#16a34a;border-bottom:1px solid #dbeafe;background:var(--indigo-light);">✓</td>
-            <td style="padding:13px 16px;text-align:center;font-weight:600;color:#dc2626;border-bottom:1px solid var(--border);">✗</td>
-            <td style="padding:13px 16px;text-align:center;font-weight:600;color:#92400e;border-bottom:1px solid var(--border);">±</td>
-            <td style="padding:13px 16px;text-align:center;font-weight:600;color:#16a34a;border-bottom:1px solid var(--border);">✓</td>
-          </tr>
-          <tr style="">
-            <td style="padding:13px 16px;color:var(--dark);font-weight:500;border-bottom:1px solid var(--border);">Stichting / ANBI (RJ 650)</td>
-            <td style="padding:13px 16px;text-align:center;font-weight:700;color:#16a34a;border-bottom:1px solid #dbeafe;background:var(--indigo-light);">✓</td>
-            <td style="padding:13px 16px;text-align:center;font-weight:600;color:#dc2626;border-bottom:1px solid var(--border);">✗</td>
-            <td style="padding:13px 16px;text-align:center;font-weight:600;color:#92400e;border-bottom:1px solid var(--border);">±</td>
-            <td style="padding:13px 16px;text-align:center;font-weight:600;color:#16a34a;border-bottom:1px solid var(--border);">✓</td>
-          </tr>
-          <tr style="background:#fafafa;">
-            <td style="padding:13px 16px;color:var(--dark);font-weight:500;border-bottom:1px solid var(--border);">Micro- / kleine BV</td>
-            <td style="padding:13px 16px;text-align:center;font-weight:700;color:#16a34a;border-bottom:1px solid #dbeafe;background:var(--indigo-light);">✓</td>
-            <td style="padding:13px 16px;text-align:center;font-weight:600;color:#dc2626;border-bottom:1px solid var(--border);">✗</td>
-            <td style="padding:13px 16px;text-align:center;font-weight:600;color:#92400e;border-bottom:1px solid var(--border);">±</td>
-            <td style="padding:13px 16px;text-align:center;font-weight:600;color:#16a34a;border-bottom:1px solid var(--border);">✓</td>
-          </tr>
-          <tr style="">
-            <td style="padding:13px 16px;color:var(--dark);font-weight:500;border-bottom:1px solid var(--border);">ZZP / eenmanszaak</td>
-            <td style="padding:13px 16px;text-align:center;font-weight:700;color:#16a34a;border-bottom:1px solid #dbeafe;background:var(--indigo-light);">✓</td>
-            <td style="padding:13px 16px;text-align:center;font-weight:600;color:#16a34a;border-bottom:1px solid var(--border);">✓</td>
-            <td style="padding:13px 16px;text-align:center;font-weight:600;color:#92400e;border-bottom:1px solid var(--border);">±</td>
-            <td style="padding:13px 16px;text-align:center;font-weight:600;color:#16a34a;border-bottom:1px solid var(--border);">✓</td>
-          </tr>
-          <tr style="background:#fafafa;">
-            <td style="padding:13px 16px;color:var(--dark);font-weight:500;border-bottom:1px solid var(--border);">Live balansvalidatie</td>
-            <td style="padding:13px 16px;text-align:center;font-weight:700;color:#16a34a;border-bottom:1px solid #dbeafe;background:var(--indigo-light);">✓</td>
-            <td style="padding:13px 16px;text-align:center;font-weight:600;color:#92400e;border-bottom:1px solid var(--border);">±</td>
-            <td style="padding:13px 16px;text-align:center;font-weight:600;color:#dc2626;border-bottom:1px solid var(--border);">✗</td>
-            <td style="padding:13px 16px;text-align:center;font-weight:600;color:#16a34a;border-bottom:1px solid var(--border);">✓</td>
-          </tr>
-          <tr style="">
-            <td style="padding:13px 16px;color:var(--dark);font-weight:500;border-bottom:1px solid var(--border);">Import Moneybird & Exact</td>
-            <td style="padding:13px 16px;text-align:center;font-weight:700;color:#16a34a;border-bottom:1px solid #dbeafe;background:var(--indigo-light);">✓</td>
-            <td style="padding:13px 16px;text-align:center;font-weight:600;color:#dc2626;border-bottom:1px solid var(--border);">✗</td>
-            <td style="padding:13px 16px;text-align:center;font-weight:600;color:#dc2626;border-bottom:1px solid var(--border);">✗</td>
-            <td style="padding:13px 16px;text-align:center;font-weight:600;color:#16a34a;border-bottom:1px solid var(--border);">✓</td>
-          </tr>
-          <tr style="background:#fafafa;">
-            <td style="padding:13px 16px;color:var(--dark);font-weight:500;border-bottom:1px solid var(--border);">KvK-deponering gereed</td>
-            <td style="padding:13px 16px;text-align:center;font-weight:700;color:#16a34a;border-bottom:1px solid #dbeafe;background:var(--indigo-light);">✓</td>
-            <td style="padding:13px 16px;text-align:center;font-weight:600;color:#16a34a;border-bottom:1px solid var(--border);">✓</td>
-            <td style="padding:13px 16px;text-align:center;font-weight:600;color:#92400e;border-bottom:1px solid var(--border);">±</td>
-            <td style="padding:13px 16px;text-align:center;font-weight:600;color:#16a34a;border-bottom:1px solid var(--border);">✓</td>
-          </tr>
-          <tr style="">
-            <td style="padding:13px 16px;color:var(--dark);font-weight:500;border-bottom:1px solid var(--border);">PDF & Excel export</td>
-            <td style="padding:13px 16px;text-align:center;font-weight:700;color:#16a34a;border-bottom:1px solid #dbeafe;background:var(--indigo-light);">✓</td>
-            <td style="padding:13px 16px;text-align:center;font-weight:600;color:#16a34a;border-bottom:1px solid var(--border);">✓</td>
-            <td style="padding:13px 16px;text-align:center;font-weight:600;color:#92400e;border-bottom:1px solid var(--border);">±</td>
-            <td style="padding:13px 16px;text-align:center;font-weight:600;color:#16a34a;border-bottom:1px solid var(--border);">✓</td>
-          </tr>
-          <tr style="background:#fafafa;">
-            <td style="padding:13px 16px;color:var(--dark);font-weight:500;border-bottom:1px solid var(--border);">Prijs per jaarrekening</td>
-            <td style="padding:13px 16px;text-align:center;font-weight:700;color:#92400e;border-bottom:1px solid #dbeafe;background:var(--indigo-light);">€9–€39</td>
-            <td style="padding:13px 16px;text-align:center;font-weight:600;color:#92400e;border-bottom:1px solid var(--border);">€29</td>
-            <td style="padding:13px 16px;text-align:center;font-weight:600;color:#92400e;border-bottom:1px solid var(--border);">Gratis*</td>
-            <td style="padding:13px 16px;text-align:center;font-weight:600;color:#92400e;border-bottom:1px solid var(--border);">€500+</td>
-          </tr>
-        </tbody>
-      </table>
-      <p style="font-size:12px;color:var(--muted);margin-top:10px;">* Excel is gratis maar heeft geen validatie, geen wettelijke structuur en kost veel tijd. ± = beperkt of handmatig.</p>
-    </div>
-  </div>
-</section>
-
 <!-- FAQ -->
 <section id="faq" style="background:var(--bg);">
   <div class="container">
@@ -1011,7 +974,7 @@
       </details>
       <details class="faq-item">
         <summary>Hoe neem ik contact op? <span class="faq-icon">+</span></summary>
-        <div class="faq-answer">Stuur een e-mail naar <a href="/cdn-cgi/l/email-protection#8be8eeeef8cbe8eeeef8efeee8e4e5fff9e4e7e7eef9a5e5e7" style="color:var(--indigo);font-weight:600;"><span class="__cf_email__" data-cfemail="630006061023000606100706000c0d17110c0f0f06114d0d0f">[email&#160;protected]</span></a>. Voor de accountantscheck kun je direct een aanvraag doen via de knop bij de prijzen.</div>
+        <div class="faq-answer">Stuur een e-mail naar <a href="mailto:cees@ceesdecontroller.nl" style="color:var(--indigo);font-weight:600;">cees@ceesdecontroller.nl</a>. Voor de accountantscheck kun je direct een aanvraag doen via de knop bij de prijzen.</div>
       </details>
     </div>
   </div>
@@ -1047,5 +1010,23 @@
   </div>
 </footer>
 </main>
+<script>
+  const hamburger = document.querySelector('.nav-hamburger');
+  const mobileMenu = document.querySelector('.mobile-menu');
+  hamburger.addEventListener('click', () => {
+    const open = hamburger.classList.toggle('open');
+    mobileMenu.classList.toggle('open', open);
+    hamburger.setAttribute('aria-expanded', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+  mobileMenu.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      mobileMenu.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    });
+  });
+</script>
 </body>
 </html>

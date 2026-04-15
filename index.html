@@ -14,7 +14,42 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Jaarklaar — zelf je jaarrekening maken, zonder accountant">
 <meta name="twitter:description" content="Jaarklaar begeleidt je stap voor stap door je jaarrekening. Wettelijk conform, klaar voor KvK-deponering.">
+<meta name="twitter:image" content="https://jaarklaar.app/og-image.svg">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "name": "Jaarklaar",
+      "url": "https://jaarklaar.app",
+      "logo": "https://jaarklaar.app/favicon.svg",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "cees@ceesdecontroller.nl",
+        "contactType": "customer support",
+        "availableLanguage": "nl"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Jaarklaar",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "description": "Jaarklaar begeleidt je stap voor stap door je jaarrekening. Wettelijk conform, klaar voor KvK-deponering. Voor VvE's, stichtingen, kleine bedrijven en ZZP'ers.",
+      "url": "https://jaarklaar.app",
+      "offers": [
+        { "@type": "Offer", "name": "ZZP / Eenmanszaak", "price": "9", "priceCurrency": "EUR" },
+        { "@type": "Offer", "name": "Micro-onderneming", "price": "9", "priceCurrency": "EUR" },
+        { "@type": "Offer", "name": "Kleine onderneming", "price": "19", "priceCurrency": "EUR" },
+        { "@type": "Offer", "name": "VvE", "price": "29", "priceCurrency": "EUR" },
+        { "@type": "Offer", "name": "Stichting / ANBI", "price": "39", "priceCurrency": "EUR" }
+      ]
+    }
+  ]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -36,7 +71,6 @@
     --shadow-lg: 0 12px 48px rgba(15,23,42,0.14);
   }
 
-  @font-face { font-display: swap; }
   html { scroll-behavior: smooth; }
 
   body {
@@ -354,6 +388,7 @@
     background: white; border: 1.5px solid var(--border);
     border-radius: var(--radius); padding: 28px 24px;
     position: relative; transition: all .2s;
+    display: flex; flex-direction: column;
   }
   .price-card:hover { box-shadow: var(--shadow); transform: translateY(-2px); }
   .price-card.featured {
@@ -380,7 +415,7 @@
     display: flex; align-items: flex-start; gap: 8px;
   }
   .price-features li::before { content: '✓'; color: #10b981; font-weight: 700; flex-shrink: 0; }
-  .price-card .btn { width: 100%; justify-content: center; }
+  .price-card .btn { width: 100%; justify-content: center; margin-top: auto; }
 
   .addon-card {
     margin-top: 32px; background: white;
@@ -1019,7 +1054,7 @@
 <!-- FOOTER -->
 <footer>
   <div class="footer-inner">
-    <a href="#" class="footer-logo">Jaarklaar</a>
+    <a href="/" class="footer-logo">Jaarklaar</a>
     <div class="footer-links">
       <a href="#voor-wie">Voor wie</a>
       <a href="#prijs">Prijs</a>
@@ -1033,7 +1068,6 @@
     <div>© 2026 Cees de Controller</div>
   </div>
 </footer>
-</main>
 <script>
   const hamburger = document.querySelector('.nav-hamburger');
   const mobileMenu = document.querySelector('.mobile-menu');

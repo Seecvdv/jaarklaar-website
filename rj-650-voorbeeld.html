@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RJ 650 voorbeeld: opbouw van een stichtingsjaarrekening | Jaarklaar</title>
+<meta name="description" content="Voorbeeld van een RJ 650-jaarrekening voor stichtingen: balans, staat van baten en lasten, kostenverdeling, reserves en fondsen. Met toelichting per onderdeel.">
+<link rel="canonical" href="https://jaarklaar.app/rj-650-voorbeeld">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jaarklaar.app/rj-650-voorbeeld">
+<meta property="og:title" content="RJ 650 voorbeeld: opbouw van een stichtingsjaarrekening | Jaarklaar">
+<meta property="og:description" content="Voorbeeld van een RJ 650-jaarrekening voor stichtingen: balans, staat van baten en lasten, kostenverdeling, reserves en fondsen.">
+<meta property="og:image" content="https://jaarklaar.app/og-image.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://jaarklaar.app/og-image.svg">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root { --indigo: #1D4ED8; --indigo-dark: #1e40af; --indigo-light: #eff6ff; --dark: #0f172a; --body: #334155; --muted: #64748b; --border: #e2e8f0; --bg: #f8fafc; --radius: 14px; --shadow: 0 4px 24px rgba(15,23,42,0.08); --accent: #db2777; --accent-light: #fdf2f8; }
+  body { font-family: 'Inter', system-ui, sans-serif; color: var(--body); background: white; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  h1, h2, h3 { color: var(--dark); line-height: 1.25; font-weight: 800; }
+  h1 { font-size: clamp(32px, 4.5vw, 52px); letter-spacing: -.02em; }
+  h2 { font-size: clamp(24px, 3vw, 36px); letter-spacing: -.015em; }
+  h3 { font-size: 18px; }
+  a { color: var(--indigo); }
+  .container { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+  .btn { display: inline-flex; align-items: center; gap: 7px; padding: 13px 28px; border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer; text-decoration: none; border: none; transition: all .18s; }
+  .btn-primary { background: var(--indigo); color: white; box-shadow: 0 2px 12px rgba(29,78,216,0.35); }
+  .btn-primary:hover { background: var(--indigo-dark); transform: translateY(-1px); }
+  .btn-secondary { background: white; color: var(--dark); border: 1.5px solid var(--border); }
+  .btn-secondary:hover { border-color: var(--indigo); color: var(--indigo); }
+  .skip-link { position: absolute; top: -40px; left: 0; background: var(--indigo); color: white; padding: 8px 16px; z-index: 1000; font-size: 14px; font-weight: 600; text-decoration: none; border-radius: 0 0 8px 0; }
+  .skip-link:focus { top: 0; }
+  nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 0 5%; display: flex; align-items: center; justify-content: space-between; height: 60px; }
+  .nav-logo { display: flex; align-items: center; gap: 8px; font-size: 17px; font-weight: 800; color: var(--dark); text-decoration: none; }
+  .nav-logo-mark { width: 30px; height: 30px; border-radius: 8px; background: var(--indigo); display: flex; align-items: center; justify-content: center; color: white; font-size: 13px; font-weight: 800; }
+  .nav-back { font-size: 13px; color: var(--muted); text-decoration: none; }
+  .nav-back:hover { color: var(--dark); }
+  .hero { padding: 64px 0 56px; border-bottom: 1px solid var(--border); }
+  .hero-chip { display: inline-flex; align-items: center; gap: 6px; background: var(--accent-light); color: #9d174d; font-size: 12px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; padding: 5px 12px; border-radius: 100px; margin-bottom: 20px; }
+  .hero h1 { margin-bottom: 18px; max-width: 700px; }
+  .hero .lead { font-size: 18px; color: var(--muted); line-height: 1.7; max-width: 620px; margin-bottom: 32px; }
+  .hero-cta { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 32px; }
+  .hero-proof { font-size: 13px; color: var(--muted); display: flex; gap: 16px; flex-wrap: wrap; }
+  .hero-proof span::before { content: '✓ '; color: #16a34a; font-weight: 700; }
+  .content-section { padding: 56px 0; border-bottom: 1px solid var(--border); }
+  .content-section h2 { margin-bottom: 20px; }
+  .content-section p { margin-bottom: 16px; font-size: 15px; line-height: 1.8; }
+  .content-section p:last-child { margin-bottom: 0; }
+  .steps { display: flex; flex-direction: column; gap: 20px; margin-top: 28px; }
+  .step { display: flex; gap: 16px; align-items: flex-start; }
+  .step-num { width: 36px; height: 36px; border-radius: 50%; background: var(--indigo); color: white; font-size: 15px; font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+  .step-content h3 { font-size: 16px; margin-bottom: 6px; }
+  .step-content p { font-size: 14px; color: var(--muted); margin: 0; }
+  .card-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 28px; }
+  .card { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; }
+  .card h3 { font-size: 15px; margin-bottom: 8px; }
+  .card p { font-size: 13px; color: var(--muted); margin: 0; line-height: 1.6; }
+  .alert { background: #fff7ed; border: 1px solid #fed7aa; border-radius: var(--radius); padding: 16px 20px; margin-top: 20px; font-size: 14px; color: #9a3412; line-height: 1.6; }
+  .alert strong { display: block; margin-bottom: 4px; }
+  .price-box { background: var(--indigo-light); border: 2px solid var(--indigo); border-radius: var(--radius); padding: 28px 32px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; margin-top: 28px; }
+  .price-box-left h3 { font-size: 18px; margin-bottom: 6px; }
+  .price-box-left p { font-size: 14px; color: var(--muted); margin: 0; }
+  .price-box-amount { font-size: 48px; font-weight: 800; color: var(--dark); white-space: nowrap; }
+  .price-box-amount span { font-size: 16px; font-weight: 500; color: var(--muted); }
+  .cta-block { background: var(--dark); border-radius: 16px; padding: 48px 40px; text-align: center; margin: 48px 0; }
+  .cta-block h2 { color: white; margin-bottom: 12px; }
+  .cta-block p { color: rgba(255,255,255,0.6); font-size: 16px; margin-bottom: 28px; }
+  .cta-note { margin-top: 14px; font-size: 13px; color: rgba(255,255,255,0.4); }
+  .faq { margin-top: 28px; }
+  details.faq-item { border-bottom: 1px solid var(--border); }
+  details.faq-item summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; padding: 18px 0; font-size: 15px; font-weight: 600; color: var(--dark); transition: color .15s; }
+  details.faq-item summary::-webkit-details-marker { display: none; }
+  details.faq-item summary:hover { color: var(--indigo); }
+  .faq-icon { font-size: 20px; color: var(--muted); flex-shrink: 0; transition: transform .2s; }
+  details.faq-item[open] summary { color: var(--indigo); }
+  details.faq-item[open] .faq-icon { transform: rotate(45deg); color: var(--indigo); }
+  .faq-answer { font-size: 14px; color: var(--muted); line-height: 1.7; padding-bottom: 18px; }
+  .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; }
+  .breadcrumb a { color: var(--muted); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--indigo); }
+  .breadcrumb span { margin: 0 6px; }
+  footer { background: var(--dark); padding: 32px 5%; color: rgba(255,255,255,0.5); font-size: 13px; }
+  .footer-inner { max-width: 860px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  .footer-logo { font-size: 15px; font-weight: 800; color: white; text-decoration: none; }
+  .footer-links { display: flex; gap: 20px; }
+  .footer-links a { color: rgba(255,255,255,0.5); text-decoration: none; }
+  .footer-links a:hover { color: white; }
+  @media (max-width: 600px) { .card-grid { grid-template-columns: 1fr; } .price-box { flex-direction: column; text-align: center; } .cta-block { padding: 32px 24px; } }
+</style>
+<script>
+  !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a=u._i.push([i,[],a]),u.loaded=!1,u.get_distinct_id=function(){var t=u.get_property("$device_id");return t||u.distinct_id},u.ready=function(t){u._i.push(["_hq",t])},g(u,"capture"),g(u,"identify"),g(u,"alias"),g(u,"set"),g(u,"unset"),g(u,"opt_out_capturing"),g(u,"has_opted_out_capturing"),g(u,"opt_in_capturing"),g(u,"reset"),g(u,"people"),g(u,"set_property");void 0===a&&(void 0!==window.posthog&&(u=window.posthog),u.loaded=!0),e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+  posthog.init('phc_A7pd4CHGAtjYgkFJEARfoygjiUoMmSQzZzaiD4iPXcEf', {
+      api_host: 'https://eu.i.posthog.com',
+      capture_pageview: true,
+      capture_pageleave: true
+    });
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Waar vind ik een officieel voorbeeld van een RJ 650-jaarrekening?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "De Raad voor de Jaarverslaggeving publiceert de richtlijn zelf (via rjnet.nl), maar geen volledig uitgewerkt voorbeeld. Goede praktijkvoorbeelden zijn de gepubliceerde jaarrekeningen van grotere goede doelen — die zijn openbaar beschikbaar op hun eigen websites. Jaarklaar levert daarnaast een generiek voorbeeld op aanvraag."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Mag ik een voorbeeld-jaarrekening als basis gebruiken voor mijn eigen stichting?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "De structuur en posten overnemen mag. Maar cijfers en toelichting moeten uiteraard je eigen situatie weergeven. Een voorbeeld helpt om de opbouw te begrijpen, het vervangt geen eigen invulling."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hoe uitgebreid moet een RJ 650-jaarrekening zijn voor een kleine stichting?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "RJ 650 geldt voor fondsenwervende organisaties ongeacht omvang, maar kleine stichtingen mogen een beperkte toelichting geven. De balans, staat van baten en lasten, kostenverdeling en reserves/fondsen zijn altijd verplicht. Kasstroomoverzicht en WNT-toelichting zijn afhankelijk van omvang."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wat is het verschil tussen RJ 640 en RJ 650?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "RJ 640 geldt voor organisaties zonder winststreven in het algemeen (bijvoorbeeld verenigingen, brancheorganisaties). RJ 650 is specifiek voor fondsenwervende organisaties — stichtingen en verenigingen die geld werven bij het publiek. Werf je actief fondsen, dan val je onder RJ 650."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Ga naar hoofdinhoud</a>
+<nav>
+  <a href="/" class="nav-logo"><div class="nav-logo-mark">J</div>Jaarklaar</a>
+  <a href="/" class="nav-back">← Terug naar overzicht</a>
+  <a href="https://app.jaarklaar.app" class="btn btn-primary" style="padding:8px 18px;font-size:13px;">Begin nu →</a>
+</nav>
+
+<main id="main-content">
+<div class="container">
+
+  <section class="hero">
+    <div class="breadcrumb"><a href="/">Jaarklaar</a><span>›</span> <a href="/stichting-jaarrekening">Stichting</a><span>›</span> RJ 650 voorbeeld</div>
+    <div class="hero-chip">RJ 650 · Voorbeeld · Stichting</div>
+    <h1>RJ 650 voorbeeld: hoe een stichtingsjaarrekening eruitziet</h1>
+    <p class="lead">Wie voor het eerst een jaarrekening voor een stichting opstelt, wil weten hoe zo'n document is opgebouwd. Hieronder per onderdeel: wat erin hoort, in welke volgorde, en hoe RJ 650 dat voorschrijft.</p>
+    <div class="hero-cta">
+      <a href="https://app.jaarklaar.app" class="btn btn-primary">Start je jaarrekening →</a>
+      <a href="#download" class="btn btn-secondary">Voorbeeld-PDF</a>
+    </div>
+    <div class="hero-proof">
+      <span>Alle verplichte onderdelen</span>
+      <span>Gebaseerd op RJ 650</span>
+      <span>Met toelichting per post</span>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <h2>Wat is RJ 650 kort samengevat?</h2>
+    <p>RJ 650 is de richtlijn van de Raad voor de Jaarverslaggeving voor <strong>fondsenwervende organisaties</strong>: stichtingen en verenigingen die geld werven bij het publiek. Niet-fondsenwervende organisaties zonder winststreven vallen onder RJ 640.</p>
+    <p>De richtlijn schrijft voor hoe je baten en lasten presenteert, hoe je reserves en fondsen splitst, en welke toelichting erbij hoort. Een volledige uitleg van de achtergrond staat op de <a href="/stichting-jaarrekening">pagina over stichtingsjaarrekeningen</a>.</p>
+  </section>
+
+  <section class="content-section">
+    <h2>Onderdelen van een RJ 650-jaarrekening</h2>
+    <p>Een volledige jaarrekening volgens RJ 650 bevat de volgende onderdelen, in deze volgorde:</p>
+    <div class="steps">
+      <div class="step"><div class="step-num">1</div><div class="step-content"><h3>Balans per 31 december</h3><p>Activa en passiva. Aan de passivakant presenteer je reserves en fondsen apart (niet samen als "eigen vermogen").</p></div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-content"><h3>Staat van baten en lasten</h3><p>Inkomsten en uitgaven over het boekjaar, met vergelijking naar de begroting en het voorgaande jaar.</p></div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-content"><h3>Kasstroomoverzicht</h3><p>Verplicht onderdeel voor middelgrote en grote fondsenwervende organisaties. Geeft inzicht in de geldstromen uit operationele, investerings- en financieringsactiviteiten.</p></div></div>
+      <div class="step"><div class="step-num">4</div><div class="step-content"><h3>Grondslagen</h3><p>Waardering en resultaatbepaling: welke methodes zijn gebruikt voor activa, voorzieningen en opbrengstverantwoording.</p></div></div>
+      <div class="step"><div class="step-num">5</div><div class="step-content"><h3>Toelichting op balans en staat van baten en lasten</h3><p>Post-voor-post uitleg, verloopoverzichten van reserves/fondsen, specificatie van baten en lasten.</p></div></div>
+      <div class="step"><div class="step-num">6</div><div class="step-content"><h3>Kostenverdeling</h3><p>Lasten verdeeld over doelstelling, werving en beheer & administratie — conform RJ 650 bijlage 3.</p></div></div>
+      <div class="step"><div class="step-num">7</div><div class="step-content"><h3>WNT-toelichting</h3><p>Bezoldiging van bestuurders en toezichthouders. Verplicht bij baten boven €100.000.</p></div></div>
+    </div>
+    <div class="alert">
+      <strong>Bestuursverslag staat apart</strong>
+      Het bestuursverslag is voor fondsenwervende organisaties verplicht, maar maakt geen onderdeel uit van de jaarrekening zelf. Je voegt het als los document samen met de jaarrekening.
+    </div>
+  </section>
+
+  <section class="content-section">
+    <h2>Balans: wat hoort waar?</h2>
+    <p>De balans volgens RJ 650 bijlage 1 onderscheidt aan de <strong>activa</strong>-zijde vaste activa (materieel, immaterieel, financieel) en vlottende activa (vorderingen, effecten, liquide middelen). Aan de <strong>passiva</strong>-zijde staan reserves en fondsen apart van voorzieningen en schulden.</p>
+    <p>Belangrijk: waar een BV "eigen vermogen" als één regel presenteert, splitst een stichting dit in <em>continuïteitsreserve</em>, <em>bestemmingsreserves</em> en <em>bestemmingsfondsen</em>. Dat maakt inzichtelijk welk vermogen vrij besteedbaar is en welk deel geoormerkt is.</p>
+  </section>
+
+  <section class="content-section">
+    <h2>Staat van baten en lasten</h2>
+    <p>De baten zijn uitgesplitst naar <strong>herkomst</strong>: particulieren, bedrijven, loterijen, subsidies van overheden, baten van andere organisaties zonder winststreven, en baten als tegenprestatie voor levering van producten/diensten.</p>
+    <p>De lasten zijn uitgesplitst naar <strong>bestemming</strong>: besteed aan de doelstelling, wervingskosten, en kosten beheer & administratie. Hieronder vallen ook personeelskosten, afschrijvingen en huisvestingskosten — verdeeld over de drie bestemmingen volgens de kostenverdeling.</p>
+    <p>Drie kolommen zijn gebruikelijk: werkelijk boekjaar, begroting boekjaar, werkelijk voorgaand jaar.</p>
+  </section>
+
+  <section class="content-section">
+    <h2>Reserves en fondsen</h2>
+    <div class="card-grid">
+      <div class="card"><h3>Continuïteitsreserve</h3><p>Vrije reserve om de continuïteit van de werkorganisatie te waarborgen bij tegenvallende inkomsten.</p></div>
+      <div class="card"><h3>Bestemmingsreserve</h3><p>Door het bestuur zelf aangewezen voor een specifiek doel. Het bestuur kan de bestemming ook weer opheffen.</p></div>
+      <div class="card"><h3>Bestemmingsfonds</h3><p>Door een externe donor geoormerkt. Alleen te besteden aan het door de donor aangegeven doel.</p></div>
+      <div class="card"><h3>Verloopoverzicht</h3><p>Per reserve of fonds: stand begin jaar, mutaties (dotaties, onttrekkingen, vrijval), stand eind jaar.</p></div>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <h2>Kostenverdeling</h2>
+    <p>Elke kostenpost wordt toegerekend aan één van drie bestemmingen: <strong>doelstelling</strong> (waarvoor de stichting bestaat), <strong>werving</strong> (kosten gemaakt om geld binnen te halen), en <strong>beheer & administratie</strong> (interne bedrijfsvoering).</p>
+    <p>RJ 650 bijlage 3 geeft een matrix: kostensoorten (personeel, huisvesting, kantoor, afschrijving, etc.) op de ene as, bestemmingen op de andere. Jaarklaar vult deze matrix automatisch in op basis van je invoer.</p>
+  </section>
+
+  <section class="content-section" id="download">
+    <h2>Download een voorbeeld-PDF</h2>
+    <p>Een volledig ingevuld voorbeeld van een RJ 650-jaarrekening — met fictieve cijfers maar correcte structuur — is binnenkort beschikbaar. Stuur een mail naar <a href="mailto:cees@ceesdecontroller.nl">cees@ceesdecontroller.nl</a> als je de PDF wilt ontvangen zodra die klaar is.</p>
+    <div class="alert">
+      <strong>Liever direct je eigen jaarrekening maken?</strong>
+      Dat kan met Jaarklaar — je hoeft geen voorbeeld te kopiëren. De app toont de juiste structuur direct, invullen is gratis en je betaalt alleen bij export (€39).
+    </div>
+  </section>
+
+  <section class="content-section">
+    <h2>Veelgestelde vragen</h2>
+    <div class="faq">
+      <details class="faq-item">
+        <summary>Waar vind ik een officieel voorbeeld van een RJ 650-jaarrekening? <span class="faq-icon">+</span></summary>
+        <div class="faq-answer">De Raad voor de Jaarverslaggeving publiceert de richtlijn zelf (via rjnet.nl), maar geen volledig uitgewerkt voorbeeld. Goede praktijkvoorbeelden zijn de gepubliceerde jaarrekeningen van grotere goede doelen — die zijn openbaar beschikbaar op hun eigen websites. Jaarklaar levert daarnaast een generiek voorbeeld op aanvraag.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Mag ik een voorbeeld-jaarrekening als basis gebruiken voor mijn eigen stichting? <span class="faq-icon">+</span></summary>
+        <div class="faq-answer">De structuur en posten overnemen mag. Maar cijfers en toelichting moeten uiteraard je eigen situatie weergeven. Een voorbeeld helpt om de opbouw te begrijpen, het vervangt geen eigen invulling.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Hoe uitgebreid moet een RJ 650-jaarrekening zijn voor een kleine stichting? <span class="faq-icon">+</span></summary>
+        <div class="faq-answer">RJ 650 geldt voor fondsenwervende organisaties ongeacht omvang, maar kleine stichtingen mogen een beperkte toelichting geven. De balans, staat van baten en lasten, kostenverdeling en reserves/fondsen zijn altijd verplicht. Kasstroomoverzicht en WNT-toelichting zijn afhankelijk van omvang.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Wat is het verschil tussen RJ 640 en RJ 650? <span class="faq-icon">+</span></summary>
+        <div class="faq-answer">RJ 640 geldt voor organisaties zonder winststreven in het algemeen (bijvoorbeeld verenigingen, brancheorganisaties). RJ 650 is specifiek voor fondsenwervende organisaties — stichtingen en verenigingen die geld werven bij het publiek. Werf je actief fondsen, dan val je onder RJ 650.</div>
+      </details>
+    </div>
+  </section>
+
+  <div class="cta-block">
+    <h2>Maak je eigen jaarrekening in Jaarklaar</h2>
+    <p>Geen voorbeeld nodig: Jaarklaar toont je de juiste structuur terwijl je invult.</p>
+    <a href="https://app.jaarklaar.app" class="btn btn-primary" style="font-size:16px;padding:15px 36px;">Start je stichtingsjaarrekening →</a>
+    <div class="cta-note">€39 per jaarrekening · RJ 650 volledig · Geen abonnement</div>
+  </div>
+
+</div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <a href="/" class="footer-logo">Jaarklaar</a>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/vve-jaarrekening">VvE</a>
+      <a href="/stichting-jaarrekening">Stichting</a>
+      <a href="/bv-jaarrekening">Kleine BV</a>
+      <a href="https://app.jaarklaar.app">App</a>
+      <a href="mailto:cees@ceesdecontroller.nl">Contact</a>
+      <a href="/privacy">Privacy</a>
+      <a href="/voorwaarden">Voorwaarden</a>
+      <a href="/verwerkersovereenkomst">Verwerkersovereenkomst</a>
+    </div>
+    <div>© 2026 Cees de Controller</div>
+  </div>
+</footer>
+</body>
+</html>

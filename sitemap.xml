@@ -14,9 +14,21 @@
   </url>
   <url>
     <loc>https://jaarklaar.app/stichting-jaarrekening</loc>
-    <lastmod>2026-04-15</lastmod>
+    <lastmod>2026-04-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://jaarklaar.app/rj-650-voorbeeld</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jaarklaar.app/anbi-jaarrekening-publicatie</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://jaarklaar.app/bv-jaarrekening</loc>

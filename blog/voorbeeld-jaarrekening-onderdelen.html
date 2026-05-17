@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Voorbeeld jaarrekening: wat staat erin? | Jaarklaar blog</title>
+<meta name="description" content="Balans, winst-en-verliesrekening, toelichting, grondslagen, bestuursverslag — wat doet elk onderdeel en wat zijn de verschillen tussen BV, stichting en VvE?">
+<link rel="canonical" href="https://jaarklaar.app/blog/voorbeeld-jaarrekening-onderdelen">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://jaarklaar.app/blog/voorbeeld-jaarrekening-onderdelen">
+<meta property="og:title" content="Voorbeeld jaarrekening: wat staat erin? | Jaarklaar blog">
+<meta property="og:description" content="Balans, winst-en-verliesrekening, toelichting, grondslagen, bestuursverslag — wat doet elk onderdeel en wat zijn de verschillen tussen rechtsvormen?">
+<meta property="og:image" content="https://jaarklaar.app/og-image.svg">
+<meta property="og:locale" content="nl_NL">
+<meta property="article:published_time" content="2026-05-17">
+<meta property="article:modified_time" content="2026-05-17">
+<meta property="article:author" content="Cees de Controller">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Voorbeeld jaarrekening: wat staat erin?">
+<meta name="twitter:description" content="Balans, winst-en-verliesrekening, toelichting, grondslagen, bestuursverslag — wat doet elk onderdeel?">
+<meta name="twitter:image" content="https://jaarklaar.app/og-image.svg">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Voorbeeld jaarrekening: wat staat erin?",
+  "description": "Balans, winst-en-verliesrekening, toelichting, grondslagen, bestuursverslag — wat doet elk onderdeel en wat zijn de verschillen tussen BV, stichting en VvE?",
+  "datePublished": "2026-05-17",
+  "dateModified": "2026-05-17",
+  "author": {
+    "@type": "Organization",
+    "name": "Cees de Controller",
+    "url": "https://jaarklaar.app/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Jaarklaar",
+    "url": "https://jaarklaar.app/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://jaarklaar.app/og-image.svg"
+    }
+  },
+  "image": "https://jaarklaar.app/og-image.svg",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://jaarklaar.app/blog/voorbeeld-jaarrekening-onderdelen"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Jaarklaar", "item": "https://jaarklaar.app/"},
+    {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://jaarklaar.app/blog"},
+    {"@type": "ListItem", "position": 3, "name": "Voorbeeld jaarrekening: wat staat erin?", "item": "https://jaarklaar.app/blog/voorbeeld-jaarrekening-onderdelen"}
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root { --indigo: #1D4ED8; --indigo-dark: #1e40af; --indigo-light: #eff6ff; --dark: #0f172a; --body: #334155; --muted: #64748b; --border: #e2e8f0; --bg: #f8fafc; --radius: 14px; --accent: #f59e0b; --accent-light: #fffbeb; }
+  body { font-family: 'Inter', system-ui, sans-serif; color: var(--body); background: white; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+  h1, h2, h3 { color: var(--dark); line-height: 1.25; font-weight: 800; }
+  h1 { font-size: clamp(28px, 4vw, 42px); letter-spacing: -.02em; }
+  h2 { font-size: clamp(22px, 2.8vw, 28px); letter-spacing: -.015em; margin-top: 40px; margin-bottom: 14px; }
+  h3 { font-size: 18px; margin-top: 28px; margin-bottom: 10px; }
+  p { margin-bottom: 16px; font-size: 16px; }
+  ul, ol { margin: 0 0 16px 22px; }
+  li { margin-bottom: 6px; font-size: 16px; }
+  a { color: var(--indigo); }
+  .container { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+  .btn { display: inline-flex; align-items: center; gap: 7px; padding: 13px 28px; border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer; text-decoration: none; border: none; transition: all .18s; }
+  .btn-primary { background: var(--indigo); color: white; box-shadow: 0 2px 12px rgba(29,78,216,0.35); }
+  .btn-primary:hover { background: var(--indigo-dark); transform: translateY(-1px); }
+  .skip-link { position: absolute; top: -40px; left: 0; background: var(--indigo); color: white; padding: 8px 16px; z-index: 1000; font-size: 14px; font-weight: 600; text-decoration: none; border-radius: 0 0 8px 0; }
+  .skip-link:focus { top: 0; }
+  nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 0 5%; display: flex; align-items: center; justify-content: space-between; height: 60px; }
+  .nav-logo { display: flex; align-items: center; gap: 8px; font-size: 17px; font-weight: 800; color: var(--dark); text-decoration: none; }
+  .nav-logo-mark { width: 30px; height: 30px; border-radius: 8px; background: var(--indigo); display: flex; align-items: center; justify-content: center; color: white; font-size: 13px; font-weight: 800; }
+  .nav-back { font-size: 13px; color: var(--muted); text-decoration: none; }
+  .nav-back:hover { color: var(--dark); }
+  .breadcrumb { font-size: 13px; color: var(--muted); margin: 32px 0 16px; }
+  .breadcrumb a { color: var(--muted); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--indigo); }
+  .breadcrumb span { margin: 0 6px; }
+  .article-header { padding-bottom: 24px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+  .article-header h1 { margin-bottom: 16px; }
+  .article-meta { font-size: 13px; color: var(--muted); display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+  .article-meta .tag { background: var(--indigo-light); color: var(--indigo); font-size: 12px; font-weight: 700; padding: 3px 10px; border-radius: 100px; }
+  .article-body { padding-bottom: 48px; }
+  .article-body strong { color: var(--dark); }
+  .highlight-box { background: var(--indigo-light); border-left: 4px solid var(--indigo); border-radius: 0 var(--radius) var(--radius) 0; padding: 16px 20px; margin: 24px 0; font-size: 15px; color: var(--body); line-height: 1.7; }
+  .highlight-box strong { color: var(--dark); }
+  .mini-table { width: 100%; border-collapse: collapse; margin: 16px 0 24px; font-size: 14px; background: white; border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+  .mini-table th, .mini-table td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); }
+  .mini-table th { background: var(--bg); font-weight: 700; color: var(--dark); font-size: 13px; }
+  .mini-table tr:last-child td { border-bottom: none; }
+  .mini-table td:last-child { text-align: right; font-variant-numeric: tabular-nums; }
+  .mini-table tr.total td { font-weight: 700; color: var(--dark); background: var(--bg); }
+  .form-card-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin: 20px 0 28px; }
+  .form-card { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; text-decoration: none; color: inherit; transition: all .15s; display: block; }
+  .form-card:hover { border-color: var(--indigo); transform: translateY(-1px); }
+  .form-card h3 { font-size: 15px; margin-top: 0; margin-bottom: 6px; color: var(--dark); }
+  .form-card p { font-size: 13px; color: var(--muted); margin: 0; line-height: 1.6; }
+  .cta-inline { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; margin: 32px 0; }
+  .cta-inline h3 { margin-top: 0; margin-bottom: 8px; font-size: 17px; }
+  .cta-inline p { font-size: 14px; color: var(--muted); margin-bottom: 14px; }
+  .related { border-top: 1px solid var(--border); padding-top: 40px; margin-top: 24px; }
+  .related h2 { font-size: 20px; margin-top: 0; margin-bottom: 18px; }
+  .related-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .related-card { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; text-decoration: none; color: inherit; transition: all .15s; }
+  .related-card:hover { border-color: var(--indigo); transform: translateY(-1px); }
+  .related-card h3 { font-size: 15px; margin-top: 0; margin-bottom: 6px; color: var(--dark); }
+  .related-card p { font-size: 13px; color: var(--muted); margin: 0; line-height: 1.6; }
+  .cta-block { background: var(--dark); border-radius: 16px; padding: 40px 32px; text-align: center; margin: 48px 0; }
+  .cta-block h2 { color: white; margin-top: 0; margin-bottom: 12px; font-size: 24px; }
+  .cta-block p { color: rgba(255,255,255,0.6); font-size: 15px; margin-bottom: 24px; }
+  .cta-note { margin-top: 14px; font-size: 13px; color: rgba(255,255,255,0.4); }
+  footer { background: var(--dark); padding: 32px 5%; color: rgba(255,255,255,0.5); font-size: 13px; }
+  .footer-inner { max-width: 860px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  .footer-logo { font-size: 15px; font-weight: 800; color: white; text-decoration: none; }
+  .footer-links { display: flex; gap: 20px; flex-wrap: wrap; }
+  .footer-links a { color: rgba(255,255,255,0.5); text-decoration: none; }
+  .footer-links a:hover { color: white; }
+  @media (max-width: 600px) {
+    .related-grid, .form-card-grid { grid-template-columns: 1fr; }
+    .mini-table { font-size: 13px; }
+    .mini-table th, .mini-table td { padding: 8px 10px; }
+  }
+</style>
+<script>
+  !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a=u._i.push([i,[],a]),u.loaded=!1,u.get_distinct_id=function(){var t=u.get_property("$device_id");return t||u.distinct_id},u.ready=function(t){u._i.push(["_hq",t])},g(u,"capture"),g(u,"identify"),g(u,"alias"),g(u,"set"),g(u,"unset"),g(u,"opt_out_capturing"),g(u,"has_opted_out_capturing"),g(u,"opt_in_capturing"),g(u,"reset"),g(u,"people"),g(u,"set_property");void 0===a&&(void 0!==window.posthog&&(u=window.posthog),u.loaded=!0),e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+  posthog.init('phc_A7pd4CHGAtjYgkFJEARfoygjiUoMmSQzZzaiD4iPXcEf', {
+      api_host: 'https://eu.i.posthog.com',
+      capture_pageview: true,
+      capture_pageleave: true
+    });
+</script>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Ga naar hoofdinhoud</a>
+<nav>
+  <a href="/" class="nav-logo"><div class="nav-logo-mark">J</div>Jaarklaar</a>
+  <a href="/blog" class="nav-back">← Terug naar blog</a>
+  <a href="https://app.jaarklaar.app" class="btn btn-primary" style="padding:8px 18px;font-size:13px;">Begin nu →</a>
+</nav>
+
+<main id="main-content">
+<article class="container">
+
+  <div class="breadcrumb">
+    <a href="/">Jaarklaar</a><span>›</span>
+    <a href="/blog">Blog</a><span>›</span>
+    Voorbeeld jaarrekening: wat staat erin?
+  </div>
+
+  <header class="article-header">
+    <h1>Voorbeeld jaarrekening: wat staat erin?</h1>
+    <div class="article-meta">
+      <span class="tag">ZZP</span>
+      <span class="tag">BV klein</span>
+      <span class="tag">Stichting</span>
+      <span class="tag">VvE</span>
+      <time datetime="2026-05-17">17 mei 2026</time>
+      <span>6 min lezen</span>
+      <span>Door Cees de Controller</span>
+    </div>
+  </header>
+
+  <div class="article-body">
+
+    <p>Een jaarrekening is geen mysterieus document — het bestaat uit een vaste set onderdelen die elk een eigen vraag beantwoorden. Hieronder per onderdeel: wat erin staat, waar het voor dient en hoe het er in een eenvoudig voorbeeld uitziet. Plus een blokje over de verschillen tussen rechtsvormen — een BV-jaarrekening is niet hetzelfde als een stichtingsjaarrekening of een VvE-jaarrekening.</p>
+
+    <h2>De vaste onderdelen</h2>
+
+    <p>Bijna elke jaarrekening bevat dezelfde basisonderdelen:</p>
+
+    <ul>
+      <li><strong>Balans</strong> — een momentopname van wat de organisatie bezit en hoe dat is gefinancierd.</li>
+      <li><strong>Winst-en-verliesrekening</strong> — alle inkomsten en uitgaven over het boekjaar. Bij stichtingen en verenigingen heet dit de <em>staat van baten en lasten</em>, bij VvE's de <em>exploitatierekening</em>.</li>
+      <li><strong>Toelichting</strong> — tekstuele uitleg per post.</li>
+      <li><strong>Grondslagen</strong> — de regels die zijn gebruikt voor waardering en resultaatbepaling.</li>
+      <li><strong>Bestuursverslag</strong> — een verslag van het bestuur over het afgelopen jaar. Niet altijd verplicht.</li>
+    </ul>
+
+    <h2>De balans: hoe je ervoor staat op één moment</h2>
+
+    <p>De balans is een financiële foto op de balansdatum — meestal 31 december. Links staan de bezittingen (activa), rechts hoe ze zijn gefinancierd (passiva: eigen vermogen, voorzieningen en schulden). De som links is altijd gelijk aan de som rechts. Loopt dat niet, dan klopt de administratie niet.</p>
+
+    <p>Een eenvoudig voorbeeld voor een kleine BV:</p>
+
+    <table class="mini-table">
+      <thead>
+        <tr><th colspan="2">Activa</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Kantoorinventaris</td><td>€5.000</td></tr>
+        <tr><td>Debiteuren</td><td>€8.000</td></tr>
+        <tr><td>Banktegoed</td><td>€12.000</td></tr>
+        <tr class="total"><td>Totaal activa</td><td>€25.000</td></tr>
+      </tbody>
+    </table>
+
+    <table class="mini-table">
+      <thead>
+        <tr><th colspan="2">Passiva</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Eigen vermogen</td><td>€15.000</td></tr>
+        <tr><td>Crediteuren</td><td>€4.000</td></tr>
+        <tr><td>Omzetbelasting</td><td>€6.000</td></tr>
+        <tr class="total"><td>Totaal passiva</td><td>€25.000</td></tr>
+      </tbody>
+    </table>
+
+    <p>De balans laat in één oogopslag zien hoe solvabel je bent (verhouding eigen vermogen tot vreemd vermogen), of er kortlopende schulden tegenover liquide middelen staan, en wat het ondernemingsvermogen is. Voor banken en investeerders is dit vaak de eerste pagina waar ze naar kijken.</p>
+
+    <h2>Winst-en-verliesrekening: wat er in het boekjaar gebeurd is</h2>
+
+    <p>De winst-en-verliesrekening (WenV) laat zien wat er gedurende het hele boekjaar aan inkomsten en uitgaven is geweest. Beginnend met de omzet, dan inkoopkosten en bedrijfskosten daaronder, eindigend in een resultaat.</p>
+
+    <table class="mini-table">
+      <tbody>
+        <tr><td>Omzet</td><td>€120.000</td></tr>
+        <tr><td>Inkoopkosten</td><td>−€30.000</td></tr>
+        <tr><td>Bedrijfskosten</td><td>−€40.000</td></tr>
+        <tr><td>Afschrijvingen</td><td>−€5.000</td></tr>
+        <tr class="total"><td>Resultaat voor belasting</td><td>€45.000</td></tr>
+      </tbody>
+    </table>
+
+    <p>Bij een BV komt onder dit resultaat nog de vennootschapsbelasting, met als sluitregel het nettoresultaat dat aan het eigen vermogen wordt toegevoegd of als dividend wordt uitgekeerd. Bij een eenmanszaak stopt de winst-en-verliesrekening hier: de inkomstenbelasting wordt op privéniveau betaald, niet binnen de onderneming.</p>
+
+    <h2>Toelichting: het verhaal achter de getallen</h2>
+
+    <p>Een balans en een WenV bestaan uit rijen getallen. Zonder context is een eigen vermogen van €15.000 alleen maar een getal — de toelichting maakt duidelijk hoe je daar gekomen bent en wat eruit op te maken is.</p>
+
+    <p>Wat een toelichting typisch bevat:</p>
+
+    <ul>
+      <li><strong>Specificaties</strong> van grote posten: welke vaste activa, welke debiteuren, welke schulden.</li>
+      <li><strong>Verloopstaten</strong>: bijvoorbeeld voor het eigen vermogen — beginstand, resultaat boekjaar, dividend, eindstand.</li>
+      <li><strong>Vergelijkende cijfers</strong>: dezelfde posten van het voorgaande jaar ernaast.</li>
+      <li><strong>Niet-zichtbare verplichtingen</strong>: huur, leasing, garanties, lopende rechtszaken.</li>
+    </ul>
+
+    <p>Voor een micro-jaarrekening kun je grotendeels zonder toelichting toe — alleen een paar standaardregels. Voor een kleine BV is een beperkte toelichting verplicht. Voor middelgroot en groot wordt het een aanzienlijk uitgebreider hoofdstuk.</p>
+
+    <h2>Grondslagen: hoe je gerekend hebt</h2>
+
+    <p>Dezelfde transactie kan onder verschillende grondslagen tot verschillende uitkomsten leiden. Schrijf je een nieuwe laptop in vijf jaar af of in drie jaar? Waardeer je voorraad tegen FIFO of tegen gemiddelde inkoopprijs? Boek je omzet bij oplevering of pas bij betaling? Dat zijn keuzes — en je moet erover transparant zijn.</p>
+
+    <p>In de grondslagen leg je vast welke regels je hebt gevolgd voor waardering en resultaatbepaling. Voor een micro-jaarrekening is dit hoofdstuk klein: de wet schrijft dan voor dat je waardeert tegen verkrijgings- of vervaardigingsprijs, met afwaardering als de marktwaarde lager is. Voor een kleine BV hoort er een korte paragraaf in over de gehanteerde grondslagen.</p>
+
+    <h2>Bestuursverslag: niet altijd verplicht</h2>
+
+    <p>Het bestuursverslag is een verslag van het bestuur over het afgelopen jaar — de gang van zaken, de belangrijkste ontwikkelingen, vooruitzichten, risico's. Het zit niet in de jaarrekening zelf, maar wordt er als los document bij gevoegd.</p>
+
+    <p>Voor wie het verplicht is:</p>
+
+    <ul>
+      <li><strong>Micro en klein:</strong> niet verplicht.</li>
+      <li><strong>Middelgroot en groot:</strong> wel verplicht.</li>
+      <li><strong>Stichtingen onder RJ 650</strong> (fondsenwervend): wel verplicht, ook bij beperkte omvang.</li>
+      <li><strong>VvE's:</strong> niet wettelijk verplicht. In de praktijk vaak wel een toelichtende notitie van het bestuur bij de jaarstukken.</li>
+    </ul>
+
+    <h2>Verschillen tussen rechtsvormen</h2>
+
+    <p>De basisonderdelen zijn vergelijkbaar, maar de uitwerking verschilt per rechtsvorm. Vier veelvoorkomende vormen op een rij:</p>
+
+    <div class="form-card-grid">
+      <a href="/zzp-jaarrekening" class="form-card">
+        <h3>Eenmanszaak / VOF</h3>
+        <p>Geen formele jaarrekening verplicht, wel fiscale jaarstukken. Focus op de winst-en-verliesrekening voor de IB-aangifte. Een balans is optioneel.</p>
+      </a>
+      <a href="/bv-jaarrekening" class="form-card">
+        <h3>BV (klein of micro)</h3>
+        <p>Balans, winst-en-verliesrekening, toelichting en grondslagen. Verplicht deponeren bij de KvK. "Eigen vermogen" als één regel.</p>
+      </a>
+      <a href="/stichting-jaarrekening" class="form-card">
+        <h3>Stichting (RJ 650)</h3>
+        <p>Staat van baten en lasten in plaats van WenV. Reserves en fondsen apart op de balans. Kostenverdeling naar doelstelling, werving en beheer.</p>
+      </a>
+      <a href="/vve-jaarrekening" class="form-card">
+        <h3>VvE</h3>
+        <p>Balans, exploitatierekening en jaarbegroting voor het komende jaar. Reservefonds apart (onderhoud), gekoppeld aan het MJOP.</p>
+      </a>
+    </div>
+
+    <p>Let op de terminologie: bij een stichting hebben we het over "saldo baten en lasten" in plaats van "winst", en over "reserves en fondsen" in plaats van "eigen vermogen". Bij een VvE staat naast de jaarcijfers ook altijd de begroting voor het komende jaar — voor een BV of stichting is dat niet gebruikelijk in de jaarrekening zelf.</p>
+
+    <h2>Wat heb je nodig om een jaarrekening te maken?</h2>
+
+    <p>De korte versie: een complete administratie van het boekjaar plus een paar specificaties. Concreet:</p>
+
+    <ul>
+      <li>Een sluitende <strong>proefbalans</strong>: alle grootboekrekeningen met debet- en creditstanden die optellen tot nul.</li>
+      <li><strong>Specificaties</strong> van debiteuren, crediteuren, voorraden en vaste activa per balansdatum.</li>
+      <li>De <strong>cijfers van het voorgaande jaar</strong> voor de vergelijkende kolom.</li>
+      <li>Voor stichtingen onder RJ 650: een kostenverdeling per bestemming en mutaties in reserves en fondsen.</li>
+      <li>Voor VvE's: de actuele stand van het reservefonds en het meerjaren-onderhoudsplan (MJOP) als onderbouwing.</li>
+    </ul>
+
+    <p>Voorbeeldjaarrekeningen zijn online overal te vinden, maar de structuur ligt voor het grootste deel in de wet vast — Boek 2 BW voor BV's, RJ 640/650 voor stichtingen, modelreglementen en de eigen splitsingsakte voor VvE's. Een tool die die structuur direct toepast op basis van je invoer scheelt typewerk en voorkomt vergeten posten.</p>
+
+    <div class="cta-inline">
+      <h3>Welke jaarrekening past bij jouw situatie?</h3>
+      <p>Kies de pagina die bij je rechtsvorm hoort voor uitleg, prijzen en de juiste module in Jaarklaar.</p>
+      <a href="/" class="btn btn-primary">Naar het overzicht →</a>
+    </div>
+
+  </div>
+
+  <section class="related">
+    <h2>Lees ook</h2>
+    <div class="related-grid">
+      <a href="/blog/micro-of-klein-grensbedragen" class="related-card">
+        <h3>Micro of klein: in welk regime val ik?</h3>
+        <p>De grensbedragen voor micro, klein en middelgroot en hoe het twee-jaars-criterium werkt.</p>
+      </a>
+      <a href="/blog/moet-ik-als-zzp-jaarrekening-maken" class="related-card">
+        <h3>Moet ik als ZZP'er een jaarrekening maken?</h3>
+        <p>Voor eenmanszaak en VOF gelden andere regels dan voor een BV. Wat moet wel en wat niet?</p>
+      </a>
+    </div>
+  </section>
+
+  <div class="cta-block">
+    <h2>Maak je eigen jaarrekening</h2>
+    <p>Jaarklaar past de juiste structuur direct toe op basis van je rechtsvorm. Geen typewerk, geen vergeten posten.</p>
+    <a href="https://app.jaarklaar.app" class="btn btn-primary" style="font-size:16px;padding:15px 36px;">Begin gratis →</a>
+    <div class="cta-note">Vanaf €9 · Geen abonnement · In minuten klaar</div>
+  </div>
+
+</article>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <a href="/" class="footer-logo">Jaarklaar</a>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/blog">Blog</a>
+      <a href="/vve-jaarrekening">VvE</a>
+      <a href="/stichting-jaarrekening">Stichting &amp; ANBI</a>
+      <a href="/bv-jaarrekening">Kleine onderneming</a>
+      <a href="/micro-onderneming-jaarrekening">Micro-onderneming</a>
+      <a href="/zzp-jaarrekening">ZZP</a>
+      <a href="https://app.jaarklaar.app">App</a>
+      <a href="/privacy">Privacy</a>
+      <a href="/voorwaarden">Voorwaarden</a>
+      <a href="/verwerkersovereenkomst">Verwerkersovereenkomst</a>
+    </div>
+    <div>© 2026 Cees de Controller</div>
+  </div>
+</footer>
+</body>
+</html>

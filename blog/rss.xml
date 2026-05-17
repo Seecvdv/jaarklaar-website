@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jaarklaar blog</title>
+    <link>https://jaarklaar.app/blog</link>
+    <atom:link href="https://jaarklaar.app/blog/rss.xml" rel="self" type="application/rss+xml" />
+    <description>Uitleg over jaarrekeningen, regimes en rechtsvormen — voor ondernemers, bestuurders en penningmeesters.</description>
+    <language>nl-nl</language>
+    <lastBuildDate>Sun, 17 May 2026 00:00:00 +0200</lastBuildDate>
+
+    <item>
+      <title>Moet ik als ZZP'er een jaarrekening maken?</title>
+      <link>https://jaarklaar.app/blog/moet-ik-als-zzp-jaarrekening-maken</link>
+      <guid isPermaLink="true">https://jaarklaar.app/blog/moet-ik-als-zzp-jaarrekening-maken</guid>
+      <pubDate>Sun, 17 May 2026 00:00:00 +0200</pubDate>
+      <description>Een eenmanszaak of VOF hoeft geen jaarrekening op te stellen — wel fiscale jaarstukken voor je IB-aangifte. Voor een ZZP-BV gelden andere regels.</description>
+    </item>
+
+    <item>
+      <title>Micro of klein: in welk regime val ik?</title>
+      <link>https://jaarklaar.app/blog/micro-of-klein-grensbedragen</link>
+      <guid isPermaLink="true">https://jaarklaar.app/blog/micro-of-klein-grensbedragen</guid>
+      <pubDate>Sun, 17 May 2026 00:00:00 +0200</pubDate>
+      <description>De grensbedragen voor micro, klein en middelgroot zijn per 2024 verhoogd. Welke criteria gelden, en hoe werkt de twee-jaars-regel?</description>
+    </item>
+
+    <item>
+      <title>Voorbeeld jaarrekening: wat staat erin?</title>
+      <link>https://jaarklaar.app/blog/voorbeeld-jaarrekening-onderdelen</link>
+      <guid isPermaLink="true">https://jaarklaar.app/blog/voorbeeld-jaarrekening-onderdelen</guid>
+      <pubDate>Sun, 17 May 2026 00:00:00 +0200</pubDate>
+      <description>Balans, winst-en-verliesrekening, toelichting, grondslagen, bestuursverslag — wat doet elk onderdeel en wat zijn de verschillen tussen rechtsvormen?</description>
+    </item>
+
+  </channel>
+</rss>

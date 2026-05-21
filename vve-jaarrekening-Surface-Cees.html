@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VvE jaarrekening maken — zelf in 3 stappen | Jaarklaar</title>
+<meta name="description" content="Maak zelf de jaarrekening van je VvE: balans, exploitatierekening, reservefonds en begroting. Wettelijk conform, vanaf €29.">
+<link rel="canonical" href="https://jaarklaar.app/vve-jaarrekening">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jaarklaar.app/vve-jaarrekening">
+<meta property="og:title" content="VvE jaarrekening maken — zelf in 3 stappen | Jaarklaar">
+<meta property="og:description" content="Maak zelf de jaarrekening van je VvE: balans, exploitatierekening, reservefonds en begroting. Wettelijk conform, vanaf €29.">
+<meta property="og:image" content="https://jaarklaar.app/og-image.svg">
+<meta property="og:image:type" content="image/svg+xml">
+<meta property="og:locale" content="nl_NL">
+<meta property="og:site_name" content="Jaarklaar">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="VvE jaarrekening maken — zelf in 3 stappen | Jaarklaar">
+<meta name="twitter:description" content="Maak zelf de jaarrekening van je VvE. Balans, exploitatierekening, reservefonds en begroting. Klaar voor de ALV. Vanaf €29.">
+<meta name="twitter:image" content="https://jaarklaar.app/og-image.svg">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/favicon.svg">
+<meta name="theme-color" content="#1D4ED8">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is een VvE-jaarrekening wettelijk verplicht?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja. Op grond van artikel 5:126 BW is elke VvE verplicht een exploitatierekening en balans op te stellen en te presenteren op de ALV. De jaarrekening moet binnen zes maanden na afloop van het boekjaar worden vastgesteld."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Moet de VvE-jaarrekening worden gedeponeerd bij de KvK?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "VvE's zijn sinds 1 juli 2018 verplicht ingeschreven in het Handelsregister. De jaarrekening hoeft echter niet bij de KvK te worden gedeponeerd — die plicht uit Titel 9 Boek 2 BW geldt voor rechtspersonen onder artikel 2:360 BW, en daar valt een VvE niet onder. De jaarrekening wordt wel formeel vastgesteld op de ALV en bewaard in de administratie van de VvE."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wat is het reservefonds en moet dat in de jaarrekening?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Het reservefonds is het spaargeld van de VvE voor groot onderhoud. Sinds 1 januari 2018 moet elke VvE jaarlijks reserveren — ofwel volgens een meerjarenonderhoudsplan (MJOP), ofwel minimaal 0,5% van de herbouwwaarde (art. 5:126 lid 2 BW). In de jaarrekening komt het reservefonds terug als post op de balans, vaak met een verloopoverzicht in de toelichting."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wat is het verschil tussen exploitatierekening en balans?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "De balans toont de financiële positie op één moment (de balansdatum): wat heeft de VvE aan bezittingen en hoe is dat gefinancierd. De exploitatierekening toont de inkomsten en uitgaven over het hele boekjaar: servicekosten, onderhoud, verzekeringen, beheerkosten. Samen geven ze het volledige financiële beeld."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kan ik importeren vanuit mijn boekhoudpakket?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja. Jaarklaar ondersteunt import vanuit Moneybird, Exact Online en via een kolommenbalans uit andere software zoals AFAS, King, Twinfield en Visma."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Heb ik een accountant nodig voor de VvE-jaarrekening?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Voor de meeste VvE's niet. Een kascommissie uit de ALV controleert de jaarrekening — geen accountant vereist. Voor extra zekerheid biedt Jaarklaar een accountantscheck op afroep voor €110 per uur."
+      }
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --indigo: #1D4ED8;
+    --indigo-dark: #1e40af;
+    --indigo-light: #eff6ff;
+    --dark: #0f172a;
+    --body: #334155;
+    --muted: #64748b;
+    --border: #e2e8f0;
+    --bg: #f8fafc;
+    --radius: 14px;
+    --shadow: 0 4px 24px rgba(15,23,42,0.08);
+  }
+  body { font-family: 'Inter', system-ui, sans-serif; color: var(--body); background: white; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  h1, h2, h3 { color: var(--dark); line-height: 1.25; font-weight: 800; }
+  h1 { font-size: clamp(32px, 4.5vw, 52px); letter-spacing: -.02em; }
+  h2 { font-size: clamp(24px, 3vw, 36px); letter-spacing: -.015em; }
+  h3 { font-size: 18px; }
+  a { color: var(--indigo); }
+  .container { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+  .btn { display: inline-flex; align-items: center; gap: 7px; padding: 13px 28px; border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer; text-decoration: none; border: none; transition: all .18s; }
+  .btn-primary { background: var(--indigo); color: white; box-shadow: 0 2px 12px rgba(29,78,216,0.35); }
+  .btn-primary:hover { background: var(--indigo-dark); transform: translateY(-1px); }
+  .btn-secondary { background: white; color: var(--dark); border: 1.5px solid var(--border); }
+  .btn-secondary:hover { border-color: var(--indigo); color: var(--indigo); }
+  .skip-link { position: absolute; top: -40px; left: 0; background: var(--indigo); color: white; padding: 8px 16px; z-index: 1000; font-size: 14px; font-weight: 600; text-decoration: none; border-radius: 0 0 8px 0; }
+  .skip-link:focus { top: 0; }
+
+  /* NAV */
+  nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 0 5%; display: flex; align-items: center; justify-content: space-between; height: 60px; }
+  .nav-logo { display: flex; align-items: center; gap: 8px; font-size: 17px; font-weight: 800; color: var(--dark); text-decoration: none; }
+  .nav-logo-mark { width: 30px; height: 30px; border-radius: 8px; background: var(--indigo); display: flex; align-items: center; justify-content: center; color: white; font-size: 13px; font-weight: 800; }
+  .nav-back { font-size: 13px; color: var(--muted); text-decoration: none; display: flex; align-items: center; gap: 4px; }
+  .nav-back:hover { color: var(--dark); }
+
+  /* HERO */
+  .hero { padding: 64px 0 56px; border-bottom: 1px solid var(--border); }
+  .hero-chip { display: inline-flex; align-items: center; gap: 6px; background: var(--indigo-light); color: #1e3a8a; font-size: 12px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; padding: 5px 12px; border-radius: 100px; margin-bottom: 20px; }
+  .hero h1 { margin-bottom: 18px; max-width: 700px; }
+  .hero .lead { font-size: 18px; color: var(--muted); line-height: 1.7; max-width: 620px; margin-bottom: 32px; }
+  .hero-cta { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 32px; }
+  .hero-proof { font-size: 13px; color: var(--muted); display: flex; gap: 16px; flex-wrap: wrap; }
+  .hero-proof span::before { content: '✓ '; color: #16a34a; font-weight: 700; }
+
+  /* CONTENT */
+  .content-section { padding: 56px 0; border-bottom: 1px solid var(--border); }
+  .content-section:last-of-type { border-bottom: none; }
+  .content-section h2 { margin-bottom: 20px; }
+  .content-section p { margin-bottom: 16px; font-size: 15px; line-height: 1.8; }
+  .content-section p:last-child { margin-bottom: 0; }
+
+  /* STEPS */
+  .steps { display: flex; flex-direction: column; gap: 20px; margin-top: 28px; }
+  .step { display: flex; gap: 16px; align-items: flex-start; }
+  .step-num { width: 36px; height: 36px; border-radius: 50%; background: var(--indigo); color: white; font-size: 15px; font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+  .step-content h3 { font-size: 16px; margin-bottom: 6px; }
+  .step-content p { font-size: 14px; color: var(--muted); margin: 0; }
+
+  /* INFO CARDS */
+  .card-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 28px; }
+  .card { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; }
+  .card h3 { font-size: 15px; margin-bottom: 8px; }
+  .card p { font-size: 13px; color: var(--muted); margin: 0; line-height: 1.6; }
+
+  /* PRICE BOX */
+  .price-box { background: var(--indigo-light); border: 2px solid var(--indigo); border-radius: var(--radius); padding: 28px 32px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; margin-top: 28px; }
+  .price-box-left h3 { font-size: 18px; margin-bottom: 6px; }
+  .price-box-left p { font-size: 14px; color: var(--muted); margin: 0; }
+  .price-box-amount { font-size: 48px; font-weight: 800; color: var(--dark); white-space: nowrap; }
+  .price-box-amount span { font-size: 16px; font-weight: 500; color: var(--muted); }
+
+  /* CTA BLOCK */
+  .cta-block { background: var(--dark); border-radius: 16px; padding: 48px 40px; text-align: center; margin: 48px 0; }
+  .cta-block h2 { color: white; margin-bottom: 12px; }
+  .cta-block p { color: rgba(255,255,255,0.6); font-size: 16px; margin-bottom: 28px; }
+  .cta-note { margin-top: 14px; font-size: 13px; color: rgba(255,255,255,0.4); }
+
+  /* FAQ */
+  .faq { margin-top: 28px; }
+  details.faq-item { border-bottom: 1px solid var(--border); }
+  details.faq-item summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; padding: 18px 0; font-size: 15px; font-weight: 600; color: var(--dark); transition: color .15s; }
+  details.faq-item summary::-webkit-details-marker { display: none; }
+  details.faq-item summary:hover { color: var(--indigo); }
+  .faq-icon { font-size: 20px; color: var(--muted); flex-shrink: 0; transition: transform .2s; }
+  details.faq-item[open] summary { color: var(--indigo); }
+  details.faq-item[open] .faq-icon { transform: rotate(45deg); color: var(--indigo); }
+  .faq-answer { font-size: 14px; color: var(--muted); line-height: 1.7; padding-bottom: 18px; }
+
+  /* BREADCRUMB */
+  .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; }
+  .breadcrumb a { color: var(--muted); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--indigo); }
+  .breadcrumb span { margin: 0 6px; }
+
+  /* FOOTER */
+  footer { background: var(--dark); padding: 32px 5%; color: rgba(255,255,255,0.5); font-size: 13px; }
+  .footer-inner { max-width: 860px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  .footer-logo { font-size: 15px; font-weight: 800; color: white; text-decoration: none; }
+  .footer-links { display: flex; gap: 20px; }
+  .footer-links a { color: rgba(255,255,255,0.5); text-decoration: none; }
+  .footer-links a:hover { color: white; }
+
+  @media (max-width: 600px) {
+    .card-grid { grid-template-columns: 1fr; }
+    .price-box { flex-direction: column; text-align: center; }
+    .cta-block { padding: 32px 24px; }
+  }
+</style>
+<script>
+  !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a=u._i.push([i,[],a]),u.loaded=!1,u.get_distinct_id=function(){var t=u.get_property("$device_id");return t||u.distinct_id},u.ready=function(t){u._i.push(["_hq",t])},g(u,"capture"),g(u,"identify"),g(u,"alias"),g(u,"set"),g(u,"unset"),g(u,"opt_out_capturing"),g(u,"has_opted_out_capturing"),g(u,"opt_in_capturing"),g(u,"reset"),g(u,"people"),g(u,"set_property");void 0===a&&(void 0!==window.posthog&&(u=window.posthog),u.loaded=!0),e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+  posthog.init('phc_A7pd4CHGAtjYgkFJEARfoygjiUoMmSQzZzaiD4iPXcEf', {
+      api_host: 'https://eu.i.posthog.com',
+      capture_pageview: true,
+      capture_pageleave: true
+    });
+</script>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Ga naar hoofdinhoud</a>
+
+<nav>
+  <a href="/" class="nav-logo">
+    <div class="nav-logo-mark">J</div>
+    Jaarklaar
+  </a>
+  <a href="/" class="nav-back">← Terug naar overzicht</a>
+  <a href="https://app.jaarklaar.app" class="btn btn-primary" style="padding:8px 18px;font-size:13px;">Begin nu →</a>
+</nav>
+
+<main id="main-content">
+<div class="container">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="breadcrumb">
+      <a href="/">Jaarklaar</a><span>›</span> VvE jaarrekening
+    </div>
+    <div class="hero-chip">VvE · Vereniging van Eigenaars</div>
+    <h1>VvE jaarrekening maken — zelf in 3 stappen</h1>
+    <p class="lead">Elke VvE is wettelijk verplicht een jaarrekening op te stellen. Jaarklaar begeleidt je stap voor stap: van balans en exploitatierekening tot reservefonds en begroting. Klaar voor presentatie op de ALV.</p>
+    <div class="hero-cta">
+      <a href="https://app.jaarklaar.app" class="btn btn-primary">Start je VvE-jaarrekening →</a>
+      <a href="#hoe-het-werkt" class="btn btn-secondary">Hoe werkt het?</a>
+    </div>
+    <div class="hero-proof">
+      <span>Wettelijk conform</span>
+      <span>Reservefonds ingebouwd</span>
+      <span>Klaar voor ALV</span>
+      <span>€29 per jaarrekening</span>
+    </div>
+  </section>
+
+  <!-- WAT IS EEN VVE JAARREKENING -->
+  <section class="content-section">
+    <h2>Wat is een VvE-jaarrekening?</h2>
+    <p>Een VvE-jaarrekening is een wettelijk verplicht financieel overzicht van je appartementencomplex. Het bestuur is verantwoordelijk voor de opstelling en presenteert de jaarrekening aan de leden op de Algemene Ledenvergadering (ALV). De jaarrekening moet binnen zes maanden na afloop van het boekjaar worden vastgesteld — dus uiterlijk 1 juli als je boekjaar op 31 december eindigt.</p>
+    <p>Een VvE-jaarrekening bestaat uit drie onderdelen: de <strong>balans</strong> (financiële positie per balansdatum, inclusief het reservefonds), de <strong>exploitatierekening</strong> (inkomsten en uitgaven over het boekjaar) en de <strong>toelichting</strong> met uitleg over de gehanteerde grondslagen en bijzondere posten.</p>
+    <p>Veel VvE's stellen de jaarrekening op in Excel of besteden het uit aan een VvE-beheerder. Met Jaarklaar doe je het zelf — gestructureerd, wettelijk conform en in een fractie van de tijd.</p>
+  </section>
+
+  <!-- WAT MOET ERIN STAAN -->
+  <section class="content-section">
+    <h2>Wat moet er in een VvE-jaarrekening staan?</h2>
+    <p>De wet schrijft drie hoofdonderdelen voor: een balans, een exploitatierekening en een toelichting. Het splitsingsreglement (Modelreglement 2006, 2017 of een ouder reglement uit jouw splitsingsakte) kan aanvullende eisen stellen — zoals een verloopoverzicht van het reservefonds of een vergelijking met de begroting.</p>
+    <h3>Balans</h3>
+    <p>De balans is een momentopname op de balansdatum, meestal 31 december. Aan de activazijde staan de banktegoeden, eventuele vorderingen op eigenaren (achterstallige bijdragen) en kortlopende beleggingen. Aan de passivazijde staat het reservefonds, het eigen vermogen en kortlopende schulden zoals nog te betalen onderhoudsfacturen of vooruitontvangen servicekosten.</p>
+    <h3>Exploitatierekening</h3>
+    <p>De exploitatierekening (in andere rechtsvormen winst- en verliesrekening genoemd) laat zien wat er over het hele jaar binnenkwam en uitging. Inkomsten zijn vooral de servicekosten van de eigenaren, soms aangevuld met opbrengsten uit verhuur van gemeenschappelijke ruimtes of rente op de reserve. Uitgaven zijn onderhoud, schoonmaak, verzekeringen, energie voor gemeenschappelijke ruimtes, beheerkosten en bestuurskosten. Het saldo van inkomsten en uitgaven wordt verrekend met het eigen vermogen of toegevoegd aan het reservefonds.</p>
+    <h3>Toelichting</h3>
+    <p>In de toelichting leg je de grondslagen uit: hoe je waardeert, welke afschrijvingstermijnen je hanteert, en hoe je het reservefonds beheert. Vermeld bijzondere posten — denk aan een grote eenmalige onderhoudsuitgave, een gewijzigde verdeelsleutel of een rechtszaak — zodat de eigenaren begrijpen wat er is gebeurd. Een verloopoverzicht van het reservefonds (beginstand, toevoegingen, onttrekkingen, eindstand) hoort hier ook thuis.</p>
+    <h3>Reservefonds en MJOP</h3>
+    <p>Sinds 1 januari 2018 moet elke VvE jaarlijks reserveren voor groot onderhoud (art. 5:126 lid 2 BW). Dat kan op twee manieren: een meerjarenonderhoudsplan (MJOP) van maximaal vijf jaar oud, of een vast bedrag van minimaal 0,5% van de herbouwwaarde per jaar. De jaarlijkse dotatie aan het reservefonds is daarmee een verplichte post in de exploitatierekening.</p>
+  </section>
+
+  <!-- HOE WERKT HET -->
+  <section class="content-section" id="hoe-het-werkt">
+    <h2>Zo maak je een VvE-jaarrekening in Jaarklaar</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <h3>Maak een dossier aan</h3>
+          <p>Kies het type "VvE" en voer de naam van je complex, het KvK-nummer en het boekjaar in. Jaarklaar toont alleen de tabbladen die voor een VvE relevant zijn.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <h3>Vul je financiële gegevens in</h3>
+          <p>Voer de balansposten in — banktegoeden, reservefonds, vorderingen en schulden. Daarna de exploitatierekening met servicekosten, onderhoudskosten en overige uitgaven. Je kunt ook importeren vanuit Moneybird, Exact of een kolommenbalans uit andere software.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <h3>Exporteer en presenteer op de ALV</h3>
+          <p>Download de opgemaakte PDF. Die is klaar voor ondertekening door het bestuur en presentatie op de Algemene Ledenvergadering. Optioneel voeg je de begroting voor volgend jaar toe.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WAT ZIT ERIN -->
+  <section class="content-section">
+    <h2>Wat zit er in de VvE-module?</h2>
+    <p>De VvE-module in Jaarklaar is specifiek gebouwd voor appartementencomplexen en bevat alle onderdelen die een VvE-jaarrekening nodig heeft:</p>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Balans</h3>
+        <p>Inclusief specificatie van het reservefonds, banktegoeden, vorderingen op eigenaren en kortlopende schulden.</p>
+      </div>
+      <div class="card">
+        <h3>Exploitatierekening</h3>
+        <p>Overzicht van servicekosten, onderhoudskosten, verzekeringen, beheerkosten en overige inkomsten en uitgaven.</p>
+      </div>
+      <div class="card">
+        <h3>Reservefonds</h3>
+        <p>Verloopoverzicht van het reservefonds: beginstand, stortingen, onttrekkingen en eindstand per balansdatum.</p>
+      </div>
+      <div class="card">
+        <h3>Eigenaren-overzicht</h3>
+        <p>Overzicht van de bijdragen per eigenaar op basis van het breukdeel in de splitsingsakte.</p>
+      </div>
+      <div class="card">
+        <h3>Begroting</h3>
+        <p>Vergelijkende cijfers naast de begroting, zodat afwijkingen direct zichtbaar zijn voor de ALV.</p>
+      </div>
+      <div class="card">
+        <h3>Toelichting</h3>
+        <p>Standaard toelichtingsteksten voor grondslagen, bijzondere posten en het reservefondsbeleid.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRIJS -->
+  <section class="content-section">
+    <h2>Wat kost het?</h2>
+    <p>Je betaalt alleen bij het exporteren van de definitieve PDF. Invoeren, bekijken en aanpassen is altijd gratis. Geen abonnement, geen verborgen kosten.</p>
+    <div class="price-box">
+      <div class="price-box-left">
+        <h3>VvE-jaarrekening</h3>
+        <p>Inclusief balans, exploitatierekening, reservefonds, begroting en toelichting. Klaar voor ALV en KvK.</p>
+      </div>
+      <div>
+        <div class="price-box-amount">€29 <span>per jaarrekening</span></div>
+        <a href="https://app.jaarklaar.app" class="btn btn-primary" style="margin-top:12px;">Begin gratis →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="content-section">
+    <h2>Veelgestelde vragen over de VvE-jaarrekening</h2>
+    <div class="faq">
+      <details class="faq-item">
+        <summary>Is een VvE-jaarrekening wettelijk verplicht? <span class="faq-icon">+</span></summary>
+        <div class="faq-answer">Ja. Op grond van artikel 5:126 BW is elke VvE verplicht een exploitatierekening en balans op te stellen en te presenteren op de ALV. De jaarrekening moet binnen zes maanden na afloop van het boekjaar worden vastgesteld.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Moet de VvE-jaarrekening worden gedeponeerd bij de KvK? <span class="faq-icon">+</span></summary>
+        <div class="faq-answer">VvE's zijn sinds 1 juli 2018 verplicht ingeschreven in het Handelsregister. De jaarrekening hoeft echter niet bij de KvK te worden gedeponeerd — die plicht uit Titel 9 Boek 2 BW geldt voor rechtspersonen onder artikel 2:360 BW, en daar valt een VvE niet onder. De jaarrekening wordt wel formeel vastgesteld op de ALV en bewaard in de administratie van de VvE.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Wat is het reservefonds en moet dat in de jaarrekening? <span class="faq-icon">+</span></summary>
+        <div class="faq-answer">Het reservefonds is het spaargeld van de VvE voor groot onderhoud. Sinds 1 januari 2018 moet elke VvE jaarlijks reserveren — ofwel volgens een meerjarenonderhoudsplan (MJOP), ofwel minimaal 0,5% van de herbouwwaarde (art. 5:126 lid 2 BW). In de jaarrekening komt het reservefonds terug als post op de balans, vaak met een verloopoverzicht in de toelichting.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Wat is het verschil tussen exploitatierekening en balans? <span class="faq-icon">+</span></summary>
+        <div class="faq-answer">De balans toont de financiële positie op één moment (de balansdatum): wat heeft de VvE aan bezittingen en hoe is dat gefinancierd. De exploitatierekening toont de inkomsten en uitgaven over het hele boekjaar: servicekosten, onderhoud, verzekeringen, beheerkosten. Samen geven ze het volledige financiële beeld.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Kan ik importeren vanuit mijn boekhoudpakket? <span class="faq-icon">+</span></summary>
+        <div class="faq-answer">Ja. Jaarklaar ondersteunt import vanuit Moneybird, Exact Online en via een kolommenbalans uit andere software zoals AFAS, King, Twinfield en Visma.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Heb ik een accountant nodig voor de VvE-jaarrekening? <span class="faq-icon">+</span></summary>
+        <div class="faq-answer">Voor de meeste VvE's niet. Een kascommissie uit de ALV controleert de jaarrekening — geen accountant vereist. Voor extra zekerheid biedt Jaarklaar een accountantscheck op afroep voor €110 per uur.</div>
+      </details>
+    </div>
+  </section>
+
+  <!-- VOOR ANDERE ORGANISATIES -->
+  <section class="content-section">
+    <h2>Voor andere organisaties</h2>
+    <p>Werk je niet voor een VvE, maar voor een ander type organisatie? Jaarklaar ondersteunt ook:</p>
+    <div class="card-grid">
+      <a class="card" href="/stichting-jaarrekening" style="text-decoration:none;color:inherit;display:block;">
+        <h3>Stichting &amp; ANBI</h3>
+        <p>Jaarrekening volgens RJ 650, inclusief staat van baten en lasten, reserves en fondsen, en ANBI-publicatie.</p>
+      </a>
+      <a class="card" href="/bv-jaarrekening" style="text-decoration:none;color:inherit;display:block;">
+        <h3>Kleine onderneming</h3>
+        <p>Jaarrekening voor BV's in het kleinregime (balanstotaal tot €7,5 mln, omzet tot €15 mln, minder dan 50 fte).</p>
+      </a>
+      <a class="card" href="/micro-onderneming-jaarrekening" style="text-decoration:none;color:inherit;display:block;">
+        <h3>Micro-onderneming</h3>
+        <p>Jaarrekening voor micro-rechtspersonen (balanstotaal tot €450k, omzet tot €900k, minder dan 10 fte).</p>
+      </a>
+      <a class="card" href="/zzp-jaarrekening" style="text-decoration:none;color:inherit;display:block;">
+        <h3>ZZP / Eenmanszaak</h3>
+        <p>Overzichtelijke resultatenrekening en fiscaal overzicht voor je eenmanszaak of VOF.</p>
+      </a>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <h2>Lees ook op de blog</h2>
+    <div class="card-grid">
+      <a class="card" href="/blog/voorbeeld-jaarrekening-onderdelen" style="text-decoration:none;color:inherit;display:block;">
+        <h3>Voorbeeld jaarrekening: wat staat erin?</h3>
+        <p>Balans, exploitatierekening, toelichting — wat doet elk onderdeel, en hoe verschilt een VvE-jaarrekening van die van een BV of stichting?</p>
+      </a>
+      <a class="card" href="/blog" style="text-decoration:none;color:inherit;display:block;">
+        <h3>Alle blogartikelen →</h3>
+        <p>Uitleg over jaarrekeningen, regimes en rechtsvormen.</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="cta-block">
+    <h2>Klaar om te beginnen?</h2>
+    <p>Maak gratis een account en start je VvE-jaarrekening vandaag. Betaal alleen bij export.</p>
+    <a href="https://app.jaarklaar.app" class="btn btn-primary" style="font-size:16px;padding:15px 36px;">Start je VvE-jaarrekening →</a>
+    <div class="cta-note">€29 per jaarrekening · Geen abonnement · Veilig opgeslagen</div>
+  </div>
+
+</div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <a href="/" class="footer-logo">Jaarklaar</a>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/blog">Blog</a>
+      <a href="/vve-jaarrekening">VvE</a>
+      <a href="/stichting-jaarrekening">Stichting &amp; ANBI</a>
+      <a href="/bv-jaarrekening">Kleine onderneming</a>
+      <a href="/micro-onderneming-jaarrekening">Micro-onderneming</a>
+      <a href="/zzp-jaarrekening">ZZP</a>
+      <a href="https://app.jaarklaar.app">App</a>
+      <a href="/privacy">Privacy</a>
+      <a href="/voorwaarden">Voorwaarden</a>
+      <a href="/verwerkersovereenkomst">Verwerkersovereenkomst</a>
+    </div>
+    <div>© 2026 Cees de Controller</div>
+  </div>
+</footer>
+</body>
+</html>

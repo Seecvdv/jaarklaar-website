@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ANBI-jaarrekening publiceren: wat moet er op je website? | Jaarklaar</title>
+<meta name="description" content="ANBI-publicatie: welke onderdelen van de jaarrekening op je website, vóór welke deadline, en welke regels gelden voor grote ANBI's?">
+<link rel="canonical" href="https://jaarklaar.app/anbi-jaarrekening-publicatie">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jaarklaar.app/anbi-jaarrekening-publicatie">
+<meta property="og:title" content="ANBI-jaarrekening publiceren: wat moet er op je website? | Jaarklaar">
+<meta property="og:description" content="ANBI-publicatie: welke onderdelen van de jaarrekening op je website, vóór welke deadline, en welke regels gelden voor grote ANBI's?">
+<meta property="og:image" content="https://jaarklaar.app/og-image.svg">
+<meta property="og:image:type" content="image/svg+xml">
+<meta property="og:locale" content="nl_NL">
+<meta property="og:site_name" content="Jaarklaar">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://jaarklaar.app/og-image.svg">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/favicon.svg">
+<meta name="theme-color" content="#1D4ED8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root { --indigo: #1D4ED8; --indigo-dark: #1e40af; --indigo-light: #eff6ff; --dark: #0f172a; --body: #334155; --muted: #64748b; --border: #e2e8f0; --bg: #f8fafc; --radius: 14px; --shadow: 0 4px 24px rgba(15,23,42,0.08); --accent: #db2777; --accent-light: #fdf2f8; }
+  body { font-family: 'Inter', system-ui, sans-serif; color: var(--body); background: white; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  h1, h2, h3 { color: var(--dark); line-height: 1.25; font-weight: 800; }
+  h1 { font-size: clamp(32px, 4.5vw, 52px); letter-spacing: -.02em; }
+  h2 { font-size: clamp(24px, 3vw, 36px); letter-spacing: -.015em; }
+  h3 { font-size: 18px; }
+  a { color: var(--indigo); }
+  .container { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+  .btn { display: inline-flex; align-items: center; gap: 7px; padding: 13px 28px; border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer; text-decoration: none; border: none; transition: all .18s; }
+  .btn-primary { background: var(--indigo); color: white; box-shadow: 0 2px 12px rgba(29,78,216,0.35); }
+  .btn-primary:hover { background: var(--indigo-dark); transform: translateY(-1px); }
+  .btn-secondary { background: white; color: var(--dark); border: 1.5px solid var(--border); }
+  .btn-secondary:hover { border-color: var(--indigo); color: var(--indigo); }
+  .skip-link { position: absolute; top: -40px; left: 0; background: var(--indigo); color: white; padding: 8px 16px; z-index: 1000; font-size: 14px; font-weight: 600; text-decoration: none; border-radius: 0 0 8px 0; }
+  .skip-link:focus { top: 0; }
+  nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 0 5%; display: flex; align-items: center; justify-content: space-between; height: 60px; }
+  .nav-logo { display: flex; align-items: center; gap: 8px; font-size: 17px; font-weight: 800; color: var(--dark); text-decoration: none; }
+  .nav-logo-mark { width: 30px; height: 30px; border-radius: 8px; background: var(--indigo); display: flex; align-items: center; justify-content: center; color: white; font-size: 13px; font-weight: 800; }
+  .nav-back { font-size: 13px; color: var(--muted); text-decoration: none; }
+  .nav-back:hover { color: var(--dark); }
+  .hero { padding: 64px 0 56px; border-bottom: 1px solid var(--border); }
+  .hero-chip { display: inline-flex; align-items: center; gap: 6px; background: var(--accent-light); color: #9d174d; font-size: 12px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; padding: 5px 12px; border-radius: 100px; margin-bottom: 20px; }
+  .hero h1 { margin-bottom: 18px; max-width: 700px; }
+  .hero .lead { font-size: 18px; color: var(--muted); line-height: 1.7; max-width: 620px; margin-bottom: 32px; }
+  .hero-cta { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 32px; }
+  .hero-proof { font-size: 13px; color: var(--muted); display: flex; gap: 16px; flex-wrap: wrap; }
+  .hero-proof span::before { content: '✓ '; color: #16a34a; font-weight: 700; }
+  .content-section { padding: 56px 0; border-bottom: 1px solid var(--border); }
+  .content-section h2 { margin-bottom: 20px; }
+  .content-section p { margin-bottom: 16px; font-size: 15px; line-height: 1.8; }
+  .content-section p:last-child { margin-bottom: 0; }
+  .steps { display: flex; flex-direction: column; gap: 20px; margin-top: 28px; }
+  .step { display: flex; gap: 16px; align-items: flex-start; }
+  .step-num { width: 36px; height: 36px; border-radius: 50%; background: var(--indigo); color: white; font-size: 15px; font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+  .step-content h3 { font-size: 16px; margin-bottom: 6px; }
+  .step-content p { font-size: 14px; color: var(--muted); margin: 0; }
+  .card-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 28px; }
+  .card { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; }
+  .card h3 { font-size: 15px; margin-bottom: 8px; }
+  .card p { font-size: 13px; color: var(--muted); margin: 0; line-height: 1.6; }
+  .alert { background: #fff7ed; border: 1px solid #fed7aa; border-radius: var(--radius); padding: 16px 20px; margin-top: 20px; font-size: 14px; color: #9a3412; line-height: 1.6; }
+  .alert strong { display: block; margin-bottom: 4px; }
+  .price-box { background: var(--indigo-light); border: 2px solid var(--indigo); border-radius: var(--radius); padding: 28px 32px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; margin-top: 28px; }
+  .price-box-left h3 { font-size: 18px; margin-bottom: 6px; }
+  .price-box-left p { font-size: 14px; color: var(--muted); margin: 0; }
+  .price-box-amount { font-size: 48px; font-weight: 800; color: var(--dark); white-space: nowrap; }
+  .price-box-amount span { font-size: 16px; font-weight: 500; color: var(--muted); }
+  .cta-block { background: var(--dark); border-radius: 16px; padding: 48px 40px; text-align: center; margin: 48px 0; }
+  .cta-block h2 { color: white; margin-bottom: 12px; }
+  .cta-block p { color: rgba(255,255,255,0.6); font-size: 16px; margin-bottom: 28px; }
+  .cta-note { margin-top: 14px; font-size: 13px; color: rgba(255,255,255,0.4); }
+  .faq { margin-top: 28px; }
+  details.faq-item { border-bottom: 1px solid var(--border); }
+  details.faq-item summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; padding: 18px 0; font-size: 15px; font-weight: 600; color: var(--dark); transition: color .15s; }
+  details.faq-item summary::-webkit-details-marker { display: none; }
+  details.faq-item summary:hover { color: var(--indigo); }
+  .faq-icon { font-size: 20px; color: var(--muted); flex-shrink: 0; transition: transform .2s; }
+  details.faq-item[open] summary { color: var(--indigo); }
+  details.faq-item[open] .faq-icon { transform: rotate(45deg); color: var(--indigo); }
+  .faq-answer { font-size: 14px; color: var(--muted); line-height: 1.7; padding-bottom: 18px; }
+  .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; }
+  .breadcrumb a { color: var(--muted); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--indigo); }
+  .breadcrumb span { margin: 0 6px; }
+  footer { background: var(--dark); padding: 32px 5%; color: rgba(255,255,255,0.5); font-size: 13px; }
+  .footer-inner { max-width: 860px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  .footer-logo { font-size: 15px; font-weight: 800; color: white; text-decoration: none; }
+  .footer-links { display: flex; gap: 20px; }
+  .footer-links a { color: rgba(255,255,255,0.5); text-decoration: none; }
+  .footer-links a:hover { color: white; }
+  @media (max-width: 600px) { .card-grid { grid-template-columns: 1fr; } .price-box { flex-direction: column; text-align: center; } .cta-block { padding: 32px 24px; } }
+</style>
+<script>
+  !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a=u._i.push([i,[],a]),u.loaded=!1,u.get_distinct_id=function(){var t=u.get_property("$device_id");return t||u.distinct_id},u.ready=function(t){u._i.push(["_hq",t])},g(u,"capture"),g(u,"identify"),g(u,"alias"),g(u,"set"),g(u,"unset"),g(u,"opt_out_capturing"),g(u,"has_opted_out_capturing"),g(u,"opt_in_capturing"),g(u,"reset"),g(u,"people"),g(u,"set_property");void 0===a&&(void 0!==window.posthog&&(u=window.posthog),u.loaded=!0),e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+  posthog.init('phc_A7pd4CHGAtjYgkFJEARfoygjiUoMmSQzZzaiD4iPXcEf', {
+      api_host: 'https://eu.i.posthog.com',
+      capture_pageview: true,
+      capture_pageleave: true
+    });
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Wat is de deadline voor ANBI-publicatie?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "De financiële verantwoording (balans, staat van baten en lasten, toelichting) moet uiterlijk 6 maanden na afloop van het boekjaar gepubliceerd zijn. Voor een kalenderjaar betekent dat vóór 1 juli van het volgende jaar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Mag de jaarrekening op een andere website staan, niet op de eigen site?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja, dat mag. Je kunt vanaf je eigen website doorlinken naar een centrale publicatiepagina (bijvoorbeeld van een koepelorganisatie). Voorwaarde is dat de gegevens via één duidelijke klik vindbaar zijn."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wanneer ben ik een grote ANBI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Dat hangt af van het type ANBI. Een fondsenwervende ANBI (werft actief geld of goederen onder derden) is groot bij baten boven €50.000 per jaar. Een niet-fondsenwervende ANBI is groot bij lasten boven €100.000 per jaar. Voor de actuele grensbedragen: kijk op belastingdienst.nl."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Moet ik bezoldigingen per bestuurder publiceren?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Bij baten boven €100.000 moeten individuele bezoldigingen van bestuurders en toezichthouders in de jaarrekening staan. Onder die grens mag het collectief. ANBI's die ook onder de WNT vallen (zorg, onderwijs) hebben aanvullende publicatieregels."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wat gebeurt er als ik niet op tijd publiceer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "De Belastingdienst kan bij niet-naleving de ANBI-status intrekken. Donateurs verliezen dan hun giftenaftrek en de instelling wordt belastingplichtig voor schenk- en erfbelasting. Herstel is mogelijk door alsnog te publiceren."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Ga naar hoofdinhoud</a>
+<nav>
+  <a href="/" class="nav-logo"><div class="nav-logo-mark">J</div>Jaarklaar</a>
+  <a href="/" class="nav-back">← Terug naar overzicht</a>
+  <a href="https://app.jaarklaar.app" class="btn btn-primary" style="padding:8px 18px;font-size:13px;">Begin nu →</a>
+</nav>
+
+<main id="main-content">
+<div class="container">
+
+  <section class="hero">
+    <div class="breadcrumb"><a href="/">Jaarklaar</a><span>›</span> <a href="/stichting-jaarrekening">Stichting</a><span>›</span> ANBI-publicatie</div>
+    <div class="hero-chip">ANBI · Publicatieplicht · Deadline 1 juli</div>
+    <h1>ANBI-jaarrekening publiceren: wat moet er op je website?</h1>
+    <p class="lead">Een ANBI moet jaarlijks een aantal vaste gegevens publiceren — waaronder de financiële verantwoording. Op deze pagina: wat je moet publiceren, vóór welke datum, en welke regels specifiek gelden voor grote ANBI's.</p>
+    <div class="hero-cta">
+      <a href="https://app.jaarklaar.app" class="btn btn-primary">Maak je jaarrekening →</a>
+      <a href="#checklist" class="btn btn-secondary">Publicatie-checklist</a>
+    </div>
+    <div class="hero-proof">
+      <span>Deadline 1 juli uitgelegd</span>
+      <span>Grote vs kleine ANBI</span>
+      <span>Bezoldigingsregels</span>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <h2>Waarom publicatieplicht?</h2>
+    <p>Een ANBI (Algemeen Nut Beogende Instelling) krijgt fiscale voordelen: donateurs mogen giften aftrekken en de instelling betaalt geen schenk- of erfbelasting. In ruil daarvoor eist de Belastingdienst transparantie: bepaalde gegevens moeten openbaar op internet te vinden zijn, zodat iedereen kan zien wat er met het geld gebeurt.</p>
+    <p>De publicatieplicht staat los van de vraag of je stichting inschrijvingsplichtig is bij de KvK voor deponering. Voor een ANBI is het de eigen website (of een centrale website waar je op doorlinkt) die telt.</p>
+  </section>
+
+  <section class="content-section" id="checklist">
+    <h2>Wat moet je publiceren?</h2>
+    <div class="card-grid">
+      <div class="card"><h3>Naam en RSIN</h3><p>Statutaire naam en RSIN/fiscaal nummer van de instelling.</p></div>
+      <div class="card"><h3>Contactgegevens</h3><p>Post- of bezoekadres, telefoonnummer of e-mailadres.</p></div>
+      <div class="card"><h3>Doelstelling</h3><p>Zoals vastgelegd in de statuten.</p></div>
+      <div class="card"><h3>Beleidsplan</h3><p>Hoofdlijnen van het actuele beleidsplan.</p></div>
+      <div class="card"><h3>Bestuurssamenstelling</h3><p>Namen van de bestuurders — of alleen functies als veiligheid daartoe aanleiding geeft.</p></div>
+      <div class="card"><h3>Beloningsbeleid</h3><p>Het beleid ten aanzien van bestuur, toezicht en personeel.</p></div>
+      <div class="card"><h3>Activiteitenverslag</h3><p>Actueel verslag van de uitgeoefende activiteiten.</p></div>
+      <div class="card"><h3>Financiële verantwoording</h3><p>Balans, staat van baten en lasten en toelichting — binnen 6 maanden na afloop boekjaar.</p></div>
+    </div>
+    <div class="alert">
+      <strong>Deadline voor de jaarrekening</strong>
+      De financiële verantwoording over een boekjaar moet uiterlijk 6 maanden na afloop van dat boekjaar gepubliceerd zijn. Voor een kalenderjaar betekent dat: vóór 1 juli van het volgende jaar.
+    </div>
+  </section>
+
+  <section class="content-section">
+    <h2>Grote ANBI of kleine ANBI?</h2>
+    <p>De Belastingdienst onderscheidt grote en kleine ANBI's. Grote ANBI's moeten een verplicht standaardformulier invullen voor de publicatie. Kleine ANBI's mogen de gegevens vormvrij op hun website zetten — zolang alle verplichte onderdelen aanwezig zijn.</p>
+    <p>Wanneer je "groot" bent, hangt af van het type ANBI:</p>
+    <div class="card-grid">
+      <div class="card"><h3>Fondsenwervende ANBI</h3><p>Werft actief geld of goederen onder derden. Geldt als groot bij <strong>baten boven €50.000</strong> per jaar.</p></div>
+      <div class="card"><h3>Niet-fondsenwervende ANBI</h3><p>Werft niet actief. Geldt als groot bij <strong>totale lasten boven €100.000</strong> per jaar.</p></div>
+    </div>
+    <p style="margin-top:20px;">Een fondsenwervende ANBI met baten van €60.000 is dus groot, ook als de lasten onder €100.000 blijven. Een niet-fondsenwervende ANBI met lasten van €80.000 blijft klein, ook bij hogere baten. Voor de actuele grensbedragen: zie <a href="https://www.belastingdienst.nl">belastingdienst.nl</a>.</p>
+  </section>
+
+  <section class="content-section">
+    <h2>Standaardformulier of alternatief?</h2>
+    <p>Grote ANBI's publiceren de verplichte gegevens via een vast format:</p>
+    <div class="card-grid">
+      <div class="card"><h3>Standaardformulier Belastingdienst</h3><p>Download het formulier van de Belastingdienst, vul het in en plaats de PDF op je website.</p></div>
+      <div class="card"><h3>CBF Erkenningspaspoort</h3><p>Als je stichting CBF-erkend is (Centraal Bureau Fondsenwerving), volstaat het Erkenningspaspoort in plaats van het standaardformulier.</p></div>
+      <div class="card"><h3>CIO-leden</h3><p>Kerkelijke instellingen die lid zijn van het Interkerkelijk Contact in Overheidszaken (CIO) mogen het standaardformulier gebruiken via hun eigen kanaal.</p></div>
+      <div class="card"><h3>Kleine ANBI</h3><p>Vormvrije publicatie op eigen website. Geen standaardformulier verplicht — wel alle verplichte onderdelen.</p></div>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <h2>Individuele bezoldiging: de €100.000-grens</h2>
+    <p>Voor fondsenwervende organisaties die onder RJ 650 vallen, geldt: bij baten boven €100.000 moeten de individuele bezoldigingen van bestuurders en toezichthouders worden vermeld in de jaarrekening. Onder die grens volstaat een collectieve vermelding.</p>
+    <p>Voor ANBI's die daarnaast onder de Wet normering topinkomens (WNT) vallen — bijvoorbeeld in zorg of onderwijs — gelden aanvullende maxima en publicatieregels. De reguliere culturele of maatschappelijke ANBI valt meestal niet onder de WNT.</p>
+    <p>Voor de achtergrond over RJ 650 en welke posten in de jaarrekening komen, zie de <a href="/stichting-jaarrekening">pagina over stichtingsjaarrekeningen</a> en het <a href="/rj-650-voorbeeld">voorbeeld van een RJ 650-jaarrekening</a>.</p>
+  </section>
+
+  <section class="content-section">
+    <h2>Wat hoeft níet openbaar?</h2>
+    <p>De publicatieplicht gaat over de genoemde vaste onderdelen. Wat je <strong>niet</strong> hoeft te publiceren:</p>
+    <div class="card-grid">
+      <div class="card"><h3>Onderliggende grootboekmutaties</h3><p>De jaarrekening (balans + staat van baten en lasten + toelichting) volstaat. Detailboekingen zijn niet voor publicatie.</p></div>
+      <div class="card"><h3>Privacygevoelige persoonsgegevens</h3><p>Donateurslijsten, personeelsgegevens en privé-adressen van bestuurders zijn uitgesloten.</p></div>
+      <div class="card"><h3>Operationele contracten</h3><p>Leverancierscontracten, huurovereenkomsten en specifieke projectbegrotingen blijven intern.</p></div>
+      <div class="card"><h3>Bestuursverslag in detail</h3><p>Een activiteitenverslag is verplicht; een uitgewerkt bestuursverslag mag beknopter als dat voldoende inzicht geeft.</p></div>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <h2>Wat als je niet publiceert?</h2>
+    <p>De Belastingdienst kan bij niet-naleving de ANBI-status intrekken. Dat betekent: donateurs verliezen hun giftenaftrek met terugwerkende kracht, en de instelling wordt schenk- en erfbelastingplichtig. Herstellen is mogelijk door alsnog te publiceren, maar de periode van intrekking blijft.</p>
+  </section>
+
+  <section class="content-section">
+    <h2>Veelgestelde vragen</h2>
+    <div class="faq">
+      <details class="faq-item">
+        <summary>Wat is de deadline voor ANBI-publicatie? <span class="faq-icon">+</span></summary>
+        <div class="faq-answer">De financiële verantwoording (balans, staat van baten en lasten, toelichting) moet uiterlijk 6 maanden na afloop van het boekjaar gepubliceerd zijn. Voor een kalenderjaar betekent dat vóór 1 juli van het volgende jaar.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Mag de jaarrekening op een andere website staan, niet op de eigen site? <span class="faq-icon">+</span></summary>
+        <div class="faq-answer">Ja, dat mag. Je kunt vanaf je eigen website doorlinken naar een centrale publicatiepagina (bijvoorbeeld van een koepelorganisatie). Voorwaarde is dat de gegevens via één duidelijke klik vindbaar zijn.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Wanneer ben ik een "grote ANBI"? <span class="faq-icon">+</span></summary>
+        <div class="faq-answer">Dat hangt af van het type ANBI. Een fondsenwervende ANBI (werft actief geld of goederen onder derden) is groot bij baten boven €50.000 per jaar. Een niet-fondsenwervende ANBI is groot bij lasten boven €100.000 per jaar. Voor de actuele grensbedragen: kijk op belastingdienst.nl.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Moet ik bezoldigingen per bestuurder publiceren? <span class="faq-icon">+</span></summary>
+        <div class="faq-answer">Bij baten boven €100.000 moeten individuele bezoldigingen van bestuurders en toezichthouders in de jaarrekening staan. Onder die grens mag het collectief. ANBI's die ook onder de WNT vallen (zorg, onderwijs) hebben aanvullende publicatieregels.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Wat gebeurt er als ik niet op tijd publiceer? <span class="faq-icon">+</span></summary>
+        <div class="faq-answer">De Belastingdienst kan bij niet-naleving de ANBI-status intrekken. Donateurs verliezen dan hun giftenaftrek en de instelling wordt belastingplichtig voor schenk- en erfbelasting. Herstel is mogelijk door alsnog te publiceren.</div>
+      </details>
+    </div>
+  </section>
+
+  <div class="cta-block">
+    <h2>Maak je ANBI-jaarrekening in Jaarklaar</h2>
+    <p>Jaarklaar volgt RJ 650 en herinnert je aan de publicatieverplichting — inclusief de drempel voor individuele bezoldigingen.</p>
+    <a href="https://app.jaarklaar.app" class="btn btn-primary" style="font-size:16px;padding:15px 36px;">Start je stichtingsjaarrekening →</a>
+    <div class="cta-note">€39 per jaarrekening · RJ 650 volledig · Geen abonnement</div>
+  </div>
+
+</div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <a href="/" class="footer-logo">Jaarklaar</a>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/blog">Blog</a>
+      <a href="/vve-jaarrekening">VvE</a>
+      <a href="/stichting-jaarrekening">Stichting</a>
+      <a href="/bv-jaarrekening">Kleine BV</a>
+      <a href="https://app.jaarklaar.app">App</a>
+      <a href="mailto:cees@ceesdecontroller.nl">Contact</a>
+      <a href="/privacy">Privacy</a>
+      <a href="/voorwaarden">Voorwaarden</a>
+      <a href="/verwerkersovereenkomst">Verwerkersovereenkomst</a>
+    </div>
+    <div>© 2026 Cees de Controller</div>
+  </div>
+</footer>
+</body>
+</html>

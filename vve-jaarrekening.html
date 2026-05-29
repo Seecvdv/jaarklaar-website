@@ -68,6 +68,30 @@
         "@type": "Answer",
         "text": "Voor de meeste VvE's niet. Een kascommissie uit de ALV controleert de jaarrekening — geen accountant vereist. Voor extra zekerheid biedt Jaarklaar een accountantscheck op afroep voor €110 per uur."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Wat doet de kascommissie bij een VvE-jaarrekening?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "De kascommissie wordt door de ALV gekozen en bestaat uit twee of meer eigenaren zonder bestuursfunctie. De commissie controleert de jaarrekening op juistheid en volledigheid: ze nemen het bankafschrift en de uitgavenposten door, en brengen verslag uit op de ALV. Een goedkeuring door de kascommissie geeft de leden de zekerheid om het bestuur decharge te verlenen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is een MJOP verplicht voor een VvE?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Een MJOP (meerjarenonderhoudsplan) is niet wettelijk verplicht, maar wel praktisch noodzakelijk. Zonder MJOP moet je minimaal 0,5% van de herbouwwaarde per jaar reserveren (art. 5:126 lid 2 BW). Met een actueel MJOP — niet ouder dan vijf jaar — mag je in plaats daarvan reserveren op basis van het plan, wat vaak realistischer is."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Moet ik een begroting opnemen in de VvE-jaarrekening?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Een begroting voor het komende boekjaar hoort officieel niet bij de jaarrekening, maar wordt in de praktijk vrijwel altijd samen met de jaarrekening op de ALV behandeld. Het splitsingsreglement schrijft meestal voor dat de ALV de begroting vaststelt waarmee de servicekosten voor het volgende jaar worden bepaald. Jaarklaar exporteert de begroting in hetzelfde document of als losse bijlage."
+      }
     }
   ]
 }
@@ -170,6 +194,17 @@
   .breadcrumb a:hover { color: var(--indigo); }
   .breadcrumb span { margin: 0 6px; }
 
+  /* EXAMPLE TABLES */
+  .example { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 24px 0 8px; }
+  .example-block h3 { font-size: 15px; margin-bottom: 10px; color: var(--dark); }
+  .example-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  .example-table td { padding: 7px 0; border-bottom: 1px solid var(--border); }
+  .example-table td:last-child { text-align: right; font-variant-numeric: tabular-nums; color: var(--dark); }
+  .example-table tr.subhead td { font-weight: 700; color: var(--dark); padding-top: 14px; border-bottom: none; }
+  .example-table tr.subhead td:first-child { text-transform: uppercase; font-size: 12px; letter-spacing: .05em; color: var(--muted); }
+  .example-table tr.total td { font-weight: 700; border-top: 2px solid var(--dark); border-bottom: none; color: var(--dark); padding-top: 10px; }
+  @media (max-width: 600px) { .example { grid-template-columns: 1fr; } }
+
   /* FOOTER */
   footer { background: var(--dark); padding: 32px 5%; color: rgba(255,255,255,0.5); font-size: 13px; }
   .footer-inner { max-width: 860px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
@@ -248,6 +283,53 @@
     <p>In de toelichting leg je de grondslagen uit: hoe je waardeert, welke afschrijvingstermijnen je hanteert, en hoe je het reservefonds beheert. Vermeld bijzondere posten — denk aan een grote eenmalige onderhoudsuitgave, een gewijzigde verdeelsleutel of een rechtszaak — zodat de eigenaren begrijpen wat er is gebeurd. Een verloopoverzicht van het reservefonds (beginstand, toevoegingen, onttrekkingen, eindstand) hoort hier ook thuis.</p>
     <h3>Reservefonds en MJOP</h3>
     <p>Sinds 1 januari 2018 moet elke VvE jaarlijks reserveren voor groot onderhoud (art. 5:126 lid 2 BW). Dat kan op twee manieren: een meerjarenonderhoudsplan (MJOP) van maximaal vijf jaar oud, of een vast bedrag van minimaal 0,5% van de herbouwwaarde per jaar. De jaarlijkse dotatie aan het reservefonds is daarmee een verplichte post in de exploitatierekening.</p>
+  </section>
+
+  <!-- PRAKTIJKVOORBEELD -->
+  <section class="content-section">
+    <h2>Voorbeeld: VvE De Gracht (12 appartementen)</h2>
+    <p>Hieronder een vereenvoudigd voorbeeld van een VvE-jaarrekening over boekjaar 2024. VvE De Gracht beheert een complex van 12 appartementen. De servicekosten zijn €250 per maand per appartement — samen €36.000 per jaar. De cijfers zijn fictief, maar de structuur volgt de praktijk.</p>
+    <div class="example">
+      <div class="example-block">
+        <h3>Balans per 31 december 2024</h3>
+        <table class="example-table">
+          <tbody>
+            <tr class="subhead"><td>Activa</td><td></td></tr>
+            <tr><td>Banktegoed lopende rekening</td><td>€4.250</td></tr>
+            <tr><td>Banktegoed reservefonds</td><td>€38.500</td></tr>
+            <tr><td>Vorderingen op eigenaren</td><td>€1.500</td></tr>
+            <tr class="total"><td>Totaal activa</td><td>€44.250</td></tr>
+            <tr class="subhead"><td>Passiva</td><td></td></tr>
+            <tr><td>Reservefonds</td><td>€38.500</td></tr>
+            <tr><td>Eigen vermogen</td><td>€3.250</td></tr>
+            <tr><td>Nog te betalen onderhoud</td><td>€2.500</td></tr>
+            <tr class="total"><td>Totaal passiva</td><td>€44.250</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="example-block">
+        <h3>Exploitatierekening 2024</h3>
+        <table class="example-table">
+          <tbody>
+            <tr class="subhead"><td>Inkomsten</td><td></td></tr>
+            <tr><td>Servicekosten eigenaren</td><td>€36.000</td></tr>
+            <tr><td>Rente reservefonds</td><td>€450</td></tr>
+            <tr class="total"><td>Totaal inkomsten</td><td>€36.450</td></tr>
+            <tr class="subhead"><td>Uitgaven</td><td></td></tr>
+            <tr><td>Groot onderhoud (lift)</td><td>€12.500</td></tr>
+            <tr><td>Dotatie reservefonds (MJOP)</td><td>€9.000</td></tr>
+            <tr><td>Beheer (extern)</td><td>€4.200</td></tr>
+            <tr><td>Schoonmaak gemeenschappelijk</td><td>€3.600</td></tr>
+            <tr><td>Verzekering</td><td>€2.800</td></tr>
+            <tr><td>Energie gemeenschappelijk</td><td>€2.400</td></tr>
+            <tr><td>Bestuurskosten</td><td>€350</td></tr>
+            <tr class="total"><td>Totaal uitgaven</td><td>€34.850</td></tr>
+            <tr class="total"><td>Saldo (naar eigen vermogen)</td><td>€1.600</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <p>Het positieve saldo van €1.600 wordt op de ALV toegevoegd aan het eigen vermogen. De dotatie aan het reservefonds van €9.000 volgt uit het meerjarenonderhoudsplan en is voldoende voor het verwachte groot onderhoud over de komende vijf jaar. De vorderingen op eigenaren betreffen één eigenaar met een betalingsachterstand — die wordt op de ALV besproken.</p>
   </section>
 
   <!-- HOE WERKT HET -->
@@ -353,6 +435,18 @@
       <details class="faq-item">
         <summary>Heb ik een accountant nodig voor de VvE-jaarrekening? <span class="faq-icon">+</span></summary>
         <div class="faq-answer">Voor de meeste VvE's niet. Een kascommissie uit de ALV controleert de jaarrekening — geen accountant vereist. Voor extra zekerheid biedt Jaarklaar een accountantscheck op afroep voor €110 per uur.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Wat doet de kascommissie bij een VvE-jaarrekening? <span class="faq-icon">+</span></summary>
+        <div class="faq-answer">De kascommissie wordt door de ALV gekozen en bestaat uit twee of meer eigenaren zonder bestuursfunctie. De commissie controleert de jaarrekening op juistheid en volledigheid: ze nemen het bankafschrift en de uitgavenposten door, en brengen verslag uit op de ALV. Een goedkeuring door de kascommissie geeft de leden de zekerheid om het bestuur decharge te verlenen.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Is een MJOP verplicht voor een VvE? <span class="faq-icon">+</span></summary>
+        <div class="faq-answer">Een MJOP (meerjarenonderhoudsplan) is niet wettelijk verplicht, maar wel praktisch noodzakelijk. Zonder MJOP moet je minimaal 0,5% van de herbouwwaarde per jaar reserveren (art. 5:126 lid 2 BW). Met een actueel MJOP — niet ouder dan vijf jaar — mag je in plaats daarvan reserveren op basis van het plan, wat vaak realistischer is.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Moet ik een begroting opnemen in de VvE-jaarrekening? <span class="faq-icon">+</span></summary>
+        <div class="faq-answer">Een begroting voor het komende boekjaar hoort officieel niet bij de jaarrekening, maar wordt in de praktijk vrijwel altijd samen met de jaarrekening op de ALV behandeld. Het splitsingsreglement schrijft meestal voor dat de ALV de begroting vaststelt waarmee de servicekosten voor het volgende jaar worden bepaald. Jaarklaar exporteert de begroting in hetzelfde document of als losse bijlage.</div>
       </details>
     </div>
   </section>

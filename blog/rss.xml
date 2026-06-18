@@ -6,7 +6,15 @@
     <atom:link href="https://jaarklaar.app/blog/rss.xml" rel="self" type="application/rss+xml" />
     <description>Uitleg over jaarrekeningen, regimes en rechtsvormen — voor ondernemers, bestuurders en penningmeesters.</description>
     <language>nl-nl</language>
-    <lastBuildDate>Sun, 17 May 2026 00:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Thu, 18 Jun 2026 00:00:00 +0200</lastBuildDate>
+
+    <item>
+      <title>Grootte criteria onderneming: micro, klein of groot?</title>
+      <link>https://jaarklaar.app/blog/grootte-criteria-onderneming</link>
+      <guid isPermaLink="true">https://jaarklaar.app/blog/grootte-criteria-onderneming</guid>
+      <pubDate>Thu, 18 Jun 2026 00:00:00 +0200</pubDate>
+      <description>Welke groottecriteria bepalen of je onderneming micro, klein, middelgroot of groot is? Met de criteria per grootteklasse en hoe je grootte doorwerkt naar de KvK-deponering.</description>
+    </item>
 
     <item>
       <title>Moet ik als ZZP'er een jaarrekening maken?</title>
